@@ -4,9 +4,11 @@ This is the IsoPhase project page. Source code and contents that we was not able
 In section 10, we mentioned that we could not put the whole list of categorized TensorFlow APIs due to the paper limit.
 
 `TF API` contains the full list of TensorFlow API categorization.
+
+Details are shown in `TF API/phase.txt`.
 ## **Quick Start**
 [simple demo](https://github.com/IsoPhase-security/IsoPhase/tree/main/demo)
-It is OpenCV IsoPhase demo. Run with test.sh
+It is OpenCV IsoPhase demo. Run with test.sh.
 ## **Static API Analysis Tool**
 We use the ast module of Python to analyze the target application's source code. 
 
