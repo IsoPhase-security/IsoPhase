@@ -1,0 +1,226 @@
+{
+    "imread":
+    {
+        "name": "imread",
+        "module": "cv2",
+        "return_type":["mat"],
+        "args":["string","int"]
+    },
+
+    "imshow":
+    {
+        "name": "imshow",
+        "module": "cv2",
+        "return_type":"none",
+        "args":["string","mat"]
+    },
+
+    "imwrite":
+    {
+        "name": "imwrite",
+        "module": "cv2",
+        "return_type":"none",
+        "args":["string","mat"]
+    },
+
+
+    "VideoCapture":
+    {
+        "name": "VideoCapture",
+        "module": "cv2",
+        "return_type":"VideoCapture",
+        "args":["int"]
+    },
+
+    "cvtColor":
+    {
+        "name": "cvtColor",
+        "module": "cv2",
+        "return_type":["mat"],
+        "args":["mat","int"]
+    },
+
+    "VideoWriter":
+    {
+        "name": "VideoWriter",
+        "module": "cv2",
+        "return_type":"VideoWriter",
+        "args":["string","int","int","tuple"]
+    },
+
+
+    "line":
+    {
+        "name": "line",
+        "module": "cv2",
+        "return_type":"none",
+        "args":["mat","tuple","tuple","tuple","int"]
+    },
+
+    "rectangle":
+    {
+        "name": "rectangle",
+        "module": "cv2",
+        "return_type":"none",
+        "args":["mat","tuple","tuple","tuple","int"]
+    },
+
+    "circle":
+    {
+        "name": "circle",
+        "module": "cv2",
+        "return_type":"none",
+        "args":["mat","tuple","int","tuple","int"]
+    },
+
+    "ellipse":
+    {
+        "name": "ellipse",
+        "module": "cv2",
+        "return_type":"none",
+        "args":["mat","tuple","int","int","int","int","tuple","int"]
+    },
+
+    "polygon":
+    {
+        "name": "polygon",
+        "module": "cv2",
+        "return_type":"none",
+        "args":["mat","array","bool","tuple"]
+    },
+
+    "putText":
+    {
+        "name": "putText",
+        "module": "cv2",
+        "return_type":"none",
+        "args":["mat","string","tuple","int","int","tuple","int","int"]
+    },
+
+    "split":
+    {
+        "name": "split",
+        "module": "cv2",
+        "return_type":"tuple",
+        "args":["mat"]
+    },
+
+    "merge":
+    {
+        "name": "merge",
+        "module": "cv2",
+        "return_type":["mat"],
+        "args":["tuple"]
+    },
+
+    "CopyMakeBorder":
+    {
+        "name": "CopyMakeBorder",
+        "module": "cv2",
+        "return_type":["mat"],
+        "args":["mat","int","int","int","int","int"]
+    },
+
+    "addWeighted":
+    {
+        "name": "addWeighted",
+        "module": "cv2",
+        "return_type":["mat"],
+        "args":["mat","float","mat","float"]
+    },
+
+    "add":
+    {
+        "name": "add",
+        "module": "cv2",
+        "return_type":["mat"],
+        "args":["mat","mat"]
+    },
+
+    "threshold":
+    {
+        "name": "threshold",
+        "module": "cv2",
+        "return_type":["int","mat"],
+        "args":["mat","int","int","int"]
+    },
+
+    "bitwise_not":
+    {
+        "name": "bitwise_not",
+        "module": "cv2",
+        "return_type":["mat"],
+        "args":["mat"],
+        "comment":"problem"
+    },
+
+    "bitwise_and":
+    {
+        "name": "bitwise_and",
+        "module": "cv2",
+        "return_type":["mat"],
+        "args":["mat","mat"]
+    },
+
+    "bitwise_or":
+    {
+        "name": "bitwise_or",
+        "module": "cv2",
+        "return_type":["mat"],
+        "args":["mat","mat"]
+    },
+
+    "medianBlur":
+    {
+        "name": "medianBlur",
+        "module": "cv2",
+        "return_type":["mat"],
+        "args":["mat","tuple"]
+    },
+
+    "countNonZero":
+    {
+        "name": "countNonZero",
+        "module": "cv2",
+        "return_type":["int"],
+        "args":["mat"]
+    },
+
+    "inRange":
+    {
+        "name": "inRange",
+        "module": "cv2",
+        "return_type":["mat"],
+        "args":["mat","array","array"]
+    },
+
+    "resize":
+    {
+        "name": "resize",
+        "module": "cv2",
+        "return_type":["mat"],
+        "args":["mat","array","array"]
+    },
+
+    "warpAffine":
+    {
+        "name": "warpAffine",
+        "module": "cv2",
+        "return_type":["mat"],
+        "args":["mat","array","array"]
+    },
+
+    "warpPerspective":
+    {
+        "name": "Perspective",
+        "module": "cv2",
+        "return_type":["mat"],
+        "args":["mat","array","array"]
+    },
+
+
+
+
+
+    "aaa":"aaa"
+}

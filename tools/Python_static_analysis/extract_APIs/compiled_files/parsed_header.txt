@@ -1,0 +1,6894 @@
+enum cv.SortFlags  
+    const cv.SORT_EVERY_ROW 0 []
+    const cv.SORT_EVERY_COLUMN 1 []
+    const cv.SORT_ASCENDING 0 []
+    const cv.SORT_DESCENDING 16 []
+enum cv.CovarFlags  
+    const cv.COVAR_SCRAMBLED 0 []
+    const cv.COVAR_NORMAL 1 []
+    const cv.COVAR_USE_AVG 2 []
+    const cv.COVAR_SCALE 4 []
+    const cv.COVAR_ROWS 8 []
+    const cv.COVAR_COLS 16 []
+enum cv.KmeansFlags  
+    const cv.KMEANS_RANDOM_CENTERS 0 []
+    const cv.KMEANS_PP_CENTERS 2 []
+    const cv.KMEANS_USE_INITIAL_LABELS 1 []
+enum cv.LineTypes  
+    const cv.FILLED -1 []
+    const cv.LINE_4 4 []
+    const cv.LINE_8 8 []
+    const cv.LINE_AA 16 []
+enum cv.HersheyFonts  
+    const cv.FONT_HERSHEY_SIMPLEX 0 []
+    const cv.FONT_HERSHEY_PLAIN 1 []
+    const cv.FONT_HERSHEY_DUPLEX 2 []
+    const cv.FONT_HERSHEY_COMPLEX 3 []
+    const cv.FONT_HERSHEY_TRIPLEX 4 []
+    const cv.FONT_HERSHEY_COMPLEX_SMALL 5 []
+    const cv.FONT_HERSHEY_SCRIPT_SIMPLEX 6 []
+    const cv.FONT_HERSHEY_SCRIPT_COMPLEX 7 []
+    const cv.FONT_ITALIC 16 []
+enum cv.ReduceTypes  
+    const cv.REDUCE_SUM 0 []
+    const cv.REDUCE_AVG 1 []
+    const cv.REDUCE_MAX 2 []
+    const cv.REDUCE_MIN 3 []
+cv.borderInterpolate int 
+    int p 
+    int len 
+    int borderType 
+cv.copyMakeBorder void 
+    Mat src 
+    Mat dst /O
+    int top 
+    int bottom 
+    int left 
+    int right 
+    int borderType 
+    Scalar value Scalar()/C; /Ref
+cv.copyMakeBorder void 
+    UMat src 
+    UMat dst /O
+    int top 
+    int bottom 
+    int left 
+    int right 
+    int borderType 
+    Scalar value Scalar()/C; /Ref
+cv.add void 
+    Mat src1 
+    Mat src2 
+    Mat dst /O
+    Mat mask Mat()
+    int dtype -1
+cv.add void 
+    UMat src1 
+    UMat src2 
+    UMat dst /O
+    UMat mask UMat()
+    int dtype -1
+cv.subtract void 
+    Mat src1 
+    Mat src2 
+    Mat dst /O
+    Mat mask Mat()
+    int dtype -1
+cv.subtract void 
+    UMat src1 
+    UMat src2 
+    UMat dst /O
+    UMat mask UMat()
+    int dtype -1
+cv.multiply void 
+    Mat src1 
+    Mat src2 
+    Mat dst /O
+    double scale 1
+    int dtype -1
+cv.multiply void 
+    UMat src1 
+    UMat src2 
+    UMat dst /O
+    double scale 1
+    int dtype -1
+cv.divide void 
+    Mat src1 
+    Mat src2 
+    Mat dst /O
+    double scale 1
+    int dtype -1
+cv.divide void 
+    UMat src1 
+    UMat src2 
+    UMat dst /O
+    double scale 1
+    int dtype -1
+cv.divide void 
+    double scale 
+    Mat src2 
+    Mat dst /O
+    int dtype -1
+cv.divide void 
+    double scale 
+    UMat src2 
+    UMat dst /O
+    int dtype -1
+cv.scaleAdd void 
+    Mat src1 
+    double alpha 
+    Mat src2 
+    Mat dst /O
+cv.scaleAdd void 
+    UMat src1 
+    double alpha 
+    UMat src2 
+    UMat dst /O
+cv.addWeighted void 
+    Mat src1 
+    double alpha 
+    Mat src2 
+    double beta 
+    double gamma 
+    Mat dst /O
+    int dtype -1
+cv.addWeighted void 
+    UMat src1 
+    double alpha 
+    UMat src2 
+    double beta 
+    double gamma 
+    UMat dst /O
+    int dtype -1
+cv.convertScaleAbs void 
+    Mat src 
+    Mat dst /O
+    double alpha 1
+    double beta 0
+cv.convertScaleAbs void 
+    UMat src 
+    UMat dst /O
+    double alpha 1
+    double beta 0
+cv.convertFp16 void 
+    Mat src 
+    Mat dst /O
+cv.convertFp16 void 
+    UMat src 
+    UMat dst /O
+cv.LUT void 
+    Mat src 
+    Mat lut 
+    Mat dst /O
+cv.LUT void 
+    UMat src 
+    UMat lut 
+    UMat dst /O
+cv.sum Scalar =sumElems
+    Mat src 
+cv.sum Scalar =sumElems
+    UMat src 
+cv.countNonZero int 
+    Mat src 
+cv.countNonZero int 
+    UMat src 
+cv.findNonZero void 
+    Mat src 
+    Mat idx /O
+cv.findNonZero void 
+    UMat src 
+    UMat idx /O
+cv.mean Scalar 
+    Mat src 
+    Mat mask Mat()
+cv.mean Scalar 
+    UMat src 
+    UMat mask UMat()
+cv.meanStdDev void 
+    Mat src 
+    Mat mean /O
+    Mat stddev /O
+    Mat mask Mat()
+cv.meanStdDev void 
+    UMat src 
+    UMat mean /O
+    UMat stddev /O
+    UMat mask UMat()
+cv.norm double 
+    Mat src1 
+    int normType NORM_L2
+    Mat mask Mat()
+cv.norm double 
+    UMat src1 
+    int normType NORM_L2
+    UMat mask UMat()
+cv.norm double 
+    Mat src1 
+    Mat src2 
+    int normType NORM_L2
+    Mat mask Mat()
+cv.norm double 
+    UMat src1 
+    UMat src2 
+    int normType NORM_L2
+    UMat mask UMat()
+cv.PSNR double 
+    Mat src1 
+    Mat src2 
+cv.PSNR double 
+    UMat src1 
+    UMat src2 
+cv.batchDistance void 
+    Mat src1 
+    Mat src2 
+    Mat dist /O
+    int dtype 
+    Mat nidx /O
+    int normType NORM_L2
+    int K 0
+    Mat mask Mat()
+    int update 0
+    bool crosscheck false
+cv.batchDistance void 
+    UMat src1 
+    UMat src2 
+    UMat dist /O
+    int dtype 
+    UMat nidx /O
+    int normType NORM_L2
+    int K 0
+    UMat mask UMat()
+    int update 0
+    bool crosscheck false
+cv.normalize void 
+    Mat src 
+    Mat dst /IO
+    double alpha 1
+    double beta 0
+    int norm_type NORM_L2
+    int dtype -1
+    Mat mask Mat()
+cv.normalize void 
+    UMat src 
+    UMat dst /IO
+    double alpha 1
+    double beta 0
+    int norm_type NORM_L2
+    int dtype -1
+    UMat mask UMat()
+cv.minMaxLoc void 
+    Mat src 
+    double* minVal /O
+    double* maxVal 0/O
+    Point* minLoc 0/O
+    Point* maxLoc 0/O
+    Mat mask Mat()
+cv.minMaxLoc void 
+    UMat src 
+    double* minVal /O
+    double* maxVal 0/O
+    Point* minLoc 0/O
+    Point* maxLoc 0/O
+    UMat mask UMat()
+cv.reduce void 
+    Mat src 
+    Mat dst /O
+    int dim 
+    int rtype 
+    int dtype -1
+cv.reduce void 
+    UMat src 
+    UMat dst /O
+    int dim 
+    int rtype 
+    int dtype -1
+cv.merge void 
+    vector_Mat mv 
+    Mat dst /O
+cv.merge void 
+    vector_Mat mv 
+    UMat dst /O
+cv.split void 
+    Mat m 
+    vector_Mat mv /O
+cv.split void 
+    UMat m 
+    vector_Mat mv /O
+cv.mixChannels void 
+    vector_Mat src 
+    vector_Mat dst /IO
+    vector_int fromTo /C; /Ref
+cv.mixChannels void 
+    vector_Mat src 
+    vector_Mat dst /IO
+    vector_int fromTo /C; /Ref
+cv.extractChannel void 
+    Mat src 
+    Mat dst /O
+    int coi 
+cv.extractChannel void 
+    UMat src 
+    UMat dst /O
+    int coi 
+cv.insertChannel void 
+    Mat src 
+    Mat dst /IO
+    int coi 
+cv.insertChannel void 
+    UMat src 
+    UMat dst /IO
+    int coi 
+cv.flip void 
+    Mat src 
+    Mat dst /O
+    int flipCode 
+cv.flip void 
+    UMat src 
+    UMat dst /O
+    int flipCode 
+enum cv.RotateFlags  
+    const cv.ROTATE_90_CLOCKWISE 0 []
+    const cv.ROTATE_180 1 []
+    const cv.ROTATE_90_COUNTERCLOCKWISE 2 []
+cv.rotate void 
+    Mat src 
+    Mat dst /O
+    int rotateCode 
+cv.rotate void 
+    UMat src 
+    UMat dst /O
+    int rotateCode 
+cv.repeat void 
+    Mat src 
+    int ny 
+    int nx 
+    Mat dst /O
+cv.repeat void 
+    UMat src 
+    int ny 
+    int nx 
+    UMat dst /O
+cv.hconcat void 
+    vector_Mat src 
+    Mat dst /O
+cv.hconcat void 
+    vector_Mat src 
+    UMat dst /O
+cv.vconcat void 
+    vector_Mat src 
+    Mat dst /O
+cv.vconcat void 
+    vector_Mat src 
+    UMat dst /O
+cv.bitwise_and void 
+    Mat src1 
+    Mat src2 
+    Mat dst /O
+    Mat mask Mat()
+cv.bitwise_and void 
+    UMat src1 
+    UMat src2 
+    UMat dst /O
+    UMat mask UMat()
+cv.bitwise_or void 
+    Mat src1 
+    Mat src2 
+    Mat dst /O
+    Mat mask Mat()
+cv.bitwise_or void 
+    UMat src1 
+    UMat src2 
+    UMat dst /O
+    UMat mask UMat()
+cv.bitwise_xor void 
+    Mat src1 
+    Mat src2 
+    Mat dst /O
+    Mat mask Mat()
+cv.bitwise_xor void 
+    UMat src1 
+    UMat src2 
+    UMat dst /O
+    UMat mask UMat()
+cv.bitwise_not void 
+    Mat src 
+    Mat dst /O
+    Mat mask Mat()
+cv.bitwise_not void 
+    UMat src 
+    UMat dst /O
+    UMat mask UMat()
+cv.absdiff void 
+    Mat src1 
+    Mat src2 
+    Mat dst /O
+cv.absdiff void 
+    UMat src1 
+    UMat src2 
+    UMat dst /O
+cv.inRange void 
+    Mat src 
+    Mat lowerb 
+    Mat upperb 
+    Mat dst /O
+cv.inRange void 
+    UMat src 
+    UMat lowerb 
+    UMat upperb 
+    UMat dst /O
+cv.compare void 
+    Mat src1 
+    Mat src2 
+    Mat dst /O
+    int cmpop 
+cv.compare void 
+    UMat src1 
+    UMat src2 
+    UMat dst /O
+    int cmpop 
+cv.min void 
+    Mat src1 
+    Mat src2 
+    Mat dst /O
+cv.min void 
+    UMat src1 
+    UMat src2 
+    UMat dst /O
+cv.max void 
+    Mat src1 
+    Mat src2 
+    Mat dst /O
+cv.max void 
+    UMat src1 
+    UMat src2 
+    UMat dst /O
+cv.sqrt void 
+    Mat src 
+    Mat dst /O
+cv.sqrt void 
+    UMat src 
+    UMat dst /O
+cv.pow void 
+    Mat src 
+    double power 
+    Mat dst /O
+cv.pow void 
+    UMat src 
+    double power 
+    UMat dst /O
+cv.exp void 
+    Mat src 
+    Mat dst /O
+cv.exp void 
+    UMat src 
+    UMat dst /O
+cv.log void 
+    Mat src 
+    Mat dst /O
+cv.log void 
+    UMat src 
+    UMat dst /O
+cv.polarToCart void 
+    Mat magnitude 
+    Mat angle 
+    Mat x /O
+    Mat y /O
+    bool angleInDegrees false
+cv.polarToCart void 
+    UMat magnitude 
+    UMat angle 
+    UMat x /O
+    UMat y /O
+    bool angleInDegrees false
+cv.cartToPolar void 
+    Mat x 
+    Mat y 
+    Mat magnitude /O
+    Mat angle /O
+    bool angleInDegrees false
+cv.cartToPolar void 
+    UMat x 
+    UMat y 
+    UMat magnitude /O
+    UMat angle /O
+    bool angleInDegrees false
+cv.phase void 
+    Mat x 
+    Mat y 
+    Mat angle /O
+    bool angleInDegrees false
+cv.phase void 
+    UMat x 
+    UMat y 
+    UMat angle /O
+    bool angleInDegrees false
+cv.magnitude void 
+    Mat x 
+    Mat y 
+    Mat magnitude /O
+cv.magnitude void 
+    UMat x 
+    UMat y 
+    UMat magnitude /O
+cv.checkRange bool 
+    Mat a 
+    bool quiet true
+    Point* pos 0/O
+    double minVal -DBL_MAX
+    double maxVal DBL_MAX
+cv.checkRange bool 
+    UMat a 
+    bool quiet true
+    Point* pos 0/O
+    double minVal -DBL_MAX
+    double maxVal DBL_MAX
+cv.patchNaNs void 
+    Mat a /IO
+    double val 0
+cv.patchNaNs void 
+    UMat a /IO
+    double val 0
+cv.gemm void 
+    Mat src1 
+    Mat src2 
+    double alpha 
+    Mat src3 
+    double beta 
+    Mat dst /O
+    int flags 0
+cv.gemm void 
+    UMat src1 
+    UMat src2 
+    double alpha 
+    UMat src3 
+    double beta 
+    UMat dst /O
+    int flags 0
+cv.mulTransposed void 
+    Mat src 
+    Mat dst /O
+    bool aTa 
+    Mat delta Mat()
+    double scale 1
+    int dtype -1
+cv.mulTransposed void 
+    UMat src 
+    UMat dst /O
+    bool aTa 
+    UMat delta UMat()
+    double scale 1
+    int dtype -1
+cv.transpose void 
+    Mat src 
+    Mat dst /O
+cv.transpose void 
+    UMat src 
+    UMat dst /O
+cv.transform void 
+    Mat src 
+    Mat dst /O
+    Mat m 
+cv.transform void 
+    UMat src 
+    UMat dst /O
+    UMat m 
+cv.perspectiveTransform void 
+    Mat src 
+    Mat dst /O
+    Mat m 
+cv.perspectiveTransform void 
+    UMat src 
+    UMat dst /O
+    UMat m 
+cv.completeSymm void 
+    Mat m /IO
+    bool lowerToUpper false
+cv.completeSymm void 
+    UMat m /IO
+    bool lowerToUpper false
+cv.setIdentity void 
+    Mat mtx /IO
+    Scalar s Scalar(1)/C; /Ref
+cv.setIdentity void 
+    UMat mtx /IO
+    Scalar s Scalar(1)/C; /Ref
+cv.determinant double 
+    Mat mtx 
+cv.determinant double 
+    UMat mtx 
+cv.trace Scalar 
+    Mat mtx 
+cv.trace Scalar 
+    UMat mtx 
+cv.invert double 
+    Mat src 
+    Mat dst /O
+    int flags DECOMP_LU
+cv.invert double 
+    UMat src 
+    UMat dst /O
+    int flags DECOMP_LU
+cv.solve bool 
+    Mat src1 
+    Mat src2 
+    Mat dst /O
+    int flags DECOMP_LU
+cv.solve bool 
+    UMat src1 
+    UMat src2 
+    UMat dst /O
+    int flags DECOMP_LU
+cv.sort void 
+    Mat src 
+    Mat dst /O
+    int flags 
+cv.sort void 
+    UMat src 
+    UMat dst /O
+    int flags 
+cv.sortIdx void 
+    Mat src 
+    Mat dst /O
+    int flags 
+cv.sortIdx void 
+    UMat src 
+    UMat dst /O
+    int flags 
+cv.solveCubic int 
+    Mat coeffs 
+    Mat roots /O
+cv.solveCubic int 
+    UMat coeffs 
+    UMat roots /O
+cv.solvePoly double 
+    Mat coeffs 
+    Mat roots /O
+    int maxIters 300
+cv.solvePoly double 
+    UMat coeffs 
+    UMat roots /O
+    int maxIters 300
+cv.eigen bool 
+    Mat src 
+    Mat eigenvalues /O
+    Mat eigenvectors Mat()/O
+cv.eigen bool 
+    UMat src 
+    UMat eigenvalues /O
+    UMat eigenvectors UMat()/O
+cv.eigenNonSymmetric void 
+    Mat src 
+    Mat eigenvalues /O
+    Mat eigenvectors /O
+cv.eigenNonSymmetric void 
+    UMat src 
+    UMat eigenvalues /O
+    UMat eigenvectors /O
+cv.calcCovarMatrix void 
+    Mat samples 
+    Mat covar /O
+    Mat mean /IO
+    int flags 
+    int ctype CV_64F
+cv.calcCovarMatrix void 
+    UMat samples 
+    UMat covar /O
+    UMat mean /IO
+    int flags 
+    int ctype CV_64F
+cv.PCACompute void 
+    Mat data 
+    Mat mean /IO
+    Mat eigenvectors /O
+    int maxComponents 0
+cv.PCACompute void 
+    UMat data 
+    UMat mean /IO
+    UMat eigenvectors /O
+    int maxComponents 0
+cv.PCACompute void =PCACompute2
+    Mat data 
+    Mat mean /IO
+    Mat eigenvectors /O
+    Mat eigenvalues /O
+    int maxComponents 0
+cv.PCACompute void =PCACompute2
+    UMat data 
+    UMat mean /IO
+    UMat eigenvectors /O
+    UMat eigenvalues /O
+    int maxComponents 0
+cv.PCACompute void 
+    Mat data 
+    Mat mean /IO
+    Mat eigenvectors /O
+    double retainedVariance 
+cv.PCACompute void 
+    UMat data 
+    UMat mean /IO
+    UMat eigenvectors /O
+    double retainedVariance 
+cv.PCACompute void =PCACompute2
+    Mat data 
+    Mat mean /IO
+    Mat eigenvectors /O
+    Mat eigenvalues /O
+    double retainedVariance 
+cv.PCACompute void =PCACompute2
+    UMat data 
+    UMat mean /IO
+    UMat eigenvectors /O
+    UMat eigenvalues /O
+    double retainedVariance 
+cv.PCAProject void 
+    Mat data 
+    Mat mean 
+    Mat eigenvectors 
+    Mat result /O
+cv.PCAProject void 
+    UMat data 
+    UMat mean 
+    UMat eigenvectors 
+    UMat result /O
+cv.PCABackProject void 
+    Mat data 
+    Mat mean 
+    Mat eigenvectors 
+    Mat result /O
+cv.PCABackProject void 
+    UMat data 
+    UMat mean 
+    UMat eigenvectors 
+    UMat result /O
+cv.SVDecomp void 
+    Mat src 
+    Mat w /O
+    Mat u /O
+    Mat vt /O
+    int flags 0
+cv.SVDecomp void 
+    UMat src 
+    UMat w /O
+    UMat u /O
+    UMat vt /O
+    int flags 0
+cv.SVBackSubst void 
+    Mat w 
+    Mat u 
+    Mat vt 
+    Mat rhs 
+    Mat dst /O
+cv.SVBackSubst void 
+    UMat w 
+    UMat u 
+    UMat vt 
+    UMat rhs 
+    UMat dst /O
+cv.Mahalanobis double 
+    Mat v1 
+    Mat v2 
+    Mat icovar 
+cv.Mahalanobis double 
+    UMat v1 
+    UMat v2 
+    UMat icovar 
+cv.dft void 
+    Mat src 
+    Mat dst /O
+    int flags 0
+    int nonzeroRows 0
+cv.dft void 
+    UMat src 
+    UMat dst /O
+    int flags 0
+    int nonzeroRows 0
+cv.idft void 
+    Mat src 
+    Mat dst /O
+    int flags 0
+    int nonzeroRows 0
+cv.idft void 
+    UMat src 
+    UMat dst /O
+    int flags 0
+    int nonzeroRows 0
+cv.dct void 
+    Mat src 
+    Mat dst /O
+    int flags 0
+cv.dct void 
+    UMat src 
+    UMat dst /O
+    int flags 0
+cv.idct void 
+    Mat src 
+    Mat dst /O
+    int flags 0
+cv.idct void 
+    UMat src 
+    UMat dst /O
+    int flags 0
+cv.mulSpectrums void 
+    Mat a 
+    Mat b 
+    Mat c /O
+    int flags 
+    bool conjB false
+cv.mulSpectrums void 
+    UMat a 
+    UMat b 
+    UMat c /O
+    int flags 
+    bool conjB false
+cv.getOptimalDFTSize int 
+    int vecsize 
+cv.setRNGSeed void 
+    int seed 
+cv.randu void 
+    Mat dst /IO
+    Mat low 
+    Mat high 
+cv.randu void 
+    UMat dst /IO
+    UMat low 
+    UMat high 
+cv.randn void 
+    Mat dst /IO
+    Mat mean 
+    Mat stddev 
+cv.randn void 
+    UMat dst /IO
+    UMat mean 
+    UMat stddev 
+cv.randShuffle void 
+    Mat dst /IO
+    double iterFactor 1.
+    RNG* rng 0
+cv.randShuffle void 
+    UMat dst /IO
+    double iterFactor 1.
+    RNG* rng 0
+enum cv.PCA.Flags  
+    const cv.PCA.DATA_AS_ROW 0 []
+    const cv.PCA.DATA_AS_COL 1 []
+    const cv.PCA.USE_AVG 2 []
+enum cv.SVD.Flags  
+    const cv.SVD.MODIFY_A 1 []
+    const cv.SVD.NO_UV 2 []
+    const cv.SVD.FULL_UV 4 []
+enum cv.RNG.<unnamed>  
+    const cv.RNG.UNIFORM 0 []
+    const cv.RNG.NORMAL 1 []
+cv.kmeans double 
+    Mat data 
+    int K 
+    Mat bestLabels /IO
+    TermCriteria criteria 
+    int attempts 
+    int flags 
+    Mat centers Mat()/O
+cv.kmeans double 
+    UMat data 
+    int K 
+    UMat bestLabels /IO
+    TermCriteria criteria 
+    int attempts 
+    int flags 
+    UMat centers UMat()/O
+enum cv.Formatter.<unnamed>  
+    const cv.Formatter.FMT_DEFAULT 0 []
+    const cv.Formatter.FMT_MATLAB 1 []
+    const cv.Formatter.FMT_CSV 2 []
+    const cv.Formatter.FMT_PYTHON 3 []
+    const cv.Formatter.FMT_NUMPY 4 []
+    const cv.Formatter.FMT_C 5 []
+class cv.Algorithm  
+cv.Algorithm.clear void /V
+cv.Algorithm.write void /C
+    Ptr_FileStorage fs /C; /Ref
+    String name String()/C; /Ref
+cv.Algorithm.read void /V
+    FileNode fn /C; /Ref
+cv.Algorithm.empty bool /C;/V
+cv.Algorithm.save void /C;/V
+    String filename /C; /Ref
+cv.Algorithm.getDefaultName String /C;/V
+enum cv.Param.<unnamed>  
+    const cv.Param.INT 0 []
+    const cv.Param.BOOLEAN 1 []
+    const cv.Param.REAL 2 []
+    const cv.Param.STRING 3 []
+    const cv.Param.MAT 4 []
+    const cv.Param.MAT_VECTOR 5 []
+    const cv.Param.ALGORITHM 6 []
+    const cv.Param.FLOAT 7 []
+    const cv.Param.UNSIGNED_INT 8 []
+    const cv.Param.UINT64 9 []
+    const cv.Param.UCHAR 11 []
+    const cv.Param.SCALAR 12 []
+enum cv.<unnamed>  
+    const cv.ACCESS_READ 1<<24 []
+    const cv.ACCESS_WRITE 1<<25 []
+    const cv.ACCESS_RW 3<<24 []
+    const cv.ACCESS_MASK ACCESS_RW []
+    const cv.ACCESS_FAST 1<<26 []
+enum cv._InputArray.<unnamed>  
+    const cv._InputArray.KIND_SHIFT 16 []
+    const cv._InputArray.FIXED_TYPE 0x8000 << KIND_SHIFT []
+    const cv._InputArray.FIXED_SIZE 0x4000 << KIND_SHIFT []
+    const cv._InputArray.KIND_MASK 31 << KIND_SHIFT []
+    const cv._InputArray.NONE 0 << KIND_SHIFT []
+    const cv._InputArray.MAT 1 << KIND_SHIFT []
+    const cv._InputArray.MATX 2 << KIND_SHIFT []
+    const cv._InputArray.STD_VECTOR 3 << KIND_SHIFT []
+    const cv._InputArray.STD_VECTOR_VECTOR 4 << KIND_SHIFT []
+    const cv._InputArray.STD_VECTOR_MAT 5 << KIND_SHIFT []
+    const cv._InputArray.EXPR 6 << KIND_SHIFT []
+    const cv._InputArray.OPENGL_BUFFER 7 << KIND_SHIFT []
+    const cv._InputArray.CUDA_HOST_MEM 8 << KIND_SHIFT []
+    const cv._InputArray.CUDA_GPU_MAT 9 << KIND_SHIFT []
+    const cv._InputArray.UMAT 10 << KIND_SHIFT []
+    const cv._InputArray.STD_VECTOR_UMAT 11 << KIND_SHIFT []
+    const cv._InputArray.STD_BOOL_VECTOR 12 << KIND_SHIFT []
+    const cv._InputArray.STD_VECTOR_CUDA_GPU_MAT 13 << KIND_SHIFT []
+    const cv._InputArray.STD_ARRAY 14 << KIND_SHIFT []
+    const cv._InputArray.STD_ARRAY_MAT 15 << KIND_SHIFT []
+enum cv._OutputArray.<unnamed>  
+    const cv._OutputArray.DEPTH_MASK_8U 1 << CV_8U []
+    const cv._OutputArray.DEPTH_MASK_8S 1 << CV_8S []
+    const cv._OutputArray.DEPTH_MASK_16U 1 << CV_16U []
+    const cv._OutputArray.DEPTH_MASK_16S 1 << CV_16S []
+    const cv._OutputArray.DEPTH_MASK_32S 1 << CV_32S []
+    const cv._OutputArray.DEPTH_MASK_32F 1 << CV_32F []
+    const cv._OutputArray.DEPTH_MASK_64F 1 << CV_64F []
+    const cv._OutputArray.DEPTH_MASK_ALL (DEPTH_MASK_64F<<1)-1 []
+    const cv._OutputArray.DEPTH_MASK_ALL_BUT_8S DEPTH_MASK_ALL & ~DEPTH_MASK_8S []
+    const cv._OutputArray.DEPTH_MASK_FLT DEPTH_MASK_32F + DEPTH_MASK_64F []
+enum cv.UMatUsageFlags  
+    const cv.USAGE_DEFAULT 0 []
+    const cv.USAGE_ALLOCATE_HOST_MEMORY 1 << 0 []
+    const cv.USAGE_ALLOCATE_DEVICE_MEMORY 1 << 1 []
+    const cv.USAGE_ALLOCATE_SHARED_MEMORY 1 << 2 []
+    const cv.__UMAT_USAGE_FLAGS_32BIT 0x7fffffff []
+enum cv.UMatData.<unnamed>  
+    const cv.UMatData.COPY_ON_MAP 1 []
+    const cv.UMatData.HOST_COPY_OBSOLETE 2 []
+    const cv.UMatData.DEVICE_COPY_OBSOLETE 4 []
+    const cv.UMatData.TEMP_UMAT 8 []
+    const cv.UMatData.TEMP_COPIED_UMAT 24 []
+    const cv.UMatData.USER_ALLOCATED 32 []
+    const cv.UMatData.DEVICE_MEM_MAPPED 64 []
+    const cv.UMatData.ASYNC_CLEANUP 128 []
+enum cv.Mat.<unnamed>  
+    const cv.Mat.MAGIC_VAL 0x42FF0000 []
+    const cv.Mat.AUTO_STEP 0 []
+    const cv.Mat.CONTINUOUS_FLAG CV_MAT_CONT_FLAG []
+    const cv.Mat.SUBMATRIX_FLAG CV_SUBMAT_FLAG []
+enum cv.Mat.<unnamed>  
+    const cv.Mat.MAGIC_MASK 0xFFFF0000 []
+    const cv.Mat.TYPE_MASK 0x00000FFF []
+    const cv.Mat.DEPTH_MASK 7 []
+enum cv.UMat.<unnamed>  
+    const cv.UMat.MAGIC_VAL 0x42FF0000 []
+    const cv.UMat.AUTO_STEP 0 []
+    const cv.UMat.CONTINUOUS_FLAG CV_MAT_CONT_FLAG []
+    const cv.UMat.SUBMATRIX_FLAG CV_SUBMAT_FLAG []
+enum cv.UMat.<unnamed>  
+    const cv.UMat.MAGIC_MASK 0xFFFF0000 []
+    const cv.UMat.TYPE_MASK 0x00000FFF []
+    const cv.UMat.DEPTH_MASK 7 []
+enum cv.SparseMat.<unnamed>  
+    const cv.SparseMat.MAGIC_VAL 0x42FD0000 []
+    const cv.SparseMat.MAX_DIM 32 []
+    const cv.SparseMat.HASH_SCALE 0x5bd1e995 []
+    const cv.SparseMat.HASH_BIT 0x80000000 []
+cv.ocl.haveOpenCL bool 
+cv.ocl.useOpenCL bool 
+cv.ocl.haveAmdBlas bool 
+cv.ocl.haveAmdFft bool 
+cv.ocl.setUseOpenCL void 
+    bool flag 
+cv.ocl.finish void 
+class cv.ocl.Device  /Simple
+cv.ocl.Device.Device  
+enum cv.ocl.Device.<unnamed>  
+    const cv.ocl.Device.TYPE_DEFAULT (1 << 0) []
+    const cv.ocl.Device.TYPE_CPU (1 << 1) []
+    const cv.ocl.Device.TYPE_GPU (1 << 2) []
+    const cv.ocl.Device.TYPE_ACCELERATOR (1 << 3) []
+    const cv.ocl.Device.TYPE_DGPU TYPE_GPU + (1 << 16) []
+    const cv.ocl.Device.TYPE_IGPU TYPE_GPU + (1 << 17) []
+    const cv.ocl.Device.TYPE_ALL 0xFFFFFFFF []
+cv.ocl.Device.name String /C
+cv.ocl.Device.extensions String /C
+cv.ocl.Device.isExtensionSupported bool /C
+    String extensionName /C; /Ref
+cv.ocl.Device.version String /C
+cv.ocl.Device.vendorName String /C
+cv.ocl.Device.OpenCL_C_Version String /C
+cv.ocl.Device.OpenCLVersion String /C
+cv.ocl.Device.deviceVersionMajor int /C
+cv.ocl.Device.deviceVersionMinor int /C
+cv.ocl.Device.driverVersion String /C
+cv.ocl.Device.type int /C
+cv.ocl.Device.addressBits int /C
+cv.ocl.Device.available bool /C
+cv.ocl.Device.compilerAvailable bool /C
+cv.ocl.Device.linkerAvailable bool /C
+enum cv.ocl.Device.<unnamed>  
+    const cv.ocl.Device.FP_DENORM (1 << 0) []
+    const cv.ocl.Device.FP_INF_NAN (1 << 1) []
+    const cv.ocl.Device.FP_ROUND_TO_NEAREST (1 << 2) []
+    const cv.ocl.Device.FP_ROUND_TO_ZERO (1 << 3) []
+    const cv.ocl.Device.FP_ROUND_TO_INF (1 << 4) []
+    const cv.ocl.Device.FP_FMA (1 << 5) []
+    const cv.ocl.Device.FP_SOFT_FLOAT (1 << 6) []
+    const cv.ocl.Device.FP_CORRECTLY_ROUNDED_DIVIDE_SQRT (1 << 7) []
+cv.ocl.Device.doubleFPConfig int /C
+cv.ocl.Device.singleFPConfig int /C
+cv.ocl.Device.halfFPConfig int /C
+cv.ocl.Device.endianLittle bool /C
+cv.ocl.Device.errorCorrectionSupport bool /C
+enum cv.ocl.Device.<unnamed>  
+    const cv.ocl.Device.EXEC_KERNEL (1 << 0) []
+    const cv.ocl.Device.EXEC_NATIVE_KERNEL (1 << 1) []
+cv.ocl.Device.executionCapabilities int /C
+cv.ocl.Device.globalMemCacheSize size_t /C
+enum cv.ocl.Device.<unnamed>  
+    const cv.ocl.Device.NO_CACHE 0 []
+    const cv.ocl.Device.READ_ONLY_CACHE 1 []
+    const cv.ocl.Device.READ_WRITE_CACHE 2 []
+cv.ocl.Device.globalMemCacheType int /C
+cv.ocl.Device.globalMemCacheLineSize int /C
+cv.ocl.Device.globalMemSize size_t /C
+cv.ocl.Device.localMemSize size_t /C
+enum cv.ocl.Device.<unnamed>  
+    const cv.ocl.Device.NO_LOCAL_MEM 0 []
+    const cv.ocl.Device.LOCAL_IS_LOCAL 1 []
+    const cv.ocl.Device.LOCAL_IS_GLOBAL 2 []
+cv.ocl.Device.localMemType int /C
+cv.ocl.Device.hostUnifiedMemory bool /C
+cv.ocl.Device.imageSupport bool /C
+cv.ocl.Device.imageFromBufferSupport bool /C
+cv.ocl.Device.intelSubgroupsSupport bool /C
+cv.ocl.Device.image2DMaxWidth size_t /C
+cv.ocl.Device.image2DMaxHeight size_t /C
+cv.ocl.Device.image3DMaxWidth size_t /C
+cv.ocl.Device.image3DMaxHeight size_t /C
+cv.ocl.Device.image3DMaxDepth size_t /C
+cv.ocl.Device.imageMaxBufferSize size_t /C
+cv.ocl.Device.imageMaxArraySize size_t /C
+enum cv.ocl.Device.<unnamed>  
+    const cv.ocl.Device.UNKNOWN_VENDOR 0 []
+    const cv.ocl.Device.VENDOR_AMD 1 []
+    const cv.ocl.Device.VENDOR_INTEL 2 []
+    const cv.ocl.Device.VENDOR_NVIDIA 3 []
+cv.ocl.Device.vendorID int /C
+cv.ocl.Device.isAMD bool /C
+cv.ocl.Device.isIntel bool /C
+cv.ocl.Device.isNVidia bool /C
+cv.ocl.Device.maxClockFrequency int /C
+cv.ocl.Device.maxComputeUnits int /C
+cv.ocl.Device.maxConstantArgs int /C
+cv.ocl.Device.maxConstantBufferSize size_t /C
+cv.ocl.Device.maxMemAllocSize size_t /C
+cv.ocl.Device.maxParameterSize size_t /C
+cv.ocl.Device.maxReadImageArgs int /C
+cv.ocl.Device.maxWriteImageArgs int /C
+cv.ocl.Device.maxSamplers int /C
+cv.ocl.Device.maxWorkGroupSize size_t /C
+cv.ocl.Device.maxWorkItemDims int /C
+cv.ocl.Device.memBaseAddrAlign int /C
+cv.ocl.Device.nativeVectorWidthChar int /C
+cv.ocl.Device.nativeVectorWidthShort int /C
+cv.ocl.Device.nativeVectorWidthInt int /C
+cv.ocl.Device.nativeVectorWidthLong int /C
+cv.ocl.Device.nativeVectorWidthFloat int /C
+cv.ocl.Device.nativeVectorWidthDouble int /C
+cv.ocl.Device.nativeVectorWidthHalf int /C
+cv.ocl.Device.preferredVectorWidthChar int /C
+cv.ocl.Device.preferredVectorWidthShort int /C
+cv.ocl.Device.preferredVectorWidthInt int /C
+cv.ocl.Device.preferredVectorWidthLong int /C
+cv.ocl.Device.preferredVectorWidthFloat int /C
+cv.ocl.Device.preferredVectorWidthDouble int /C
+cv.ocl.Device.preferredVectorWidthHalf int /C
+cv.ocl.Device.printfBufferSize size_t /C
+cv.ocl.Device.profilingTimerResolution size_t /C
+cv.ocl.Device.getDefault Device /S
+enum cv.ocl.KernelArg.<unnamed>  
+    const cv.ocl.KernelArg.LOCAL 1 []
+    const cv.ocl.KernelArg.READ_ONLY 2 []
+    const cv.ocl.KernelArg.WRITE_ONLY 4 []
+    const cv.ocl.KernelArg.READ_WRITE 6 []
+    const cv.ocl.KernelArg.CONSTANT 8 []
+    const cv.ocl.KernelArg.PTR_ONLY 16 []
+    const cv.ocl.KernelArg.NO_SIZE 256 []
+enum cv.ocl.OclVectorStrategy  
+    const cv.ocl.OCL_VECTOR_OWN 0 []
+    const cv.ocl.OCL_VECTOR_MAX 1 []
+    const cv.ocl.OCL_VECTOR_DEFAULT OCL_VECTOR_OWN []
+class cv.flann.Index  
+cv.flann.Index.Index  
+cv.flann.Index.Index  
+    Mat features 
+    IndexParams params /C; /Ref
+    cvflann_flann_distance_t distType cvflann::FLANN_DIST_L2
+cv.flann.Index.Index  
+    UMat features 
+    IndexParams params /C; /Ref
+    cvflann_flann_distance_t distType cvflann::FLANN_DIST_L2
+cv.flann.Index.build void /V
+    Mat features 
+    IndexParams params /C; /Ref
+    cvflann_flann_distance_t distType cvflann::FLANN_DIST_L2
+cv.flann.Index.build void /V
+    UMat features 
+    IndexParams params /C; /Ref
+    cvflann_flann_distance_t distType cvflann::FLANN_DIST_L2
+cv.flann.Index.knnSearch void /V
+    Mat query 
+    Mat indices /O
+    Mat dists /O
+    int knn 
+    SearchParams params SearchParams()/C; /Ref
+cv.flann.Index.knnSearch void /V
+    UMat query 
+    UMat indices /O
+    UMat dists /O
+    int knn 
+    SearchParams params SearchParams()/C; /Ref
+cv.flann.Index.radiusSearch int /V
+    Mat query 
+    Mat indices /O
+    Mat dists /O
+    double radius 
+    int maxResults 
+    SearchParams params SearchParams()/C; /Ref
+cv.flann.Index.radiusSearch int /V
+    UMat query 
+    UMat indices /O
+    UMat dists /O
+    double radius 
+    int maxResults 
+    SearchParams params SearchParams()/C; /Ref
+cv.flann.Index.save void /C;/V
+    String filename /C; /Ref
+cv.flann.Index.load bool /V
+    Mat features 
+    String filename /C; /Ref
+cv.flann.Index.load bool /V
+    UMat features 
+    String filename /C; /Ref
+cv.flann.Index.release void /V
+cv.flann.Index.getDistance cvflann_flann_distance_t /C
+cv.flann.Index.getAlgorithm cvflann_flann_algorithm_t /C
+enum cv.ml.VariableTypes  
+    const cv.ml.VAR_NUMERICAL 0 []
+    const cv.ml.VAR_ORDERED 0 []
+    const cv.ml.VAR_CATEGORICAL 1 []
+enum cv.ml.ErrorTypes  
+    const cv.ml.TEST_ERROR 0 []
+    const cv.ml.TRAIN_ERROR 1 []
+enum cv.ml.SampleTypes  
+    const cv.ml.ROW_SAMPLE 0 []
+    const cv.ml.COL_SAMPLE 1 []
+class cv.ml.ParamGrid  
+    double minVal /RW
+    double maxVal /RW
+    double logStep /RW
+cv.ml.ParamGrid.create Ptr_ParamGrid /S
+    double minVal 0.
+    double maxVal 0.
+    double logstep 1.
+class cv.ml.TrainData  
+cv.ml.TrainData.getLayout int /C;/V;/PV
+cv.ml.TrainData.getNTrainSamples int /C;/V;/PV
+cv.ml.TrainData.getNTestSamples int /C;/V;/PV
+cv.ml.TrainData.getNSamples int /C;/V;/PV
+cv.ml.TrainData.getNVars int /C;/V;/PV
+cv.ml.TrainData.getNAllVars int /C;/V;/PV
+cv.ml.TrainData.getSample void /C;/V;/PV
+    Mat varIdx 
+    int sidx 
+    float* buf 
+cv.ml.TrainData.getSample void /C;/V;/PV
+    UMat varIdx 
+    int sidx 
+    float* buf 
+cv.ml.TrainData.getSamples Mat /C;/V;/PV
+cv.ml.TrainData.getMissing Mat /C;/V;/PV
+cv.ml.TrainData.getTrainSamples Mat /C;/V;/PV
+    int layout ROW_SAMPLE
+    bool compressSamples true
+    bool compressVars true
+cv.ml.TrainData.getTrainResponses Mat /C;/V;/PV
+cv.ml.TrainData.getTrainNormCatResponses Mat /C;/V;/PV
+cv.ml.TrainData.getTestResponses Mat /C;/V;/PV
+cv.ml.TrainData.getTestNormCatResponses Mat /C;/V;/PV
+cv.ml.TrainData.getResponses Mat /C;/V;/PV
+cv.ml.TrainData.getNormCatResponses Mat /C;/V;/PV
+cv.ml.TrainData.getSampleWeights Mat /C;/V;/PV
+cv.ml.TrainData.getTrainSampleWeights Mat /C;/V;/PV
+cv.ml.TrainData.getTestSampleWeights Mat /C;/V;/PV
+cv.ml.TrainData.getVarIdx Mat /C;/V;/PV
+cv.ml.TrainData.getVarType Mat /C;/V;/PV
+cv.ml.TrainData.getVarSymbolFlags Mat /C
+cv.ml.TrainData.getResponseType int /C;/V;/PV
+cv.ml.TrainData.getTrainSampleIdx Mat /C;/V;/PV
+cv.ml.TrainData.getTestSampleIdx Mat /C;/V;/PV
+cv.ml.TrainData.getValues void /C;/V;/PV
+    int vi 
+    Mat sidx 
+    float* values 
+cv.ml.TrainData.getValues void /C;/V;/PV
+    int vi 
+    UMat sidx 
+    float* values 
+cv.ml.TrainData.getDefaultSubstValues Mat /C;/V;/PV
+cv.ml.TrainData.getCatCount int /C;/V;/PV
+    int vi 
+cv.ml.TrainData.getClassLabels Mat /C;/V;/PV
+cv.ml.TrainData.getCatOfs Mat /C;/V;/PV
+cv.ml.TrainData.getCatMap Mat /C;/V;/PV
+cv.ml.TrainData.setTrainTestSplit void /V;/PV
+    int count 
+    bool shuffle true
+cv.ml.TrainData.setTrainTestSplitRatio void /V;/PV
+    double ratio 
+    bool shuffle true
+cv.ml.TrainData.shuffleTrainTest void /V;/PV
+cv.ml.TrainData.getTestSamples Mat /C
+cv.ml.TrainData.getNames void /C
+    vector_String names /Ref
+cv.ml.TrainData.getSubVector Mat /S
+    Mat vec /C; /Ref
+    Mat idx /C; /Ref
+cv.ml.TrainData.getSubVector Mat /S
+    Mat vec /C; /Ref
+    Mat idx /C; /Ref
+cv.ml.TrainData.getSubMatrix Mat /S
+    Mat matrix /C; /Ref
+    Mat idx /C; /Ref
+    int layout 
+cv.ml.TrainData.getSubMatrix Mat /S
+    Mat matrix /C; /Ref
+    Mat idx /C; /Ref
+    int layout 
+cv.ml.TrainData.create Ptr_TrainData /S
+    Mat samples 
+    int layout 
+    Mat responses 
+    Mat varIdx Mat()
+    Mat sampleIdx Mat()
+    Mat sampleWeights Mat()
+    Mat varType Mat()
+cv.ml.TrainData.create Ptr_TrainData /S
+    UMat samples 
+    int layout 
+    UMat responses 
+    UMat varIdx UMat()
+    UMat sampleIdx UMat()
+    UMat sampleWeights UMat()
+    UMat varType UMat()
+class cv.ml.StatModel : cv::Algorithm 
+enum cv.ml.StatModel.Flags  
+    const cv.ml.StatModel.UPDATE_MODEL 1 []
+    const cv.ml.StatModel.RAW_OUTPUT 1 []
+    const cv.ml.StatModel.COMPRESSED_INPUT 2 []
+    const cv.ml.StatModel.PREPROCESSED_INPUT 4 []
+cv.ml.StatModel.getVarCount int /C;/V;/PV
+cv.ml.StatModel.empty bool /C;/V
+cv.ml.StatModel.isTrained bool /C;/V;/PV
+cv.ml.StatModel.isClassifier bool /C;/V;/PV
+cv.ml.StatModel.train bool /V
+    Ptr_TrainData trainData /C; /Ref
+    int flags 0
+cv.ml.StatModel.train bool /V
+    Mat samples 
+    int layout 
+    Mat responses 
+cv.ml.StatModel.train bool /V
+    UMat samples 
+    int layout 
+    UMat responses 
+cv.ml.StatModel.calcError float /C;/V
+    Ptr_TrainData data /C; /Ref
+    bool test 
+    Mat resp /O
+cv.ml.StatModel.calcError float /C;/V
+    Ptr_TrainData data /C; /Ref
+    bool test 
+    UMat resp /O
+cv.ml.StatModel.predict float /C;/V;/PV
+    Mat samples 
+    Mat results Mat()/O
+    int flags 0
+cv.ml.StatModel.predict float /C;/V;/PV
+    UMat samples 
+    UMat results UMat()/O
+    int flags 0
+class cv.ml.NormalBayesClassifier : cv::ml::StatModel 
+cv.ml.NormalBayesClassifier.predictProb float /C;/V;/PV
+    Mat inputs 
+    Mat outputs /O
+    Mat outputProbs /O
+    int flags 0
+cv.ml.NormalBayesClassifier.predictProb float /C;/V;/PV
+    UMat inputs 
+    UMat outputs /O
+    UMat outputProbs /O
+    int flags 0
+cv.ml.NormalBayesClassifier.create Ptr_NormalBayesClassifier /S
+cv.ml.NormalBayesClassifier.load Ptr_NormalBayesClassifier /S
+    String filepath /C; /Ref
+    String nodeName String()/C; /Ref
+class cv.ml.KNearest : cv::ml::StatModel 
+cv.ml.KNearest.getDefaultK int /C;/V;/PV
+cv.ml.KNearest.setDefaultK void /V;/PV
+    int val 
+cv.ml.KNearest.getIsClassifier bool /C;/V;/PV
+cv.ml.KNearest.setIsClassifier void /V;/PV
+    bool val 
+cv.ml.KNearest.getEmax int /C;/V;/PV
+cv.ml.KNearest.setEmax void /V;/PV
+    int val 
+cv.ml.KNearest.getAlgorithmType int /C;/V;/PV
+cv.ml.KNearest.setAlgorithmType void /V;/PV
+    int val 
+cv.ml.KNearest.findNearest float /C;/V;/PV
+    Mat samples 
+    int k 
+    Mat results /O
+    Mat neighborResponses Mat()/O
+    Mat dist Mat()/O
+cv.ml.KNearest.findNearest float /C;/V;/PV
+    UMat samples 
+    int k 
+    UMat results /O
+    UMat neighborResponses UMat()/O
+    UMat dist UMat()/O
+enum cv.ml.KNearest.Types  
+    const cv.ml.KNearest.BRUTE_FORCE 1 []
+    const cv.ml.KNearest.KDTREE 2 []
+cv.ml.KNearest.create Ptr_KNearest /S
+cv.ml.KNearest.load Ptr_KNearest /S
+    String filepath /C; /Ref
+class cv.ml.SVM : cv::ml::StatModel 
+cv.ml.SVM.getType int /C;/V;/PV
+cv.ml.SVM.setType void /V;/PV
+    int val 
+cv.ml.SVM.getGamma double /C;/V;/PV
+cv.ml.SVM.setGamma void /V;/PV
+    double val 
+cv.ml.SVM.getCoef0 double /C;/V;/PV
+cv.ml.SVM.setCoef0 void /V;/PV
+    double val 
+cv.ml.SVM.getDegree double /C;/V;/PV
+cv.ml.SVM.setDegree void /V;/PV
+    double val 
+cv.ml.SVM.getC double /C;/V;/PV
+cv.ml.SVM.setC void /V;/PV
+    double val 
+cv.ml.SVM.getNu double /C;/V;/PV
+cv.ml.SVM.setNu void /V;/PV
+    double val 
+cv.ml.SVM.getP double /C;/V;/PV
+cv.ml.SVM.setP void /V;/PV
+    double val 
+cv.ml.SVM.getClassWeights Mat /C;/V;/PV
+cv.ml.SVM.setClassWeights void /V;/PV
+    Mat val /C; /Ref
+cv.ml.SVM.setClassWeights void /V;/PV
+    Mat val /C; /Ref
+cv.ml.SVM.getTermCriteria TermCriteria /C;/V;/PV
+cv.ml.SVM.setTermCriteria void /V;/PV
+    TermCriteria val /C; /Ref
+cv.ml.SVM.getKernelType int /C;/V;/PV
+cv.ml.SVM.setKernel void /V;/PV
+    int kernelType 
+enum cv.ml.SVM.Types  
+    const cv.ml.SVM.C_SVC 100 []
+    const cv.ml.SVM.NU_SVC 101 []
+    const cv.ml.SVM.ONE_CLASS 102 []
+    const cv.ml.SVM.EPS_SVR 103 []
+    const cv.ml.SVM.NU_SVR 104 []
+enum cv.ml.SVM.KernelTypes  
+    const cv.ml.SVM.CUSTOM -1 []
+    const cv.ml.SVM.LINEAR 0 []
+    const cv.ml.SVM.POLY 1 []
+    const cv.ml.SVM.RBF 2 []
+    const cv.ml.SVM.SIGMOID 3 []
+    const cv.ml.SVM.CHI2 4 []
+    const cv.ml.SVM.INTER 5 []
+enum cv.ml.SVM.ParamTypes  
+    const cv.ml.SVM.C 0 []
+    const cv.ml.SVM.GAMMA 1 []
+    const cv.ml.SVM.P 2 []
+    const cv.ml.SVM.NU 3 []
+    const cv.ml.SVM.COEF 4 []
+    const cv.ml.SVM.DEGREE 5 []
+cv.ml.SVM.trainAuto bool 
+    Mat samples 
+    int layout 
+    Mat responses 
+    int kFold 10
+    Ptr_ParamGrid Cgrid SVM::getDefaultGridPtr(SVM::C)
+    Ptr_ParamGrid gammaGrid SVM::getDefaultGridPtr(SVM::GAMMA)
+    Ptr_ParamGrid pGrid SVM::getDefaultGridPtr(SVM::P)
+    Ptr_ParamGrid nuGrid SVM::getDefaultGridPtr(SVM::NU)
+    Ptr_ParamGrid coeffGrid SVM::getDefaultGridPtr(SVM::COEF)
+    Ptr_ParamGrid degreeGrid SVM::getDefaultGridPtr(SVM::DEGREE)
+    bool balanced false
+cv.ml.SVM.trainAuto bool 
+    UMat samples 
+    int layout 
+    UMat responses 
+    int kFold 10
+    Ptr_ParamGrid Cgrid SVM::getDefaultGridPtr(SVM::C)
+    Ptr_ParamGrid gammaGrid SVM::getDefaultGridPtr(SVM::GAMMA)
+    Ptr_ParamGrid pGrid SVM::getDefaultGridPtr(SVM::P)
+    Ptr_ParamGrid nuGrid SVM::getDefaultGridPtr(SVM::NU)
+    Ptr_ParamGrid coeffGrid SVM::getDefaultGridPtr(SVM::COEF)
+    Ptr_ParamGrid degreeGrid SVM::getDefaultGridPtr(SVM::DEGREE)
+    bool balanced false
+cv.ml.SVM.getSupportVectors Mat /C;/V;/PV
+cv.ml.SVM.getUncompressedSupportVectors Mat /C
+cv.ml.SVM.getDecisionFunction double /C;/V;/PV
+    int i 
+    Mat alpha /O
+    Mat svidx /O
+cv.ml.SVM.getDecisionFunction double /C;/V;/PV
+    int i 
+    UMat alpha /O
+    UMat svidx /O
+cv.ml.SVM.getDefaultGridPtr Ptr_ParamGrid /S
+    int param_id 
+cv.ml.SVM.create Ptr_SVM /S
+cv.ml.SVM.load Ptr_SVM /S
+    String filepath /C; /Ref
+class cv.ml.EM : cv::ml::StatModel 
+enum cv.ml.EM.Types  
+    const cv.ml.EM.COV_MAT_SPHERICAL 0 []
+    const cv.ml.EM.COV_MAT_DIAGONAL 1 []
+    const cv.ml.EM.COV_MAT_GENERIC 2 []
+    const cv.ml.EM.COV_MAT_DEFAULT COV_MAT_DIAGONAL []
+enum cv.ml.EM.<unnamed>  
+    const cv.ml.EM.DEFAULT_NCLUSTERS 5 []
+    const cv.ml.EM.DEFAULT_MAX_ITERS 100 []
+enum cv.ml.EM.<unnamed>  
+    const cv.ml.EM.START_E_STEP 1 []
+    const cv.ml.EM.START_M_STEP 2 []
+    const cv.ml.EM.START_AUTO_STEP 0 []
+cv.ml.EM.getClustersNumber int /C;/V;/PV
+cv.ml.EM.setClustersNumber void /V;/PV
+    int val 
+cv.ml.EM.getCovarianceMatrixType int /C;/V;/PV
+cv.ml.EM.setCovarianceMatrixType void /V;/PV
+    int val 
+cv.ml.EM.getTermCriteria TermCriteria /C;/V;/PV
+cv.ml.EM.setTermCriteria void /V;/PV
+    TermCriteria val /C; /Ref
+cv.ml.EM.getWeights Mat /C;/V;/PV
+cv.ml.EM.getMeans Mat /C;/V;/PV
+cv.ml.EM.getCovs void /C;/V;/PV
+    vector_Mat covs /O; /Ref
+cv.ml.EM.getCovs void /C;/V;/PV
+    vector_Mat covs /O; /Ref
+cv.ml.EM.predict float /C;/V;/PV
+    Mat samples 
+    Mat results Mat()/O
+    int flags 0
+cv.ml.EM.predict float /C;/V;/PV
+    UMat samples 
+    UMat results UMat()/O
+    int flags 0
+cv.ml.EM.predict2 Vec2d /C;/V;/PV
+    Mat sample 
+    Mat probs /O
+cv.ml.EM.predict2 Vec2d /C;/V;/PV
+    UMat sample 
+    UMat probs /O
+cv.ml.EM.trainEM bool /V;/PV
+    Mat samples 
+    Mat logLikelihoods Mat()/O
+    Mat labels Mat()/O
+    Mat probs Mat()/O
+cv.ml.EM.trainEM bool /V;/PV
+    UMat samples 
+    UMat logLikelihoods UMat()/O
+    UMat labels UMat()/O
+    UMat probs UMat()/O
+cv.ml.EM.trainE bool /V;/PV
+    Mat samples 
+    Mat means0 
+    Mat covs0 Mat()
+    Mat weights0 Mat()
+    Mat logLikelihoods Mat()/O
+    Mat labels Mat()/O
+    Mat probs Mat()/O
+cv.ml.EM.trainE bool /V;/PV
+    UMat samples 
+    UMat means0 
+    UMat covs0 UMat()
+    UMat weights0 UMat()
+    UMat logLikelihoods UMat()/O
+    UMat labels UMat()/O
+    UMat probs UMat()/O
+cv.ml.EM.trainM bool /V;/PV
+    Mat samples 
+    Mat probs0 
+    Mat logLikelihoods Mat()/O
+    Mat labels Mat()/O
+    Mat probs Mat()/O
+cv.ml.EM.trainM bool /V;/PV
+    UMat samples 
+    UMat probs0 
+    UMat logLikelihoods UMat()/O
+    UMat labels UMat()/O
+    UMat probs UMat()/O
+cv.ml.EM.create Ptr_EM /S
+cv.ml.EM.load Ptr_EM /S
+    String filepath /C; /Ref
+    String nodeName String()/C; /Ref
+class cv.ml.DTrees : cv::ml::StatModel 
+enum cv.ml.DTrees.Flags  
+    const cv.ml.DTrees.PREDICT_AUTO 0 []
+    const cv.ml.DTrees.PREDICT_SUM (1<<8) []
+    const cv.ml.DTrees.PREDICT_MAX_VOTE (2<<8) []
+    const cv.ml.DTrees.PREDICT_MASK (3<<8) []
+cv.ml.DTrees.getMaxCategories int /C;/V;/PV
+cv.ml.DTrees.setMaxCategories void /V;/PV
+    int val 
+cv.ml.DTrees.getMaxDepth int /C;/V;/PV
+cv.ml.DTrees.setMaxDepth void /V;/PV
+    int val 
+cv.ml.DTrees.getMinSampleCount int /C;/V;/PV
+cv.ml.DTrees.setMinSampleCount void /V;/PV
+    int val 
+cv.ml.DTrees.getCVFolds int /C;/V;/PV
+cv.ml.DTrees.setCVFolds void /V;/PV
+    int val 
+cv.ml.DTrees.getUseSurrogates bool /C;/V;/PV
+cv.ml.DTrees.setUseSurrogates void /V;/PV
+    bool val 
+cv.ml.DTrees.getUse1SERule bool /C;/V;/PV
+cv.ml.DTrees.setUse1SERule void /V;/PV
+    bool val 
+cv.ml.DTrees.getTruncatePrunedTree bool /C;/V;/PV
+cv.ml.DTrees.setTruncatePrunedTree void /V;/PV
+    bool val 
+cv.ml.DTrees.getRegressionAccuracy float /C;/V;/PV
+cv.ml.DTrees.setRegressionAccuracy void /V;/PV
+    float val 
+cv.ml.DTrees.getPriors Mat /C;/V;/PV
+cv.ml.DTrees.setPriors void /V;/PV
+    Mat val /C; /Ref
+cv.ml.DTrees.setPriors void /V;/PV
+    Mat val /C; /Ref
+cv.ml.DTrees.create Ptr_DTrees /S
+cv.ml.DTrees.load Ptr_DTrees /S
+    String filepath /C; /Ref
+    String nodeName String()/C; /Ref
+class cv.ml.RTrees : cv::ml::DTrees 
+cv.ml.RTrees.getCalculateVarImportance bool /C;/V;/PV
+cv.ml.RTrees.setCalculateVarImportance void /V;/PV
+    bool val 
+cv.ml.RTrees.getActiveVarCount int /C;/V;/PV
+cv.ml.RTrees.setActiveVarCount void /V;/PV
+    int val 
+cv.ml.RTrees.getTermCriteria TermCriteria /C;/V;/PV
+cv.ml.RTrees.setTermCriteria void /V;/PV
+    TermCriteria val /C; /Ref
+cv.ml.RTrees.getVarImportance Mat /C;/V;/PV
+cv.ml.RTrees.getVotes void /C
+    Mat samples 
+    Mat results /O
+    int flags 
+cv.ml.RTrees.getVotes void /C
+    UMat samples 
+    UMat results /O
+    int flags 
+cv.ml.RTrees.create Ptr_RTrees /S
+cv.ml.RTrees.load Ptr_RTrees /S
+    String filepath /C; /Ref
+    String nodeName String()/C; /Ref
+class cv.ml.Boost : cv::ml::DTrees 
+cv.ml.Boost.getBoostType int /C;/V;/PV
+cv.ml.Boost.setBoostType void /V;/PV
+    int val 
+cv.ml.Boost.getWeakCount int /C;/V;/PV
+cv.ml.Boost.setWeakCount void /V;/PV
+    int val 
+cv.ml.Boost.getWeightTrimRate double /C;/V;/PV
+cv.ml.Boost.setWeightTrimRate void /V;/PV
+    double val 
+enum cv.ml.Boost.Types  
+    const cv.ml.Boost.DISCRETE 0 []
+    const cv.ml.Boost.REAL 1 []
+    const cv.ml.Boost.LOGIT 2 []
+    const cv.ml.Boost.GENTLE 3 []
+cv.ml.Boost.create Ptr_Boost /S
+cv.ml.Boost.load Ptr_Boost /S
+    String filepath /C; /Ref
+    String nodeName String()/C; /Ref
+class cv.ml.ANN_MLP : cv::ml::StatModel 
+enum cv.ml.ANN_MLP.TrainingMethods  
+    const cv.ml.ANN_MLP.BACKPROP 0 []
+    const cv.ml.ANN_MLP.RPROP 1 []
+    const cv.ml.ANN_MLP.ANNEAL 2 []
+cv.ml.ANN_MLP.setTrainMethod void /V;/PV
+    int method 
+    double param1 0
+    double param2 0
+cv.ml.ANN_MLP.getTrainMethod int /C;/V;/PV
+cv.ml.ANN_MLP.setActivationFunction void /V;/PV
+    int type 
+    double param1 0
+    double param2 0
+cv.ml.ANN_MLP.setLayerSizes void /V;/PV
+    Mat _layer_sizes 
+cv.ml.ANN_MLP.setLayerSizes void /V;/PV
+    UMat _layer_sizes 
+cv.ml.ANN_MLP.getLayerSizes Mat /C;/V;/PV
+cv.ml.ANN_MLP.getTermCriteria TermCriteria /C;/V;/PV
+cv.ml.ANN_MLP.setTermCriteria void /V;/PV
+    TermCriteria val 
+cv.ml.ANN_MLP.getBackpropWeightScale double /C;/V;/PV
+cv.ml.ANN_MLP.setBackpropWeightScale void /V;/PV
+    double val 
+cv.ml.ANN_MLP.getBackpropMomentumScale double /C;/V;/PV
+cv.ml.ANN_MLP.setBackpropMomentumScale void /V;/PV
+    double val 
+cv.ml.ANN_MLP.getRpropDW0 double /C;/V;/PV
+cv.ml.ANN_MLP.setRpropDW0 void /V;/PV
+    double val 
+cv.ml.ANN_MLP.getRpropDWPlus double /C;/V;/PV
+cv.ml.ANN_MLP.setRpropDWPlus void /V;/PV
+    double val 
+cv.ml.ANN_MLP.getRpropDWMinus double /C;/V;/PV
+cv.ml.ANN_MLP.setRpropDWMinus void /V;/PV
+    double val 
+cv.ml.ANN_MLP.getRpropDWMin double /C;/V;/PV
+cv.ml.ANN_MLP.setRpropDWMin void /V;/PV
+    double val 
+cv.ml.ANN_MLP.getRpropDWMax double /C;/V;/PV
+cv.ml.ANN_MLP.setRpropDWMax void /V;/PV
+    double val 
+cv.ml.ANN_MLP.getAnnealInitialT double /C
+cv.ml.ANN_MLP.setAnnealInitialT void 
+    double val 
+cv.ml.ANN_MLP.getAnnealFinalT double /C
+cv.ml.ANN_MLP.setAnnealFinalT void 
+    double val 
+cv.ml.ANN_MLP.getAnnealCoolingRatio double /C
+cv.ml.ANN_MLP.setAnnealCoolingRatio void 
+    double val 
+cv.ml.ANN_MLP.getAnnealItePerStep int /C
+cv.ml.ANN_MLP.setAnnealItePerStep void 
+    int val 
+enum cv.ml.ANN_MLP.ActivationFunctions  
+    const cv.ml.ANN_MLP.IDENTITY 0 []
+    const cv.ml.ANN_MLP.SIGMOID_SYM 1 []
+    const cv.ml.ANN_MLP.GAUSSIAN 2 []
+    const cv.ml.ANN_MLP.RELU 3 []
+    const cv.ml.ANN_MLP.LEAKYRELU 4 []
+enum cv.ml.ANN_MLP.TrainFlags  
+    const cv.ml.ANN_MLP.UPDATE_WEIGHTS 1 []
+    const cv.ml.ANN_MLP.NO_INPUT_SCALE 2 []
+    const cv.ml.ANN_MLP.NO_OUTPUT_SCALE 4 []
+cv.ml.ANN_MLP.getWeights Mat /C;/V;/PV
+    int layerIdx 
+cv.ml.ANN_MLP.create Ptr_ANN_MLP /S
+cv.ml.ANN_MLP.load Ptr_ANN_MLP /S
+    String filepath /C; /Ref
+class cv.ml.LogisticRegression : cv::ml::StatModel 
+cv.ml.LogisticRegression.getLearningRate double /C;/V;/PV
+cv.ml.LogisticRegression.setLearningRate void /V;/PV
+    double val 
+cv.ml.LogisticRegression.getIterations int /C;/V;/PV
+cv.ml.LogisticRegression.setIterations void /V;/PV
+    int val 
+cv.ml.LogisticRegression.getRegularization int /C;/V;/PV
+cv.ml.LogisticRegression.setRegularization void /V;/PV
+    int val 
+cv.ml.LogisticRegression.getTrainMethod int /C;/V;/PV
+cv.ml.LogisticRegression.setTrainMethod void /V;/PV
+    int val 
+cv.ml.LogisticRegression.getMiniBatchSize int /C;/V;/PV
+cv.ml.LogisticRegression.setMiniBatchSize void /V;/PV
+    int val 
+cv.ml.LogisticRegression.getTermCriteria TermCriteria /C;/V;/PV
+cv.ml.LogisticRegression.setTermCriteria void /V;/PV
+    TermCriteria val 
+enum cv.ml.LogisticRegression.RegKinds  
+    const cv.ml.LogisticRegression.REG_DISABLE -1 []
+    const cv.ml.LogisticRegression.REG_L1 0 []
+    const cv.ml.LogisticRegression.REG_L2 1 []
+enum cv.ml.LogisticRegression.Methods  
+    const cv.ml.LogisticRegression.BATCH 0 []
+    const cv.ml.LogisticRegression.MINI_BATCH 1 []
+cv.ml.LogisticRegression.predict float /C;/V;/PV
+    Mat samples 
+    Mat results Mat()/O
+    int flags 0
+cv.ml.LogisticRegression.predict float /C;/V;/PV
+    UMat samples 
+    UMat results UMat()/O
+    int flags 0
+cv.ml.LogisticRegression.get_learnt_thetas Mat /C;/V;/PV
+cv.ml.LogisticRegression.create Ptr_LogisticRegression /S
+cv.ml.LogisticRegression.load Ptr_LogisticRegression /S
+    String filepath /C; /Ref
+    String nodeName String()/C; /Ref
+class cv.ml.SVMSGD : cv::ml::StatModel 
+enum cv.ml.SVMSGD.SvmsgdType  
+    const cv.ml.SVMSGD.SGD 0 []
+    const cv.ml.SVMSGD.ASGD 1 []
+enum cv.ml.SVMSGD.MarginType  
+    const cv.ml.SVMSGD.SOFT_MARGIN 0 []
+    const cv.ml.SVMSGD.HARD_MARGIN 1 []
+cv.ml.SVMSGD.getWeights Mat /V;/PV
+cv.ml.SVMSGD.getShift float /V;/PV
+cv.ml.SVMSGD.create Ptr_SVMSGD /S
+cv.ml.SVMSGD.load Ptr_SVMSGD /S
+    String filepath /C; /Ref
+    String nodeName String()/C; /Ref
+cv.ml.SVMSGD.setOptimalParameters void /V;/PV
+    int svmsgdType SVMSGD::ASGD
+    int marginType SVMSGD::SOFT_MARGIN
+cv.ml.SVMSGD.getSvmsgdType int /C;/V;/PV
+cv.ml.SVMSGD.setSvmsgdType void /V;/PV
+    int svmsgdType 
+cv.ml.SVMSGD.getMarginType int /C;/V;/PV
+cv.ml.SVMSGD.setMarginType void /V;/PV
+    int marginType 
+cv.ml.SVMSGD.getMarginRegularization float /C;/V;/PV
+cv.ml.SVMSGD.setMarginRegularization void /V;/PV
+    float marginRegularization 
+cv.ml.SVMSGD.getInitialStepSize float /C;/V;/PV
+cv.ml.SVMSGD.setInitialStepSize void /V;/PV
+    float InitialStepSize 
+cv.ml.SVMSGD.getStepDecreasingPower float /C;/V;/PV
+cv.ml.SVMSGD.setStepDecreasingPower void /V;/PV
+    float stepDecreasingPower 
+cv.ml.SVMSGD.getTermCriteria TermCriteria /C;/V;/PV
+cv.ml.SVMSGD.setTermCriteria void /V;/PV
+    TermCriteria val /C; /Ref
+class cv.ml.ANN_MLP_ANNEAL : cv::ml::ANN_MLP 
+cv.ml.ANN_MLP_ANNEAL.getAnnealInitialT double /C;/V;/PV
+cv.ml.ANN_MLP_ANNEAL.setAnnealInitialT void /V;/PV
+    double val 
+cv.ml.ANN_MLP_ANNEAL.getAnnealFinalT double /C;/V;/PV
+cv.ml.ANN_MLP_ANNEAL.setAnnealFinalT void /V;/PV
+    double val 
+cv.ml.ANN_MLP_ANNEAL.getAnnealCoolingRatio double /C;/V;/PV
+cv.ml.ANN_MLP_ANNEAL.setAnnealCoolingRatio void /V;/PV
+    double val 
+cv.ml.ANN_MLP_ANNEAL.getAnnealItePerStep int /C;/V;/PV
+cv.ml.ANN_MLP_ANNEAL.setAnnealItePerStep void /V;/PV
+    int val 
+enum cv.MorphTypes  
+    const cv.MORPH_ERODE 0 []
+    const cv.MORPH_DILATE 1 []
+    const cv.MORPH_OPEN 2 []
+    const cv.MORPH_CLOSE 3 []
+    const cv.MORPH_GRADIENT 4 []
+    const cv.MORPH_TOPHAT 5 []
+    const cv.MORPH_BLACKHAT 6 []
+    const cv.MORPH_HITMISS 7 []
+enum cv.MorphShapes  
+    const cv.MORPH_RECT 0 []
+    const cv.MORPH_CROSS 1 []
+    const cv.MORPH_ELLIPSE 2 []
+enum cv.InterpolationFlags  
+    const cv.INTER_NEAREST 0 []
+    const cv.INTER_LINEAR 1 []
+    const cv.INTER_CUBIC 2 []
+    const cv.INTER_AREA 3 []
+    const cv.INTER_LANCZOS4 4 []
+    const cv.INTER_LINEAR_EXACT 5 []
+    const cv.INTER_MAX 7 []
+    const cv.WARP_FILL_OUTLIERS 8 []
+    const cv.WARP_INVERSE_MAP 16 []
+enum cv.WarpPolarMode  
+    const cv.WARP_POLAR_LINEAR 0 []
+    const cv.WARP_POLAR_LOG 256 []
+enum cv.InterpolationMasks  
+    const cv.INTER_BITS 5 []
+    const cv.INTER_BITS2 INTER_BITS * 2 []
+    const cv.INTER_TAB_SIZE 1 << INTER_BITS []
+    const cv.INTER_TAB_SIZE2 INTER_TAB_SIZE * INTER_TAB_SIZE []
+enum cv.DistanceTypes  
+    const cv.DIST_USER -1 []
+    const cv.DIST_L1 1 []
+    const cv.DIST_L2 2 []
+    const cv.DIST_C 3 []
+    const cv.DIST_L12 4 []
+    const cv.DIST_FAIR 5 []
+    const cv.DIST_WELSCH 6 []
+    const cv.DIST_HUBER 7 []
+enum cv.DistanceTransformMasks  
+    const cv.DIST_MASK_3 3 []
+    const cv.DIST_MASK_5 5 []
+    const cv.DIST_MASK_PRECISE 0 []
+enum cv.ThresholdTypes  
+    const cv.THRESH_BINARY 0 []
+    const cv.THRESH_BINARY_INV 1 []
+    const cv.THRESH_TRUNC 2 []
+    const cv.THRESH_TOZERO 3 []
+    const cv.THRESH_TOZERO_INV 4 []
+    const cv.THRESH_MASK 7 []
+    const cv.THRESH_OTSU 8 []
+    const cv.THRESH_TRIANGLE 16 []
+enum cv.AdaptiveThresholdTypes  
+    const cv.ADAPTIVE_THRESH_MEAN_C 0 []
+    const cv.ADAPTIVE_THRESH_GAUSSIAN_C 1 []
+enum cv.UndistortTypes  
+    const cv.PROJ_SPHERICAL_ORTHO 0 []
+    const cv.PROJ_SPHERICAL_EQRECT 1 []
+enum cv.GrabCutClasses  
+    const cv.GC_BGD 0 []
+    const cv.GC_FGD 1 []
+    const cv.GC_PR_BGD 2 []
+    const cv.GC_PR_FGD 3 []
+enum cv.GrabCutModes  
+    const cv.GC_INIT_WITH_RECT 0 []
+    const cv.GC_INIT_WITH_MASK 1 []
+    const cv.GC_EVAL 2 []
+    const cv.GC_EVAL_FREEZE_MODEL 3 []
+enum cv.DistanceTransformLabelTypes  
+    const cv.DIST_LABEL_CCOMP 0 []
+    const cv.DIST_LABEL_PIXEL 1 []
+enum cv.FloodFillFlags  
+    const cv.FLOODFILL_FIXED_RANGE 1 << 16 []
+    const cv.FLOODFILL_MASK_ONLY 1 << 17 []
+enum cv.ConnectedComponentsTypes  
+    const cv.CC_STAT_LEFT 0 []
+    const cv.CC_STAT_TOP 1 []
+    const cv.CC_STAT_WIDTH 2 []
+    const cv.CC_STAT_HEIGHT 3 []
+    const cv.CC_STAT_AREA 4 []
+    const cv.CC_STAT_MAX 5 []
+enum cv.ConnectedComponentsAlgorithmsTypes  
+    const cv.CCL_WU 0 []
+    const cv.CCL_DEFAULT -1 []
+    const cv.CCL_GRANA 1 []
+enum cv.RetrievalModes  
+    const cv.RETR_EXTERNAL 0 []
+    const cv.RETR_LIST 1 []
+    const cv.RETR_CCOMP 2 []
+    const cv.RETR_TREE 3 []
+    const cv.RETR_FLOODFILL 4 []
+enum cv.ContourApproximationModes  
+    const cv.CHAIN_APPROX_NONE 1 []
+    const cv.CHAIN_APPROX_SIMPLE 2 []
+    const cv.CHAIN_APPROX_TC89_L1 3 []
+    const cv.CHAIN_APPROX_TC89_KCOS 4 []
+enum cv.ShapeMatchModes  
+    const cv.CONTOURS_MATCH_I1 1 []
+    const cv.CONTOURS_MATCH_I2 2 []
+    const cv.CONTOURS_MATCH_I3 3 []
+enum cv.HoughModes  
+    const cv.HOUGH_STANDARD 0 []
+    const cv.HOUGH_PROBABILISTIC 1 []
+    const cv.HOUGH_MULTI_SCALE 2 []
+    const cv.HOUGH_GRADIENT 3 []
+enum cv.LineSegmentDetectorModes  
+    const cv.LSD_REFINE_NONE 0 []
+    const cv.LSD_REFINE_STD 1 []
+    const cv.LSD_REFINE_ADV 2 []
+enum cv.HistCompMethods  
+    const cv.HISTCMP_CORREL 0 []
+    const cv.HISTCMP_CHISQR 1 []
+    const cv.HISTCMP_INTERSECT 2 []
+    const cv.HISTCMP_BHATTACHARYYA 3 []
+    const cv.HISTCMP_HELLINGER HISTCMP_BHATTACHARYYA []
+    const cv.HISTCMP_CHISQR_ALT 4 []
+    const cv.HISTCMP_KL_DIV 5 []
+enum cv.ColorConversionCodes  
+    const cv.COLOR_BGR2BGRA 0 []
+    const cv.COLOR_RGB2RGBA COLOR_BGR2BGRA []
+    const cv.COLOR_BGRA2BGR 1 []
+    const cv.COLOR_RGBA2RGB COLOR_BGRA2BGR []
+    const cv.COLOR_BGR2RGBA 2 []
+    const cv.COLOR_RGB2BGRA COLOR_BGR2RGBA []
+    const cv.COLOR_RGBA2BGR 3 []
+    const cv.COLOR_BGRA2RGB COLOR_RGBA2BGR []
+    const cv.COLOR_BGR2RGB 4 []
+    const cv.COLOR_RGB2BGR COLOR_BGR2RGB []
+    const cv.COLOR_BGRA2RGBA 5 []
+    const cv.COLOR_RGBA2BGRA COLOR_BGRA2RGBA []
+    const cv.COLOR_BGR2GRAY 6 []
+    const cv.COLOR_RGB2GRAY 7 []
+    const cv.COLOR_GRAY2BGR 8 []
+    const cv.COLOR_GRAY2RGB COLOR_GRAY2BGR []
+    const cv.COLOR_GRAY2BGRA 9 []
+    const cv.COLOR_GRAY2RGBA COLOR_GRAY2BGRA []
+    const cv.COLOR_BGRA2GRAY 10 []
+    const cv.COLOR_RGBA2GRAY 11 []
+    const cv.COLOR_BGR2BGR565 12 []
+    const cv.COLOR_RGB2BGR565 13 []
+    const cv.COLOR_BGR5652BGR 14 []
+    const cv.COLOR_BGR5652RGB 15 []
+    const cv.COLOR_BGRA2BGR565 16 []
+    const cv.COLOR_RGBA2BGR565 17 []
+    const cv.COLOR_BGR5652BGRA 18 []
+    const cv.COLOR_BGR5652RGBA 19 []
+    const cv.COLOR_GRAY2BGR565 20 []
+    const cv.COLOR_BGR5652GRAY 21 []
+    const cv.COLOR_BGR2BGR555 22 []
+    const cv.COLOR_RGB2BGR555 23 []
+    const cv.COLOR_BGR5552BGR 24 []
+    const cv.COLOR_BGR5552RGB 25 []
+    const cv.COLOR_BGRA2BGR555 26 []
+    const cv.COLOR_RGBA2BGR555 27 []
+    const cv.COLOR_BGR5552BGRA 28 []
+    const cv.COLOR_BGR5552RGBA 29 []
+    const cv.COLOR_GRAY2BGR555 30 []
+    const cv.COLOR_BGR5552GRAY 31 []
+    const cv.COLOR_BGR2XYZ 32 []
+    const cv.COLOR_RGB2XYZ 33 []
+    const cv.COLOR_XYZ2BGR 34 []
+    const cv.COLOR_XYZ2RGB 35 []
+    const cv.COLOR_BGR2YCrCb 36 []
+    const cv.COLOR_RGB2YCrCb 37 []
+    const cv.COLOR_YCrCb2BGR 38 []
+    const cv.COLOR_YCrCb2RGB 39 []
+    const cv.COLOR_BGR2HSV 40 []
+    const cv.COLOR_RGB2HSV 41 []
+    const cv.COLOR_BGR2Lab 44 []
+    const cv.COLOR_RGB2Lab 45 []
+    const cv.COLOR_BGR2Luv 50 []
+    const cv.COLOR_RGB2Luv 51 []
+    const cv.COLOR_BGR2HLS 52 []
+    const cv.COLOR_RGB2HLS 53 []
+    const cv.COLOR_HSV2BGR 54 []
+    const cv.COLOR_HSV2RGB 55 []
+    const cv.COLOR_Lab2BGR 56 []
+    const cv.COLOR_Lab2RGB 57 []
+    const cv.COLOR_Luv2BGR 58 []
+    const cv.COLOR_Luv2RGB 59 []
+    const cv.COLOR_HLS2BGR 60 []
+    const cv.COLOR_HLS2RGB 61 []
+    const cv.COLOR_BGR2HSV_FULL 66 []
+    const cv.COLOR_RGB2HSV_FULL 67 []
+    const cv.COLOR_BGR2HLS_FULL 68 []
+    const cv.COLOR_RGB2HLS_FULL 69 []
+    const cv.COLOR_HSV2BGR_FULL 70 []
+    const cv.COLOR_HSV2RGB_FULL 71 []
+    const cv.COLOR_HLS2BGR_FULL 72 []
+    const cv.COLOR_HLS2RGB_FULL 73 []
+    const cv.COLOR_LBGR2Lab 74 []
+    const cv.COLOR_LRGB2Lab 75 []
+    const cv.COLOR_LBGR2Luv 76 []
+    const cv.COLOR_LRGB2Luv 77 []
+    const cv.COLOR_Lab2LBGR 78 []
+    const cv.COLOR_Lab2LRGB 79 []
+    const cv.COLOR_Luv2LBGR 80 []
+    const cv.COLOR_Luv2LRGB 81 []
+    const cv.COLOR_BGR2YUV 82 []
+    const cv.COLOR_RGB2YUV 83 []
+    const cv.COLOR_YUV2BGR 84 []
+    const cv.COLOR_YUV2RGB 85 []
+    const cv.COLOR_YUV2RGB_NV12 90 []
+    const cv.COLOR_YUV2BGR_NV12 91 []
+    const cv.COLOR_YUV2RGB_NV21 92 []
+    const cv.COLOR_YUV2BGR_NV21 93 []
+    const cv.COLOR_YUV420sp2RGB COLOR_YUV2RGB_NV21 []
+    const cv.COLOR_YUV420sp2BGR COLOR_YUV2BGR_NV21 []
+    const cv.COLOR_YUV2RGBA_NV12 94 []
+    const cv.COLOR_YUV2BGRA_NV12 95 []
+    const cv.COLOR_YUV2RGBA_NV21 96 []
+    const cv.COLOR_YUV2BGRA_NV21 97 []
+    const cv.COLOR_YUV420sp2RGBA COLOR_YUV2RGBA_NV21 []
+    const cv.COLOR_YUV420sp2BGRA COLOR_YUV2BGRA_NV21 []
+    const cv.COLOR_YUV2RGB_YV12 98 []
+    const cv.COLOR_YUV2BGR_YV12 99 []
+    const cv.COLOR_YUV2RGB_IYUV 100 []
+    const cv.COLOR_YUV2BGR_IYUV 101 []
+    const cv.COLOR_YUV2RGB_I420 COLOR_YUV2RGB_IYUV []
+    const cv.COLOR_YUV2BGR_I420 COLOR_YUV2BGR_IYUV []
+    const cv.COLOR_YUV420p2RGB COLOR_YUV2RGB_YV12 []
+    const cv.COLOR_YUV420p2BGR COLOR_YUV2BGR_YV12 []
+    const cv.COLOR_YUV2RGBA_YV12 102 []
+    const cv.COLOR_YUV2BGRA_YV12 103 []
+    const cv.COLOR_YUV2RGBA_IYUV 104 []
+    const cv.COLOR_YUV2BGRA_IYUV 105 []
+    const cv.COLOR_YUV2RGBA_I420 COLOR_YUV2RGBA_IYUV []
+    const cv.COLOR_YUV2BGRA_I420 COLOR_YUV2BGRA_IYUV []
+    const cv.COLOR_YUV420p2RGBA COLOR_YUV2RGBA_YV12 []
+    const cv.COLOR_YUV420p2BGRA COLOR_YUV2BGRA_YV12 []
+    const cv.COLOR_YUV2GRAY_420 106 []
+    const cv.COLOR_YUV2GRAY_NV21 COLOR_YUV2GRAY_420 []
+    const cv.COLOR_YUV2GRAY_NV12 COLOR_YUV2GRAY_420 []
+    const cv.COLOR_YUV2GRAY_YV12 COLOR_YUV2GRAY_420 []
+    const cv.COLOR_YUV2GRAY_IYUV COLOR_YUV2GRAY_420 []
+    const cv.COLOR_YUV2GRAY_I420 COLOR_YUV2GRAY_420 []
+    const cv.COLOR_YUV420sp2GRAY COLOR_YUV2GRAY_420 []
+    const cv.COLOR_YUV420p2GRAY COLOR_YUV2GRAY_420 []
+    const cv.COLOR_YUV2RGB_UYVY 107 []
+    const cv.COLOR_YUV2BGR_UYVY 108 []
+    const cv.COLOR_YUV2RGB_Y422 COLOR_YUV2RGB_UYVY []
+    const cv.COLOR_YUV2BGR_Y422 COLOR_YUV2BGR_UYVY []
+    const cv.COLOR_YUV2RGB_UYNV COLOR_YUV2RGB_UYVY []
+    const cv.COLOR_YUV2BGR_UYNV COLOR_YUV2BGR_UYVY []
+    const cv.COLOR_YUV2RGBA_UYVY 111 []
+    const cv.COLOR_YUV2BGRA_UYVY 112 []
+    const cv.COLOR_YUV2RGBA_Y422 COLOR_YUV2RGBA_UYVY []
+    const cv.COLOR_YUV2BGRA_Y422 COLOR_YUV2BGRA_UYVY []
+    const cv.COLOR_YUV2RGBA_UYNV COLOR_YUV2RGBA_UYVY []
+    const cv.COLOR_YUV2BGRA_UYNV COLOR_YUV2BGRA_UYVY []
+    const cv.COLOR_YUV2RGB_YUY2 115 []
+    const cv.COLOR_YUV2BGR_YUY2 116 []
+    const cv.COLOR_YUV2RGB_YVYU 117 []
+    const cv.COLOR_YUV2BGR_YVYU 118 []
+    const cv.COLOR_YUV2RGB_YUYV COLOR_YUV2RGB_YUY2 []
+    const cv.COLOR_YUV2BGR_YUYV COLOR_YUV2BGR_YUY2 []
+    const cv.COLOR_YUV2RGB_YUNV COLOR_YUV2RGB_YUY2 []
+    const cv.COLOR_YUV2BGR_YUNV COLOR_YUV2BGR_YUY2 []
+    const cv.COLOR_YUV2RGBA_YUY2 119 []
+    const cv.COLOR_YUV2BGRA_YUY2 120 []
+    const cv.COLOR_YUV2RGBA_YVYU 121 []
+    const cv.COLOR_YUV2BGRA_YVYU 122 []
+    const cv.COLOR_YUV2RGBA_YUYV COLOR_YUV2RGBA_YUY2 []
+    const cv.COLOR_YUV2BGRA_YUYV COLOR_YUV2BGRA_YUY2 []
+    const cv.COLOR_YUV2RGBA_YUNV COLOR_YUV2RGBA_YUY2 []
+    const cv.COLOR_YUV2BGRA_YUNV COLOR_YUV2BGRA_YUY2 []
+    const cv.COLOR_YUV2GRAY_UYVY 123 []
+    const cv.COLOR_YUV2GRAY_YUY2 124 []
+    const cv.COLOR_YUV2GRAY_Y422 COLOR_YUV2GRAY_UYVY []
+    const cv.COLOR_YUV2GRAY_UYNV COLOR_YUV2GRAY_UYVY []
+    const cv.COLOR_YUV2GRAY_YVYU COLOR_YUV2GRAY_YUY2 []
+    const cv.COLOR_YUV2GRAY_YUYV COLOR_YUV2GRAY_YUY2 []
+    const cv.COLOR_YUV2GRAY_YUNV COLOR_YUV2GRAY_YUY2 []
+    const cv.COLOR_RGBA2mRGBA 125 []
+    const cv.COLOR_mRGBA2RGBA 126 []
+    const cv.COLOR_RGB2YUV_I420 127 []
+    const cv.COLOR_BGR2YUV_I420 128 []
+    const cv.COLOR_RGB2YUV_IYUV COLOR_RGB2YUV_I420 []
+    const cv.COLOR_BGR2YUV_IYUV COLOR_BGR2YUV_I420 []
+    const cv.COLOR_RGBA2YUV_I420 129 []
+    const cv.COLOR_BGRA2YUV_I420 130 []
+    const cv.COLOR_RGBA2YUV_IYUV COLOR_RGBA2YUV_I420 []
+    const cv.COLOR_BGRA2YUV_IYUV COLOR_BGRA2YUV_I420 []
+    const cv.COLOR_RGB2YUV_YV12 131 []
+    const cv.COLOR_BGR2YUV_YV12 132 []
+    const cv.COLOR_RGBA2YUV_YV12 133 []
+    const cv.COLOR_BGRA2YUV_YV12 134 []
+    const cv.COLOR_BayerBG2BGR 46 []
+    const cv.COLOR_BayerGB2BGR 47 []
+    const cv.COLOR_BayerRG2BGR 48 []
+    const cv.COLOR_BayerGR2BGR 49 []
+    const cv.COLOR_BayerBG2RGB COLOR_BayerRG2BGR []
+    const cv.COLOR_BayerGB2RGB COLOR_BayerGR2BGR []
+    const cv.COLOR_BayerRG2RGB COLOR_BayerBG2BGR []
+    const cv.COLOR_BayerGR2RGB COLOR_BayerGB2BGR []
+    const cv.COLOR_BayerBG2GRAY 86 []
+    const cv.COLOR_BayerGB2GRAY 87 []
+    const cv.COLOR_BayerRG2GRAY 88 []
+    const cv.COLOR_BayerGR2GRAY 89 []
+    const cv.COLOR_BayerBG2BGR_VNG 62 []
+    const cv.COLOR_BayerGB2BGR_VNG 63 []
+    const cv.COLOR_BayerRG2BGR_VNG 64 []
+    const cv.COLOR_BayerGR2BGR_VNG 65 []
+    const cv.COLOR_BayerBG2RGB_VNG COLOR_BayerRG2BGR_VNG []
+    const cv.COLOR_BayerGB2RGB_VNG COLOR_BayerGR2BGR_VNG []
+    const cv.COLOR_BayerRG2RGB_VNG COLOR_BayerBG2BGR_VNG []
+    const cv.COLOR_BayerGR2RGB_VNG COLOR_BayerGB2BGR_VNG []
+    const cv.COLOR_BayerBG2BGR_EA 135 []
+    const cv.COLOR_BayerGB2BGR_EA 136 []
+    const cv.COLOR_BayerRG2BGR_EA 137 []
+    const cv.COLOR_BayerGR2BGR_EA 138 []
+    const cv.COLOR_BayerBG2RGB_EA COLOR_BayerRG2BGR_EA []
+    const cv.COLOR_BayerGB2RGB_EA COLOR_BayerGR2BGR_EA []
+    const cv.COLOR_BayerRG2RGB_EA COLOR_BayerBG2BGR_EA []
+    const cv.COLOR_BayerGR2RGB_EA COLOR_BayerGB2BGR_EA []
+    const cv.COLOR_BayerBG2BGRA 139 []
+    const cv.COLOR_BayerGB2BGRA 140 []
+    const cv.COLOR_BayerRG2BGRA 141 []
+    const cv.COLOR_BayerGR2BGRA 142 []
+    const cv.COLOR_BayerBG2RGBA COLOR_BayerRG2BGRA []
+    const cv.COLOR_BayerGB2RGBA COLOR_BayerGR2BGRA []
+    const cv.COLOR_BayerRG2RGBA COLOR_BayerBG2BGRA []
+    const cv.COLOR_BayerGR2RGBA COLOR_BayerGB2BGRA []
+    const cv.COLOR_COLORCVT_MAX 143 []
+enum cv.RectanglesIntersectTypes  
+    const cv.INTERSECT_NONE 0 []
+    const cv.INTERSECT_PARTIAL 1 []
+    const cv.INTERSECT_FULL 2 []
+class cv.GeneralizedHough : cv::Algorithm 
+cv.GeneralizedHough.setTemplate void /V;/PV
+    Mat templ 
+    Point templCenter Point(-1, -1)
+cv.GeneralizedHough.setTemplate void /V;/PV
+    UMat templ 
+    Point templCenter Point(-1, -1)
+cv.GeneralizedHough.setTemplate void /V;/PV
+    Mat edges 
+    Mat dx 
+    Mat dy 
+    Point templCenter Point(-1, -1)
+cv.GeneralizedHough.setTemplate void /V;/PV
+    UMat edges 
+    UMat dx 
+    UMat dy 
+    Point templCenter Point(-1, -1)
+cv.GeneralizedHough.detect void /V;/PV
+    Mat image 
+    Mat positions /O
+    Mat votes Mat()/O
+cv.GeneralizedHough.detect void /V;/PV
+    UMat image 
+    UMat positions /O
+    UMat votes UMat()/O
+cv.GeneralizedHough.detect void /V;/PV
+    Mat edges 
+    Mat dx 
+    Mat dy 
+    Mat positions /O
+    Mat votes Mat()/O
+cv.GeneralizedHough.detect void /V;/PV
+    UMat edges 
+    UMat dx 
+    UMat dy 
+    UMat positions /O
+    UMat votes UMat()/O
+cv.GeneralizedHough.setCannyLowThresh void /V;/PV
+    int cannyLowThresh 
+cv.GeneralizedHough.getCannyLowThresh int /C;/V;/PV
+cv.GeneralizedHough.setCannyHighThresh void /V;/PV
+    int cannyHighThresh 
+cv.GeneralizedHough.getCannyHighThresh int /C;/V;/PV
+cv.GeneralizedHough.setMinDist void /V;/PV
+    double minDist 
+cv.GeneralizedHough.getMinDist double /C;/V;/PV
+cv.GeneralizedHough.setDp void /V;/PV
+    double dp 
+cv.GeneralizedHough.getDp double /C;/V;/PV
+cv.GeneralizedHough.setMaxBufferSize void /V;/PV
+    int maxBufferSize 
+cv.GeneralizedHough.getMaxBufferSize int /C;/V;/PV
+class cv.GeneralizedHoughBallard : cv::GeneralizedHough 
+cv.GeneralizedHoughBallard.setLevels void /V;/PV
+    int levels 
+cv.GeneralizedHoughBallard.getLevels int /C;/V;/PV
+cv.GeneralizedHoughBallard.setVotesThreshold void /V;/PV
+    int votesThreshold 
+cv.GeneralizedHoughBallard.getVotesThreshold int /C;/V;/PV
+class cv.GeneralizedHoughGuil : cv::GeneralizedHough 
+cv.GeneralizedHoughGuil.setXi void /V;/PV
+    double xi 
+cv.GeneralizedHoughGuil.getXi double /C;/V;/PV
+cv.GeneralizedHoughGuil.setLevels void /V;/PV
+    int levels 
+cv.GeneralizedHoughGuil.getLevels int /C;/V;/PV
+cv.GeneralizedHoughGuil.setAngleEpsilon void /V;/PV
+    double angleEpsilon 
+cv.GeneralizedHoughGuil.getAngleEpsilon double /C;/V;/PV
+cv.GeneralizedHoughGuil.setMinAngle void /V;/PV
+    double minAngle 
+cv.GeneralizedHoughGuil.getMinAngle double /C;/V;/PV
+cv.GeneralizedHoughGuil.setMaxAngle void /V;/PV
+    double maxAngle 
+cv.GeneralizedHoughGuil.getMaxAngle double /C;/V;/PV
+cv.GeneralizedHoughGuil.setAngleStep void /V;/PV
+    double angleStep 
+cv.GeneralizedHoughGuil.getAngleStep double /C;/V;/PV
+cv.GeneralizedHoughGuil.setAngleThresh void /V;/PV
+    int angleThresh 
+cv.GeneralizedHoughGuil.getAngleThresh int /C;/V;/PV
+cv.GeneralizedHoughGuil.setMinScale void /V;/PV
+    double minScale 
+cv.GeneralizedHoughGuil.getMinScale double /C;/V;/PV
+cv.GeneralizedHoughGuil.setMaxScale void /V;/PV
+    double maxScale 
+cv.GeneralizedHoughGuil.getMaxScale double /C;/V;/PV
+cv.GeneralizedHoughGuil.setScaleStep void /V;/PV
+    double scaleStep 
+cv.GeneralizedHoughGuil.getScaleStep double /C;/V;/PV
+cv.GeneralizedHoughGuil.setScaleThresh void /V;/PV
+    int scaleThresh 
+cv.GeneralizedHoughGuil.getScaleThresh int /C;/V;/PV
+cv.GeneralizedHoughGuil.setPosThresh void /V;/PV
+    int posThresh 
+cv.GeneralizedHoughGuil.getPosThresh int /C;/V;/PV
+class cv.CLAHE : cv::Algorithm 
+cv.CLAHE.apply void /V;/PV
+    Mat src 
+    Mat dst /O
+cv.CLAHE.apply void /V;/PV
+    UMat src 
+    UMat dst /O
+cv.CLAHE.setClipLimit void /V;/PV
+    double clipLimit 
+cv.CLAHE.getClipLimit double /C;/V;/PV
+cv.CLAHE.setTilesGridSize void /V;/PV
+    Size tileGridSize 
+cv.CLAHE.getTilesGridSize Size /C;/V;/PV
+cv.CLAHE.collectGarbage void /V;/PV
+class cv.Subdiv2D  
+enum cv.Subdiv2D.<unnamed>  
+    const cv.Subdiv2D.PTLOC_ERROR -2 []
+    const cv.Subdiv2D.PTLOC_OUTSIDE_RECT -1 []
+    const cv.Subdiv2D.PTLOC_INSIDE 0 []
+    const cv.Subdiv2D.PTLOC_VERTEX 1 []
+    const cv.Subdiv2D.PTLOC_ON_EDGE 2 []
+enum cv.Subdiv2D.<unnamed>  
+    const cv.Subdiv2D.NEXT_AROUND_ORG 0x00 []
+    const cv.Subdiv2D.NEXT_AROUND_DST 0x22 []
+    const cv.Subdiv2D.PREV_AROUND_ORG 0x11 []
+    const cv.Subdiv2D.PREV_AROUND_DST 0x33 []
+    const cv.Subdiv2D.NEXT_AROUND_LEFT 0x13 []
+    const cv.Subdiv2D.NEXT_AROUND_RIGHT 0x31 []
+    const cv.Subdiv2D.PREV_AROUND_LEFT 0x20 []
+    const cv.Subdiv2D.PREV_AROUND_RIGHT 0x02 []
+cv.Subdiv2D.Subdiv2D  
+cv.Subdiv2D.Subdiv2D  
+    Rect rect 
+cv.Subdiv2D.initDelaunay void 
+    Rect rect 
+cv.Subdiv2D.insert int 
+    Point2f pt 
+cv.Subdiv2D.insert void 
+    vector_Point2f ptvec /C; /Ref
+cv.Subdiv2D.locate int 
+    Point2f pt 
+    int edge /O; /Ref
+    int vertex /O; /Ref
+cv.Subdiv2D.findNearest int 
+    Point2f pt 
+    Point2f* nearestPt 0/O
+cv.Subdiv2D.getEdgeList void /C
+    vector_Vec4f edgeList /O; /Ref
+cv.Subdiv2D.getLeadingEdgeList void /C
+    vector_int leadingEdgeList /O; /Ref
+cv.Subdiv2D.getTriangleList void /C
+    vector_Vec6f triangleList /O; /Ref
+cv.Subdiv2D.getVoronoiFacetList void 
+    vector_int idx /C; /Ref
+    vector_vector_Point2f facetList /O; /Ref
+    vector_Point2f facetCenters /O; /Ref
+cv.Subdiv2D.getVertex Point2f /C
+    int vertex 
+    int* firstEdge 0/O
+cv.Subdiv2D.getEdge int /C
+    int edge 
+    int nextEdgeType 
+cv.Subdiv2D.nextEdge int /C
+    int edge 
+cv.Subdiv2D.rotateEdge int /C
+    int edge 
+    int rotate 
+cv.Subdiv2D.symEdge int /C
+    int edge 
+cv.Subdiv2D.edgeOrg int /C
+    int edge 
+    Point2f* orgpt 0/O
+cv.Subdiv2D.edgeDst int /C
+    int edge 
+    Point2f* dstpt 0/O
+class cv.LineSegmentDetector : cv::Algorithm 
+cv.LineSegmentDetector.detect void /V;/PV
+    Mat _image 
+    Mat _lines /O
+    Mat width Mat()/O
+    Mat prec Mat()/O
+    Mat nfa Mat()/O
+cv.LineSegmentDetector.detect void /V;/PV
+    UMat _image 
+    UMat _lines /O
+    UMat width UMat()/O
+    UMat prec UMat()/O
+    UMat nfa UMat()/O
+cv.LineSegmentDetector.drawSegments void /V;/PV
+    Mat _image /IO
+    Mat lines 
+cv.LineSegmentDetector.drawSegments void /V;/PV
+    UMat _image /IO
+    UMat lines 
+cv.LineSegmentDetector.compareSegments int /V;/PV
+    Size size /C; /Ref
+    Mat lines1 
+    Mat lines2 
+    Mat _image Mat()/IO
+cv.LineSegmentDetector.compareSegments int /V;/PV
+    Size size /C; /Ref
+    UMat lines1 
+    UMat lines2 
+    UMat _image UMat()/IO
+cv.createLineSegmentDetector Ptr_LineSegmentDetector 
+    int _refine LSD_REFINE_STD
+    double _scale 0.8
+    double _sigma_scale 0.6
+    double _quant 2.0
+    double _ang_th 22.5
+    double _log_eps 0
+    double _density_th 0.7
+    int _n_bins 1024
+cv.getGaussianKernel Mat 
+    int ksize 
+    double sigma 
+    int ktype CV_64F
+cv.getDerivKernels void 
+    Mat kx /O
+    Mat ky /O
+    int dx 
+    int dy 
+    int ksize 
+    bool normalize false
+    int ktype CV_32F
+cv.getDerivKernels void 
+    UMat kx /O
+    UMat ky /O
+    int dx 
+    int dy 
+    int ksize 
+    bool normalize false
+    int ktype CV_32F
+cv.getGaborKernel Mat 
+    Size ksize 
+    double sigma 
+    double theta 
+    double lambd 
+    double gamma 
+    double psi CV_PI*0.5
+    int ktype CV_64F
+cv.getStructuringElement Mat 
+    int shape 
+    Size ksize 
+    Point anchor Point(-1,-1)
+cv.medianBlur void 
+    Mat src 
+    Mat dst /O
+    int ksize 
+cv.medianBlur void 
+    UMat src 
+    UMat dst /O
+    int ksize 
+cv.GaussianBlur void 
+    Mat src 
+    Mat dst /O
+    Size ksize 
+    double sigmaX 
+    double sigmaY 0
+    int borderType BORDER_DEFAULT
+cv.GaussianBlur void 
+    UMat src 
+    UMat dst /O
+    Size ksize 
+    double sigmaX 
+    double sigmaY 0
+    int borderType BORDER_DEFAULT
+cv.bilateralFilter void 
+    Mat src 
+    Mat dst /O
+    int d 
+    double sigmaColor 
+    double sigmaSpace 
+    int borderType BORDER_DEFAULT
+cv.bilateralFilter void 
+    UMat src 
+    UMat dst /O
+    int d 
+    double sigmaColor 
+    double sigmaSpace 
+    int borderType BORDER_DEFAULT
+cv.boxFilter void 
+    Mat src 
+    Mat dst /O
+    int ddepth 
+    Size ksize 
+    Point anchor Point(-1,-1)
+    bool normalize true
+    int borderType BORDER_DEFAULT
+cv.boxFilter void 
+    UMat src 
+    UMat dst /O
+    int ddepth 
+    Size ksize 
+    Point anchor Point(-1,-1)
+    bool normalize true
+    int borderType BORDER_DEFAULT
+cv.sqrBoxFilter void 
+    Mat src 
+    Mat dst /O
+    int ddepth 
+    Size ksize 
+    Point anchor Point(-1, -1)
+    bool normalize true
+    int borderType BORDER_DEFAULT
+cv.sqrBoxFilter void 
+    UMat src 
+    UMat dst /O
+    int ddepth 
+    Size ksize 
+    Point anchor Point(-1, -1)
+    bool normalize true
+    int borderType BORDER_DEFAULT
+cv.blur void 
+    Mat src 
+    Mat dst /O
+    Size ksize 
+    Point anchor Point(-1,-1)
+    int borderType BORDER_DEFAULT
+cv.blur void 
+    UMat src 
+    UMat dst /O
+    Size ksize 
+    Point anchor Point(-1,-1)
+    int borderType BORDER_DEFAULT
+cv.filter2D void 
+    Mat src 
+    Mat dst /O
+    int ddepth 
+    Mat kernel 
+    Point anchor Point(-1,-1)
+    double delta 0
+    int borderType BORDER_DEFAULT
+cv.filter2D void 
+    UMat src 
+    UMat dst /O
+    int ddepth 
+    UMat kernel 
+    Point anchor Point(-1,-1)
+    double delta 0
+    int borderType BORDER_DEFAULT
+cv.sepFilter2D void 
+    Mat src 
+    Mat dst /O
+    int ddepth 
+    Mat kernelX 
+    Mat kernelY 
+    Point anchor Point(-1,-1)
+    double delta 0
+    int borderType BORDER_DEFAULT
+cv.sepFilter2D void 
+    UMat src 
+    UMat dst /O
+    int ddepth 
+    UMat kernelX 
+    UMat kernelY 
+    Point anchor Point(-1,-1)
+    double delta 0
+    int borderType BORDER_DEFAULT
+cv.Sobel void 
+    Mat src 
+    Mat dst /O
+    int ddepth 
+    int dx 
+    int dy 
+    int ksize 3
+    double scale 1
+    double delta 0
+    int borderType BORDER_DEFAULT
+cv.Sobel void 
+    UMat src 
+    UMat dst /O
+    int ddepth 
+    int dx 
+    int dy 
+    int ksize 3
+    double scale 1
+    double delta 0
+    int borderType BORDER_DEFAULT
+cv.spatialGradient void 
+    Mat src 
+    Mat dx /O
+    Mat dy /O
+    int ksize 3
+    int borderType BORDER_DEFAULT
+cv.spatialGradient void 
+    UMat src 
+    UMat dx /O
+    UMat dy /O
+    int ksize 3
+    int borderType BORDER_DEFAULT
+cv.Scharr void 
+    Mat src 
+    Mat dst /O
+    int ddepth 
+    int dx 
+    int dy 
+    double scale 1
+    double delta 0
+    int borderType BORDER_DEFAULT
+cv.Scharr void 
+    UMat src 
+    UMat dst /O
+    int ddepth 
+    int dx 
+    int dy 
+    double scale 1
+    double delta 0
+    int borderType BORDER_DEFAULT
+cv.Laplacian void 
+    Mat src 
+    Mat dst /O
+    int ddepth 
+    int ksize 1
+    double scale 1
+    double delta 0
+    int borderType BORDER_DEFAULT
+cv.Laplacian void 
+    UMat src 
+    UMat dst /O
+    int ddepth 
+    int ksize 1
+    double scale 1
+    double delta 0
+    int borderType BORDER_DEFAULT
+cv.Canny void 
+    Mat image 
+    Mat edges /O
+    double threshold1 
+    double threshold2 
+    int apertureSize 3
+    bool L2gradient false
+cv.Canny void 
+    UMat image 
+    UMat edges /O
+    double threshold1 
+    double threshold2 
+    int apertureSize 3
+    bool L2gradient false
+cv.Canny void 
+    Mat dx 
+    Mat dy 
+    Mat edges /O
+    double threshold1 
+    double threshold2 
+    bool L2gradient false
+cv.Canny void 
+    UMat dx 
+    UMat dy 
+    UMat edges /O
+    double threshold1 
+    double threshold2 
+    bool L2gradient false
+cv.cornerMinEigenVal void 
+    Mat src 
+    Mat dst /O
+    int blockSize 
+    int ksize 3
+    int borderType BORDER_DEFAULT
+cv.cornerMinEigenVal void 
+    UMat src 
+    UMat dst /O
+    int blockSize 
+    int ksize 3
+    int borderType BORDER_DEFAULT
+cv.cornerHarris void 
+    Mat src 
+    Mat dst /O
+    int blockSize 
+    int ksize 
+    double k 
+    int borderType BORDER_DEFAULT
+cv.cornerHarris void 
+    UMat src 
+    UMat dst /O
+    int blockSize 
+    int ksize 
+    double k 
+    int borderType BORDER_DEFAULT
+cv.cornerEigenValsAndVecs void 
+    Mat src 
+    Mat dst /O
+    int blockSize 
+    int ksize 
+    int borderType BORDER_DEFAULT
+cv.cornerEigenValsAndVecs void 
+    UMat src 
+    UMat dst /O
+    int blockSize 
+    int ksize 
+    int borderType BORDER_DEFAULT
+cv.preCornerDetect void 
+    Mat src 
+    Mat dst /O
+    int ksize 
+    int borderType BORDER_DEFAULT
+cv.preCornerDetect void 
+    UMat src 
+    UMat dst /O
+    int ksize 
+    int borderType BORDER_DEFAULT
+cv.cornerSubPix void 
+    Mat image 
+    Mat corners /IO
+    Size winSize 
+    Size zeroZone 
+    TermCriteria criteria 
+cv.cornerSubPix void 
+    UMat image 
+    UMat corners /IO
+    Size winSize 
+    Size zeroZone 
+    TermCriteria criteria 
+cv.goodFeaturesToTrack void 
+    Mat image 
+    Mat corners /O
+    int maxCorners 
+    double qualityLevel 
+    double minDistance 
+    Mat mask Mat()
+    int blockSize 3
+    bool useHarrisDetector false
+    double k 0.04
+cv.goodFeaturesToTrack void 
+    UMat image 
+    UMat corners /O
+    int maxCorners 
+    double qualityLevel 
+    double minDistance 
+    UMat mask UMat()
+    int blockSize 3
+    bool useHarrisDetector false
+    double k 0.04
+cv.goodFeaturesToTrack void 
+    Mat image 
+    Mat corners /O
+    int maxCorners 
+    double qualityLevel 
+    double minDistance 
+    Mat mask 
+    int blockSize 
+    int gradientSize 
+    bool useHarrisDetector false
+    double k 0.04
+cv.goodFeaturesToTrack void 
+    UMat image 
+    UMat corners /O
+    int maxCorners 
+    double qualityLevel 
+    double minDistance 
+    UMat mask 
+    int blockSize 
+    int gradientSize 
+    bool useHarrisDetector false
+    double k 0.04
+cv.HoughLines void 
+    Mat image 
+    Mat lines /O
+    double rho 
+    double theta 
+    int threshold 
+    double srn 0
+    double stn 0
+    double min_theta 0
+    double max_theta CV_PI
+cv.HoughLines void 
+    UMat image 
+    UMat lines /O
+    double rho 
+    double theta 
+    int threshold 
+    double srn 0
+    double stn 0
+    double min_theta 0
+    double max_theta CV_PI
+cv.HoughLinesP void 
+    Mat image 
+    Mat lines /O
+    double rho 
+    double theta 
+    int threshold 
+    double minLineLength 0
+    double maxLineGap 0
+cv.HoughLinesP void 
+    UMat image 
+    UMat lines /O
+    double rho 
+    double theta 
+    int threshold 
+    double minLineLength 0
+    double maxLineGap 0
+cv.HoughLinesPointSet void 
+    Mat _point 
+    Mat _lines /O
+    int lines_max 
+    int threshold 
+    double min_rho 
+    double max_rho 
+    double rho_step 
+    double min_theta 
+    double max_theta 
+    double theta_step 
+cv.HoughLinesPointSet void 
+    UMat _point 
+    UMat _lines /O
+    int lines_max 
+    int threshold 
+    double min_rho 
+    double max_rho 
+    double rho_step 
+    double min_theta 
+    double max_theta 
+    double theta_step 
+cv.HoughCircles void 
+    Mat image 
+    Mat circles /O
+    int method 
+    double dp 
+    double minDist 
+    double param1 100
+    double param2 100
+    int minRadius 0
+    int maxRadius 0
+cv.HoughCircles void 
+    UMat image 
+    UMat circles /O
+    int method 
+    double dp 
+    double minDist 
+    double param1 100
+    double param2 100
+    int minRadius 0
+    int maxRadius 0
+cv.erode void 
+    Mat src 
+    Mat dst /O
+    Mat kernel 
+    Point anchor Point(-1,-1)
+    int iterations 1
+    int borderType BORDER_CONSTANT
+    Scalar borderValue morphologyDefaultBorderValue()/C; /Ref
+cv.erode void 
+    UMat src 
+    UMat dst /O
+    UMat kernel 
+    Point anchor Point(-1,-1)
+    int iterations 1
+    int borderType BORDER_CONSTANT
+    Scalar borderValue morphologyDefaultBorderValue()/C; /Ref
+cv.dilate void 
+    Mat src 
+    Mat dst /O
+    Mat kernel 
+    Point anchor Point(-1,-1)
+    int iterations 1
+    int borderType BORDER_CONSTANT
+    Scalar borderValue morphologyDefaultBorderValue()/C; /Ref
+cv.dilate void 
+    UMat src 
+    UMat dst /O
+    UMat kernel 
+    Point anchor Point(-1,-1)
+    int iterations 1
+    int borderType BORDER_CONSTANT
+    Scalar borderValue morphologyDefaultBorderValue()/C; /Ref
+cv.morphologyEx void 
+    Mat src 
+    Mat dst /O
+    int op 
+    Mat kernel 
+    Point anchor Point(-1,-1)
+    int iterations 1
+    int borderType BORDER_CONSTANT
+    Scalar borderValue morphologyDefaultBorderValue()/C; /Ref
+cv.morphologyEx void 
+    UMat src 
+    UMat dst /O
+    int op 
+    UMat kernel 
+    Point anchor Point(-1,-1)
+    int iterations 1
+    int borderType BORDER_CONSTANT
+    Scalar borderValue morphologyDefaultBorderValue()/C; /Ref
+cv.resize void 
+    Mat src 
+    Mat dst /O
+    Size dsize 
+    double fx 0
+    double fy 0
+    int interpolation INTER_LINEAR
+cv.resize void 
+    UMat src 
+    UMat dst /O
+    Size dsize 
+    double fx 0
+    double fy 0
+    int interpolation INTER_LINEAR
+cv.warpAffine void 
+    Mat src 
+    Mat dst /O
+    Mat M 
+    Size dsize 
+    int flags INTER_LINEAR
+    int borderMode BORDER_CONSTANT
+    Scalar borderValue Scalar()/C; /Ref
+cv.warpAffine void 
+    UMat src 
+    UMat dst /O
+    UMat M 
+    Size dsize 
+    int flags INTER_LINEAR
+    int borderMode BORDER_CONSTANT
+    Scalar borderValue Scalar()/C; /Ref
+cv.warpPerspective void 
+    Mat src 
+    Mat dst /O
+    Mat M 
+    Size dsize 
+    int flags INTER_LINEAR
+    int borderMode BORDER_CONSTANT
+    Scalar borderValue Scalar()/C; /Ref
+cv.warpPerspective void 
+    UMat src 
+    UMat dst /O
+    UMat M 
+    Size dsize 
+    int flags INTER_LINEAR
+    int borderMode BORDER_CONSTANT
+    Scalar borderValue Scalar()/C; /Ref
+cv.remap void 
+    Mat src 
+    Mat dst /O
+    Mat map1 
+    Mat map2 
+    int interpolation 
+    int borderMode BORDER_CONSTANT
+    Scalar borderValue Scalar()/C; /Ref
+cv.remap void 
+    UMat src 
+    UMat dst /O
+    UMat map1 
+    UMat map2 
+    int interpolation 
+    int borderMode BORDER_CONSTANT
+    Scalar borderValue Scalar()/C; /Ref
+cv.convertMaps void 
+    Mat map1 
+    Mat map2 
+    Mat dstmap1 /O
+    Mat dstmap2 /O
+    int dstmap1type 
+    bool nninterpolation false
+cv.convertMaps void 
+    UMat map1 
+    UMat map2 
+    UMat dstmap1 /O
+    UMat dstmap2 /O
+    int dstmap1type 
+    bool nninterpolation false
+cv.getRotationMatrix2D Mat 
+    Point2f center 
+    double angle 
+    double scale 
+cv.invertAffineTransform void 
+    Mat M 
+    Mat iM /O
+cv.invertAffineTransform void 
+    UMat M 
+    UMat iM /O
+cv.getPerspectiveTransform Mat 
+    Mat src 
+    Mat dst 
+cv.getPerspectiveTransform Mat 
+    UMat src 
+    UMat dst 
+cv.getAffineTransform Mat 
+    Mat src 
+    Mat dst 
+cv.getAffineTransform Mat 
+    UMat src 
+    UMat dst 
+cv.getRectSubPix void 
+    Mat image 
+    Size patchSize 
+    Point2f center 
+    Mat patch /O
+    int patchType -1
+cv.getRectSubPix void 
+    UMat image 
+    Size patchSize 
+    Point2f center 
+    UMat patch /O
+    int patchType -1
+cv.logPolar void 
+    Mat src 
+    Mat dst /O
+    Point2f center 
+    double M 
+    int flags 
+cv.logPolar void 
+    UMat src 
+    UMat dst /O
+    Point2f center 
+    double M 
+    int flags 
+cv.linearPolar void 
+    Mat src 
+    Mat dst /O
+    Point2f center 
+    double maxRadius 
+    int flags 
+cv.linearPolar void 
+    UMat src 
+    UMat dst /O
+    Point2f center 
+    double maxRadius 
+    int flags 
+cv.warpPolar void 
+    Mat src 
+    Mat dst /O
+    Size dsize 
+    Point2f center 
+    double maxRadius 
+    int flags 
+cv.warpPolar void 
+    UMat src 
+    UMat dst /O
+    Size dsize 
+    Point2f center 
+    double maxRadius 
+    int flags 
+cv.integral void 
+    Mat src 
+    Mat sum /O
+    int sdepth -1
+cv.integral void 
+    UMat src 
+    UMat sum /O
+    int sdepth -1
+cv.integral void =integral2
+    Mat src 
+    Mat sum /O
+    Mat sqsum /O
+    int sdepth -1
+    int sqdepth -1
+cv.integral void =integral2
+    UMat src 
+    UMat sum /O
+    UMat sqsum /O
+    int sdepth -1
+    int sqdepth -1
+cv.integral void =integral3
+    Mat src 
+    Mat sum /O
+    Mat sqsum /O
+    Mat tilted /O
+    int sdepth -1
+    int sqdepth -1
+cv.integral void =integral3
+    UMat src 
+    UMat sum /O
+    UMat sqsum /O
+    UMat tilted /O
+    int sdepth -1
+    int sqdepth -1
+cv.accumulate void 
+    Mat src 
+    Mat dst /IO
+    Mat mask Mat()
+cv.accumulate void 
+    UMat src 
+    UMat dst /IO
+    UMat mask UMat()
+cv.accumulateSquare void 
+    Mat src 
+    Mat dst /IO
+    Mat mask Mat()
+cv.accumulateSquare void 
+    UMat src 
+    UMat dst /IO
+    UMat mask UMat()
+cv.accumulateProduct void 
+    Mat src1 
+    Mat src2 
+    Mat dst /IO
+    Mat mask Mat()
+cv.accumulateProduct void 
+    UMat src1 
+    UMat src2 
+    UMat dst /IO
+    UMat mask UMat()
+cv.accumulateWeighted void 
+    Mat src 
+    Mat dst /IO
+    double alpha 
+    Mat mask Mat()
+cv.accumulateWeighted void 
+    UMat src 
+    UMat dst /IO
+    double alpha 
+    UMat mask UMat()
+cv.phaseCorrelate Point2d 
+    Mat src1 
+    Mat src2 
+    Mat window Mat()
+    double* response 0/O
+cv.phaseCorrelate Point2d 
+    UMat src1 
+    UMat src2 
+    UMat window UMat()
+    double* response 0/O
+cv.createHanningWindow void 
+    Mat dst /O
+    Size winSize 
+    int type 
+cv.createHanningWindow void 
+    UMat dst /O
+    Size winSize 
+    int type 
+cv.threshold double 
+    Mat src 
+    Mat dst /O
+    double thresh 
+    double maxval 
+    int type 
+cv.threshold double 
+    UMat src 
+    UMat dst /O
+    double thresh 
+    double maxval 
+    int type 
+cv.adaptiveThreshold void 
+    Mat src 
+    Mat dst /O
+    double maxValue 
+    int adaptiveMethod 
+    int thresholdType 
+    int blockSize 
+    double C 
+cv.adaptiveThreshold void 
+    UMat src 
+    UMat dst /O
+    double maxValue 
+    int adaptiveMethod 
+    int thresholdType 
+    int blockSize 
+    double C 
+cv.pyrDown void 
+    Mat src 
+    Mat dst /O
+    Size dstsize Size()/C; /Ref
+    int borderType BORDER_DEFAULT
+cv.pyrDown void 
+    UMat src 
+    UMat dst /O
+    Size dstsize Size()/C; /Ref
+    int borderType BORDER_DEFAULT
+cv.pyrUp void 
+    Mat src 
+    Mat dst /O
+    Size dstsize Size()/C; /Ref
+    int borderType BORDER_DEFAULT
+cv.pyrUp void 
+    UMat src 
+    UMat dst /O
+    Size dstsize Size()/C; /Ref
+    int borderType BORDER_DEFAULT
+cv.undistort void 
+    Mat src 
+    Mat dst /O
+    Mat cameraMatrix 
+    Mat distCoeffs 
+    Mat newCameraMatrix Mat()
+cv.undistort void 
+    UMat src 
+    UMat dst /O
+    UMat cameraMatrix 
+    UMat distCoeffs 
+    UMat newCameraMatrix UMat()
+cv.initUndistortRectifyMap void 
+    Mat cameraMatrix 
+    Mat distCoeffs 
+    Mat R 
+    Mat newCameraMatrix 
+    Size size 
+    int m1type 
+    Mat map1 /O
+    Mat map2 /O
+cv.initUndistortRectifyMap void 
+    UMat cameraMatrix 
+    UMat distCoeffs 
+    UMat R 
+    UMat newCameraMatrix 
+    Size size 
+    int m1type 
+    UMat map1 /O
+    UMat map2 /O
+cv.initWideAngleProjMap float 
+    Mat cameraMatrix 
+    Mat distCoeffs 
+    Size imageSize 
+    int destImageWidth 
+    int m1type 
+    Mat map1 /O
+    Mat map2 /O
+    int projType PROJ_SPHERICAL_EQRECT
+    double alpha 0
+cv.initWideAngleProjMap float 
+    UMat cameraMatrix 
+    UMat distCoeffs 
+    Size imageSize 
+    int destImageWidth 
+    int m1type 
+    UMat map1 /O
+    UMat map2 /O
+    int projType PROJ_SPHERICAL_EQRECT
+    double alpha 0
+cv.getDefaultNewCameraMatrix Mat 
+    Mat cameraMatrix 
+    Size imgsize Size()
+    bool centerPrincipalPoint false
+cv.getDefaultNewCameraMatrix Mat 
+    UMat cameraMatrix 
+    Size imgsize Size()
+    bool centerPrincipalPoint false
+cv.undistortPoints void 
+    Mat src 
+    Mat dst /O
+    Mat cameraMatrix 
+    Mat distCoeffs 
+    Mat R Mat()
+    Mat P Mat()
+cv.undistortPoints void 
+    UMat src 
+    UMat dst /O
+    UMat cameraMatrix 
+    UMat distCoeffs 
+    UMat R UMat()
+    UMat P UMat()
+cv.undistortPoints void =undistortPointsIter
+    Mat src 
+    Mat dst /O
+    Mat cameraMatrix 
+    Mat distCoeffs 
+    Mat R 
+    Mat P 
+    TermCriteria criteria 
+cv.undistortPoints void =undistortPointsIter
+    UMat src 
+    UMat dst /O
+    UMat cameraMatrix 
+    UMat distCoeffs 
+    UMat R 
+    UMat P 
+    TermCriteria criteria 
+cv.calcHist void 
+    vector_Mat images 
+    vector_int channels /C; /Ref
+    Mat mask 
+    Mat hist /O
+    vector_int histSize /C; /Ref
+    vector_float ranges /C; /Ref
+    bool accumulate false
+cv.calcHist void 
+    vector_Mat images 
+    vector_int channels /C; /Ref
+    UMat mask 
+    UMat hist /O
+    vector_int histSize /C; /Ref
+    vector_float ranges /C; /Ref
+    bool accumulate false
+cv.calcBackProject void 
+    vector_Mat images 
+    vector_int channels /C; /Ref
+    Mat hist 
+    Mat dst /O
+    vector_float ranges /C; /Ref
+    double scale 
+cv.calcBackProject void 
+    vector_Mat images 
+    vector_int channels /C; /Ref
+    UMat hist 
+    UMat dst /O
+    vector_float ranges /C; /Ref
+    double scale 
+cv.compareHist double 
+    Mat H1 
+    Mat H2 
+    int method 
+cv.compareHist double 
+    UMat H1 
+    UMat H2 
+    int method 
+cv.equalizeHist void 
+    Mat src 
+    Mat dst /O
+cv.equalizeHist void 
+    UMat src 
+    UMat dst /O
+cv.createCLAHE Ptr_CLAHE 
+    double clipLimit 40.0
+    Size tileGridSize Size(8, 8)
+cv.wrapperEMD float =EMD
+    Mat signature1 
+    Mat signature2 
+    int distType 
+    Mat cost Mat()
+    Ptr_float lowerBound Ptr<float>()/IO
+    Mat flow Mat()/O
+cv.wrapperEMD float =EMD
+    UMat signature1 
+    UMat signature2 
+    int distType 
+    UMat cost UMat()
+    Ptr_float lowerBound Ptr<float>()/IO
+    UMat flow UMat()/O
+cv.watershed void 
+    Mat image 
+    Mat markers /IO
+cv.watershed void 
+    UMat image 
+    UMat markers /IO
+cv.pyrMeanShiftFiltering void 
+    Mat src 
+    Mat dst /O
+    double sp 
+    double sr 
+    int maxLevel 1
+    TermCriteria termcrit TermCriteria(TermCriteria::MAX_ITER+TermCriteria::EPS,5,1)
+cv.pyrMeanShiftFiltering void 
+    UMat src 
+    UMat dst /O
+    double sp 
+    double sr 
+    int maxLevel 1
+    TermCriteria termcrit TermCriteria(TermCriteria::MAX_ITER+TermCriteria::EPS,5,1)
+cv.grabCut void 
+    Mat img 
+    Mat mask /IO
+    Rect rect 
+    Mat bgdModel /IO
+    Mat fgdModel /IO
+    int iterCount 
+    int mode GC_EVAL
+cv.grabCut void 
+    UMat img 
+    UMat mask /IO
+    Rect rect 
+    UMat bgdModel /IO
+    UMat fgdModel /IO
+    int iterCount 
+    int mode GC_EVAL
+cv.distanceTransform void =distanceTransformWithLabels
+    Mat src 
+    Mat dst /O
+    Mat labels /O
+    int distanceType 
+    int maskSize 
+    int labelType DIST_LABEL_CCOMP
+cv.distanceTransform void =distanceTransformWithLabels
+    UMat src 
+    UMat dst /O
+    UMat labels /O
+    int distanceType 
+    int maskSize 
+    int labelType DIST_LABEL_CCOMP
+cv.distanceTransform void 
+    Mat src 
+    Mat dst /O
+    int distanceType 
+    int maskSize 
+    int dstType CV_32F
+cv.distanceTransform void 
+    UMat src 
+    UMat dst /O
+    int distanceType 
+    int maskSize 
+    int dstType CV_32F
+cv.floodFill int 
+    Mat image /IO
+    Mat mask /IO
+    Point seedPoint 
+    Scalar newVal 
+    Rect* rect 0/O
+    Scalar loDiff Scalar()
+    Scalar upDiff Scalar()
+    int flags 4
+cv.floodFill int 
+    UMat image /IO
+    UMat mask /IO
+    Point seedPoint 
+    Scalar newVal 
+    Rect* rect 0/O
+    Scalar loDiff Scalar()
+    Scalar upDiff Scalar()
+    int flags 4
+cv.cvtColor void 
+    Mat src 
+    Mat dst /O
+    int code 
+    int dstCn 0
+cv.cvtColor void 
+    UMat src 
+    UMat dst /O
+    int code 
+    int dstCn 0
+cv.cvtColorTwoPlane void 
+    Mat src1 
+    Mat src2 
+    Mat dst /O
+    int code 
+cv.cvtColorTwoPlane void 
+    UMat src1 
+    UMat src2 
+    UMat dst /O
+    int code 
+cv.demosaicing void 
+    Mat src 
+    Mat dst /O
+    int code 
+    int dstCn 0
+cv.demosaicing void 
+    UMat src 
+    UMat dst /O
+    int code 
+    int dstCn 0
+cv.moments Moments 
+    Mat array 
+    bool binaryImage false
+cv.moments Moments 
+    UMat array 
+    bool binaryImage false
+cv.HuMoments void 
+    Moments m /C; /Ref
+    Mat hu /O
+cv.HuMoments void 
+    Moments m /C; /Ref
+    UMat hu /O
+enum cv.TemplateMatchModes  
+    const cv.TM_SQDIFF 0 []
+    const cv.TM_SQDIFF_NORMED 1 []
+    const cv.TM_CCORR 2 []
+    const cv.TM_CCORR_NORMED 3 []
+    const cv.TM_CCOEFF 4 []
+    const cv.TM_CCOEFF_NORMED 5 []
+cv.matchTemplate void 
+    Mat image 
+    Mat templ 
+    Mat result /O
+    int method 
+    Mat mask Mat()
+cv.matchTemplate void 
+    UMat image 
+    UMat templ 
+    UMat result /O
+    int method 
+    UMat mask UMat()
+cv.connectedComponents int =connectedComponentsWithAlgorithm
+    Mat image 
+    Mat labels /O
+    int connectivity 
+    int ltype 
+    int ccltype 
+cv.connectedComponents int =connectedComponentsWithAlgorithm
+    UMat image 
+    UMat labels /O
+    int connectivity 
+    int ltype 
+    int ccltype 
+cv.connectedComponents int 
+    Mat image 
+    Mat labels /O
+    int connectivity 8
+    int ltype CV_32S
+cv.connectedComponents int 
+    UMat image 
+    UMat labels /O
+    int connectivity 8
+    int ltype CV_32S
+cv.connectedComponentsWithStats int =connectedComponentsWithStatsWithAlgorithm
+    Mat image 
+    Mat labels /O
+    Mat stats /O
+    Mat centroids /O
+    int connectivity 
+    int ltype 
+    int ccltype 
+cv.connectedComponentsWithStats int =connectedComponentsWithStatsWithAlgorithm
+    UMat image 
+    UMat labels /O
+    UMat stats /O
+    UMat centroids /O
+    int connectivity 
+    int ltype 
+    int ccltype 
+cv.connectedComponentsWithStats int 
+    Mat image 
+    Mat labels /O
+    Mat stats /O
+    Mat centroids /O
+    int connectivity 8
+    int ltype CV_32S
+cv.connectedComponentsWithStats int 
+    UMat image 
+    UMat labels /O
+    UMat stats /O
+    UMat centroids /O
+    int connectivity 8
+    int ltype CV_32S
+cv.findContours void 
+    Mat image /IO
+    vector_Mat contours /O
+    Mat hierarchy /O
+    int mode 
+    int method 
+    Point offset Point()
+cv.findContours void 
+    UMat image /IO
+    vector_Mat contours /O
+    UMat hierarchy /O
+    int mode 
+    int method 
+    Point offset Point()
+cv.approxPolyDP void 
+    Mat curve 
+    Mat approxCurve /O
+    double epsilon 
+    bool closed 
+cv.approxPolyDP void 
+    UMat curve 
+    UMat approxCurve /O
+    double epsilon 
+    bool closed 
+cv.arcLength double 
+    Mat curve 
+    bool closed 
+cv.arcLength double 
+    UMat curve 
+    bool closed 
+cv.boundingRect Rect 
+    Mat array 
+cv.boundingRect Rect 
+    UMat array 
+cv.contourArea double 
+    Mat contour 
+    bool oriented false
+cv.contourArea double 
+    UMat contour 
+    bool oriented false
+cv.minAreaRect RotatedRect 
+    Mat points 
+cv.minAreaRect RotatedRect 
+    UMat points 
+cv.boxPoints void 
+    RotatedRect box 
+    Mat points /O
+cv.boxPoints void 
+    RotatedRect box 
+    UMat points /O
+cv.minEnclosingCircle void 
+    Mat points 
+    Point2f center /O; /Ref
+    float radius /O; /Ref
+cv.minEnclosingCircle void 
+    UMat points 
+    Point2f center /O; /Ref
+    float radius /O; /Ref
+cv.minEnclosingTriangle double 
+    Mat points 
+    Mat triangle /O; /O
+cv.minEnclosingTriangle double 
+    UMat points 
+    UMat triangle /O; /O
+cv.matchShapes double 
+    Mat contour1 
+    Mat contour2 
+    int method 
+    double parameter 
+cv.matchShapes double 
+    UMat contour1 
+    UMat contour2 
+    int method 
+    double parameter 
+cv.convexHull void 
+    Mat points 
+    Mat hull /O
+    bool clockwise false
+    bool returnPoints true
+cv.convexHull void 
+    UMat points 
+    UMat hull /O
+    bool clockwise false
+    bool returnPoints true
+cv.convexityDefects void 
+    Mat contour 
+    Mat convexhull 
+    Mat convexityDefects /O
+cv.convexityDefects void 
+    UMat contour 
+    UMat convexhull 
+    UMat convexityDefects /O
+cv.isContourConvex bool 
+    Mat contour 
+cv.isContourConvex bool 
+    UMat contour 
+cv.intersectConvexConvex float 
+    Mat _p1 
+    Mat _p2 
+    Mat _p12 /O
+    bool handleNested true
+cv.intersectConvexConvex float 
+    UMat _p1 
+    UMat _p2 
+    UMat _p12 /O
+    bool handleNested true
+cv.fitEllipse RotatedRect 
+    Mat points 
+cv.fitEllipse RotatedRect 
+    UMat points 
+cv.fitEllipseAMS RotatedRect 
+    Mat points 
+cv.fitEllipseAMS RotatedRect 
+    UMat points 
+cv.fitEllipseDirect RotatedRect 
+    Mat points 
+cv.fitEllipseDirect RotatedRect 
+    UMat points 
+cv.fitLine void 
+    Mat points 
+    Mat line /O
+    int distType 
+    double param 
+    double reps 
+    double aeps 
+cv.fitLine void 
+    UMat points 
+    UMat line /O
+    int distType 
+    double param 
+    double reps 
+    double aeps 
+cv.pointPolygonTest double 
+    Mat contour 
+    Point2f pt 
+    bool measureDist 
+cv.pointPolygonTest double 
+    UMat contour 
+    Point2f pt 
+    bool measureDist 
+cv.rotatedRectangleIntersection int 
+    RotatedRect rect1 /C; /Ref
+    RotatedRect rect2 /C; /Ref
+    Mat intersectingRegion /O
+cv.rotatedRectangleIntersection int 
+    RotatedRect rect1 /C; /Ref
+    RotatedRect rect2 /C; /Ref
+    UMat intersectingRegion /O
+cv.createGeneralizedHoughBallard Ptr_GeneralizedHoughBallard 
+cv.createGeneralizedHoughGuil Ptr_GeneralizedHoughGuil 
+enum cv.ColormapTypes  
+    const cv.COLORMAP_AUTUMN 0 []
+    const cv.COLORMAP_BONE 1 []
+    const cv.COLORMAP_JET 2 []
+    const cv.COLORMAP_WINTER 3 []
+    const cv.COLORMAP_RAINBOW 4 []
+    const cv.COLORMAP_OCEAN 5 []
+    const cv.COLORMAP_SUMMER 6 []
+    const cv.COLORMAP_SPRING 7 []
+    const cv.COLORMAP_COOL 8 []
+    const cv.COLORMAP_HSV 9 []
+    const cv.COLORMAP_PINK 10 []
+    const cv.COLORMAP_HOT 11 []
+    const cv.COLORMAP_PARULA 12 []
+    const cv.COLORMAP_MAGMA 13 []
+    const cv.COLORMAP_INFERNO 14 []
+    const cv.COLORMAP_PLASMA 15 []
+    const cv.COLORMAP_VIRIDIS 16 []
+    const cv.COLORMAP_CIVIDIS 17 []
+    const cv.COLORMAP_TWILIGHT 18 []
+    const cv.COLORMAP_TWILIGHT_SHIFTED 19 []
+    const cv.COLORMAP_TURBO 20 []
+cv.applyColorMap void 
+    Mat src 
+    Mat dst /O
+    int colormap 
+cv.applyColorMap void 
+    UMat src 
+    UMat dst /O
+    int colormap 
+cv.applyColorMap void 
+    Mat src 
+    Mat dst /O
+    Mat userColor 
+cv.applyColorMap void 
+    UMat src 
+    UMat dst /O
+    UMat userColor 
+cv.line void 
+    Mat img /IO
+    Point pt1 
+    Point pt2 
+    Scalar color /C; /Ref
+    int thickness 1
+    int lineType LINE_8
+    int shift 0
+cv.line void 
+    UMat img /IO
+    Point pt1 
+    Point pt2 
+    Scalar color /C; /Ref
+    int thickness 1
+    int lineType LINE_8
+    int shift 0
+cv.arrowedLine void 
+    Mat img /IO
+    Point pt1 
+    Point pt2 
+    Scalar color /C; /Ref
+    int thickness 1
+    int line_type 8
+    int shift 0
+    double tipLength 0.1
+cv.arrowedLine void 
+    UMat img /IO
+    Point pt1 
+    Point pt2 
+    Scalar color /C; /Ref
+    int thickness 1
+    int line_type 8
+    int shift 0
+    double tipLength 0.1
+cv.rectangle void 
+    Mat img /IO
+    Point pt1 
+    Point pt2 
+    Scalar color /C; /Ref
+    int thickness 1
+    int lineType LINE_8
+    int shift 0
+cv.rectangle void 
+    UMat img /IO
+    Point pt1 
+    Point pt2 
+    Scalar color /C; /Ref
+    int thickness 1
+    int lineType LINE_8
+    int shift 0
+cv.circle void 
+    Mat img /IO
+    Point center 
+    int radius 
+    Scalar color /C; /Ref
+    int thickness 1
+    int lineType LINE_8
+    int shift 0
+cv.circle void 
+    UMat img /IO
+    Point center 
+    int radius 
+    Scalar color /C; /Ref
+    int thickness 1
+    int lineType LINE_8
+    int shift 0
+cv.ellipse void 
+    Mat img /IO
+    Point center 
+    Size axes 
+    double angle 
+    double startAngle 
+    double endAngle 
+    Scalar color /C; /Ref
+    int thickness 1
+    int lineType LINE_8
+    int shift 0
+cv.ellipse void 
+    UMat img /IO
+    Point center 
+    Size axes 
+    double angle 
+    double startAngle 
+    double endAngle 
+    Scalar color /C; /Ref
+    int thickness 1
+    int lineType LINE_8
+    int shift 0
+cv.ellipse void 
+    Mat img /IO
+    RotatedRect box /C; /Ref
+    Scalar color /C; /Ref
+    int thickness 1
+    int lineType LINE_8
+cv.ellipse void 
+    UMat img /IO
+    RotatedRect box /C; /Ref
+    Scalar color /C; /Ref
+    int thickness 1
+    int lineType LINE_8
+enum cv.MarkerTypes  
+    const cv.MARKER_CROSS 0 []
+    const cv.MARKER_TILTED_CROSS 1 []
+    const cv.MARKER_STAR 2 []
+    const cv.MARKER_DIAMOND 3 []
+    const cv.MARKER_SQUARE 4 []
+    const cv.MARKER_TRIANGLE_UP 5 []
+    const cv.MARKER_TRIANGLE_DOWN 6 []
+cv.drawMarker void 
+    Mat img /IO; /Ref
+    Point position 
+    Scalar color /C; /Ref
+    int markerType MARKER_CROSS
+    int markerSize 20
+    int thickness 1
+    int line_type 8
+cv.drawMarker void 
+    Mat img /IO; /Ref
+    Point position 
+    Scalar color /C; /Ref
+    int markerType MARKER_CROSS
+    int markerSize 20
+    int thickness 1
+    int line_type 8
+cv.fillConvexPoly void 
+    Mat img /IO
+    Mat points 
+    Scalar color /C; /Ref
+    int lineType LINE_8
+    int shift 0
+cv.fillConvexPoly void 
+    UMat img /IO
+    UMat points 
+    Scalar color /C; /Ref
+    int lineType LINE_8
+    int shift 0
+cv.fillPoly void 
+    Mat img /IO
+    vector_Mat pts 
+    Scalar color /C; /Ref
+    int lineType LINE_8
+    int shift 0
+    Point offset Point()
+cv.fillPoly void 
+    UMat img /IO
+    vector_Mat pts 
+    Scalar color /C; /Ref
+    int lineType LINE_8
+    int shift 0
+    Point offset Point()
+cv.polylines void 
+    Mat img /IO
+    vector_Mat pts 
+    bool isClosed 
+    Scalar color /C; /Ref
+    int thickness 1
+    int lineType LINE_8
+    int shift 0
+cv.polylines void 
+    UMat img /IO
+    vector_Mat pts 
+    bool isClosed 
+    Scalar color /C; /Ref
+    int thickness 1
+    int lineType LINE_8
+    int shift 0
+cv.drawContours void 
+    Mat image /IO
+    vector_Mat contours 
+    int contourIdx 
+    Scalar color /C; /Ref
+    int thickness 1
+    int lineType LINE_8
+    Mat hierarchy Mat()
+    int maxLevel INT_MAX
+    Point offset Point()
+cv.drawContours void 
+    UMat image /IO
+    vector_Mat contours 
+    int contourIdx 
+    Scalar color /C; /Ref
+    int thickness 1
+    int lineType LINE_8
+    UMat hierarchy UMat()
+    int maxLevel INT_MAX
+    Point offset Point()
+cv.clipLine bool 
+    Rect imgRect 
+    Point pt1 /O; /IO; /Ref
+    Point pt2 /O; /IO; /Ref
+cv.ellipse2Poly void 
+    Point center 
+    Size axes 
+    int angle 
+    int arcStart 
+    int arcEnd 
+    int delta 
+    vector_Point pts /O; /Ref
+cv.putText void 
+    Mat img /IO
+    String text /C; /Ref
+    Point org 
+    int fontFace 
+    double fontScale 
+    Scalar color 
+    int thickness 1
+    int lineType LINE_8
+    bool bottomLeftOrigin false
+cv.putText void 
+    UMat img /IO
+    String text /C; /Ref
+    Point org 
+    int fontFace 
+    double fontScale 
+    Scalar color 
+    int thickness 1
+    int lineType LINE_8
+    bool bottomLeftOrigin false
+cv.getTextSize Size 
+    String text /C; /Ref
+    int fontFace 
+    double fontScale 
+    int thickness 
+    int* baseLine /O
+cv.getFontScaleFromHeight double 
+    int fontFace /C
+    int pixelHeight /C
+    int thickness 1/C
+enum cv.<unnamed>  
+    const cv.LMEDS 4 []
+    const cv.RANSAC 8 []
+    const cv.RHO 16 []
+enum cv.SolvePnPMethod  
+    const cv.SOLVEPNP_ITERATIVE 0 []
+    const cv.SOLVEPNP_EPNP 1 []
+    const cv.SOLVEPNP_P3P 2 []
+    const cv.SOLVEPNP_DLS 3 []
+    const cv.SOLVEPNP_UPNP 4 []
+    const cv.SOLVEPNP_AP3P 5 []
+    const cv.SOLVEPNP_IPPE 6 []
+    const cv.SOLVEPNP_IPPE_SQUARE 7 []
+    const cv.SOLVEPNP_MAX_COUNT 7+1 []
+enum cv.<unnamed>  
+    const cv.CALIB_CB_ADAPTIVE_THRESH 1 []
+    const cv.CALIB_CB_NORMALIZE_IMAGE 2 []
+    const cv.CALIB_CB_FILTER_QUADS 4 []
+    const cv.CALIB_CB_FAST_CHECK 8 []
+enum cv.<unnamed>  
+    const cv.CALIB_CB_SYMMETRIC_GRID 1 []
+    const cv.CALIB_CB_ASYMMETRIC_GRID 2 []
+    const cv.CALIB_CB_CLUSTERING 4 []
+enum cv.<unnamed>  
+    const cv.CALIB_USE_INTRINSIC_GUESS 0x00001 []
+    const cv.CALIB_FIX_ASPECT_RATIO 0x00002 []
+    const cv.CALIB_FIX_PRINCIPAL_POINT 0x00004 []
+    const cv.CALIB_ZERO_TANGENT_DIST 0x00008 []
+    const cv.CALIB_FIX_FOCAL_LENGTH 0x00010 []
+    const cv.CALIB_FIX_K1 0x00020 []
+    const cv.CALIB_FIX_K2 0x00040 []
+    const cv.CALIB_FIX_K3 0x00080 []
+    const cv.CALIB_FIX_K4 0x00800 []
+    const cv.CALIB_FIX_K5 0x01000 []
+    const cv.CALIB_FIX_K6 0x02000 []
+    const cv.CALIB_RATIONAL_MODEL 0x04000 []
+    const cv.CALIB_THIN_PRISM_MODEL 0x08000 []
+    const cv.CALIB_FIX_S1_S2_S3_S4 0x10000 []
+    const cv.CALIB_TILTED_MODEL 0x40000 []
+    const cv.CALIB_FIX_TAUX_TAUY 0x80000 []
+    const cv.CALIB_USE_QR 0x100000 []
+    const cv.CALIB_FIX_TANGENT_DIST 0x200000 []
+    const cv.CALIB_FIX_INTRINSIC 0x00100 []
+    const cv.CALIB_SAME_FOCAL_LENGTH 0x00200 []
+    const cv.CALIB_ZERO_DISPARITY 0x00400 []
+    const cv.CALIB_USE_LU (1 << 17) []
+    const cv.CALIB_USE_EXTRINSIC_GUESS (1 << 22) []
+enum cv.<unnamed>  
+    const cv.FM_7POINT 1 []
+    const cv.FM_8POINT 2 []
+    const cv.FM_LMEDS 4 []
+    const cv.FM_RANSAC 8 []
+enum cv.HandEyeCalibrationMethod  
+    const cv.CALIB_HAND_EYE_TSAI 0 []
+    const cv.CALIB_HAND_EYE_PARK 1 []
+    const cv.CALIB_HAND_EYE_HORAUD 2 []
+    const cv.CALIB_HAND_EYE_ANDREFF 3 []
+    const cv.CALIB_HAND_EYE_DANIILIDIS 4 []
+cv.Rodrigues void 
+    Mat src 
+    Mat dst /O
+    Mat jacobian Mat()/O
+cv.Rodrigues void 
+    UMat src 
+    UMat dst /O
+    UMat jacobian UMat()/O
+cv.findHomography Mat 
+    Mat srcPoints 
+    Mat dstPoints 
+    int method 0
+    double ransacReprojThreshold 3
+    Mat mask Mat()/O
+    int maxIters 2000/C
+    double confidence 0.995/C
+cv.findHomography Mat 
+    UMat srcPoints 
+    UMat dstPoints 
+    int method 0
+    double ransacReprojThreshold 3
+    UMat mask UMat()/O
+    int maxIters 2000/C
+    double confidence 0.995/C
+cv.RQDecomp3x3 Vec3d 
+    Mat src 
+    Mat mtxR /O
+    Mat mtxQ /O
+    Mat Qx Mat()/O
+    Mat Qy Mat()/O
+    Mat Qz Mat()/O
+cv.RQDecomp3x3 Vec3d 
+    UMat src 
+    UMat mtxR /O
+    UMat mtxQ /O
+    UMat Qx UMat()/O
+    UMat Qy UMat()/O
+    UMat Qz UMat()/O
+cv.decomposeProjectionMatrix void 
+    Mat projMatrix 
+    Mat cameraMatrix /O
+    Mat rotMatrix /O
+    Mat transVect /O
+    Mat rotMatrixX Mat()/O
+    Mat rotMatrixY Mat()/O
+    Mat rotMatrixZ Mat()/O
+    Mat eulerAngles Mat()/O
+cv.decomposeProjectionMatrix void 
+    UMat projMatrix 
+    UMat cameraMatrix /O
+    UMat rotMatrix /O
+    UMat transVect /O
+    UMat rotMatrixX UMat()/O
+    UMat rotMatrixY UMat()/O
+    UMat rotMatrixZ UMat()/O
+    UMat eulerAngles UMat()/O
+cv.matMulDeriv void 
+    Mat A 
+    Mat B 
+    Mat dABdA /O
+    Mat dABdB /O
+cv.matMulDeriv void 
+    UMat A 
+    UMat B 
+    UMat dABdA /O
+    UMat dABdB /O
+cv.composeRT void 
+    Mat rvec1 
+    Mat tvec1 
+    Mat rvec2 
+    Mat tvec2 
+    Mat rvec3 /O
+    Mat tvec3 /O
+    Mat dr3dr1 Mat()/O
+    Mat dr3dt1 Mat()/O
+    Mat dr3dr2 Mat()/O
+    Mat dr3dt2 Mat()/O
+    Mat dt3dr1 Mat()/O
+    Mat dt3dt1 Mat()/O
+    Mat dt3dr2 Mat()/O
+    Mat dt3dt2 Mat()/O
+cv.composeRT void 
+    UMat rvec1 
+    UMat tvec1 
+    UMat rvec2 
+    UMat tvec2 
+    UMat rvec3 /O
+    UMat tvec3 /O
+    UMat dr3dr1 UMat()/O
+    UMat dr3dt1 UMat()/O
+    UMat dr3dr2 UMat()/O
+    UMat dr3dt2 UMat()/O
+    UMat dt3dr1 UMat()/O
+    UMat dt3dt1 UMat()/O
+    UMat dt3dr2 UMat()/O
+    UMat dt3dt2 UMat()/O
+cv.projectPoints void 
+    Mat objectPoints 
+    Mat rvec 
+    Mat tvec 
+    Mat cameraMatrix 
+    Mat distCoeffs 
+    Mat imagePoints /O
+    Mat jacobian Mat()/O
+    double aspectRatio 0
+cv.projectPoints void 
+    UMat objectPoints 
+    UMat rvec 
+    UMat tvec 
+    UMat cameraMatrix 
+    UMat distCoeffs 
+    UMat imagePoints /O
+    UMat jacobian UMat()/O
+    double aspectRatio 0
+cv.solvePnP bool 
+    Mat objectPoints 
+    Mat imagePoints 
+    Mat cameraMatrix 
+    Mat distCoeffs 
+    Mat rvec /O
+    Mat tvec /O
+    bool useExtrinsicGuess false
+    int flags SOLVEPNP_ITERATIVE
+cv.solvePnP bool 
+    UMat objectPoints 
+    UMat imagePoints 
+    UMat cameraMatrix 
+    UMat distCoeffs 
+    UMat rvec /O
+    UMat tvec /O
+    bool useExtrinsicGuess false
+    int flags SOLVEPNP_ITERATIVE
+cv.solvePnPRansac bool 
+    Mat objectPoints 
+    Mat imagePoints 
+    Mat cameraMatrix 
+    Mat distCoeffs 
+    Mat rvec /O
+    Mat tvec /O
+    bool useExtrinsicGuess false
+    int iterationsCount 100
+    float reprojectionError 8.0
+    double confidence 0.99
+    Mat inliers Mat()/O
+    int flags SOLVEPNP_ITERATIVE
+cv.solvePnPRansac bool 
+    UMat objectPoints 
+    UMat imagePoints 
+    UMat cameraMatrix 
+    UMat distCoeffs 
+    UMat rvec /O
+    UMat tvec /O
+    bool useExtrinsicGuess false
+    int iterationsCount 100
+    float reprojectionError 8.0
+    double confidence 0.99
+    UMat inliers UMat()/O
+    int flags SOLVEPNP_ITERATIVE
+cv.solveP3P int 
+    Mat objectPoints 
+    Mat imagePoints 
+    Mat cameraMatrix 
+    Mat distCoeffs 
+    vector_Mat rvecs /O
+    vector_Mat tvecs /O
+    int flags 
+cv.solveP3P int 
+    UMat objectPoints 
+    UMat imagePoints 
+    UMat cameraMatrix 
+    UMat distCoeffs 
+    vector_Mat rvecs /O
+    vector_Mat tvecs /O
+    int flags 
+cv.solvePnPRefineLM void 
+    Mat objectPoints 
+    Mat imagePoints 
+    Mat cameraMatrix 
+    Mat distCoeffs 
+    Mat rvec /IO
+    Mat tvec /IO
+    TermCriteria criteria TermCriteria(TermCriteria::EPS + TermCriteria::COUNT, 20, FLT_EPSILON)
+cv.solvePnPRefineLM void 
+    UMat objectPoints 
+    UMat imagePoints 
+    UMat cameraMatrix 
+    UMat distCoeffs 
+    UMat rvec /IO
+    UMat tvec /IO
+    TermCriteria criteria TermCriteria(TermCriteria::EPS + TermCriteria::COUNT, 20, FLT_EPSILON)
+cv.solvePnPRefineVVS void 
+    Mat objectPoints 
+    Mat imagePoints 
+    Mat cameraMatrix 
+    Mat distCoeffs 
+    Mat rvec /IO
+    Mat tvec /IO
+    TermCriteria criteria TermCriteria(TermCriteria::EPS + TermCriteria::COUNT, 20, FLT_EPSILON)
+    double VVSlambda 1
+cv.solvePnPRefineVVS void 
+    UMat objectPoints 
+    UMat imagePoints 
+    UMat cameraMatrix 
+    UMat distCoeffs 
+    UMat rvec /IO
+    UMat tvec /IO
+    TermCriteria criteria TermCriteria(TermCriteria::EPS + TermCriteria::COUNT, 20, FLT_EPSILON)
+    double VVSlambda 1
+cv.solvePnPGeneric int 
+    Mat objectPoints 
+    Mat imagePoints 
+    Mat cameraMatrix 
+    Mat distCoeffs 
+    vector_Mat rvecs /O
+    vector_Mat tvecs /O
+    bool useExtrinsicGuess false
+    SolvePnPMethod flags SOLVEPNP_ITERATIVE
+    Mat rvec Mat()
+    Mat tvec Mat()
+    Mat reprojectionError Mat()/O
+cv.solvePnPGeneric int 
+    UMat objectPoints 
+    UMat imagePoints 
+    UMat cameraMatrix 
+    UMat distCoeffs 
+    vector_Mat rvecs /O
+    vector_Mat tvecs /O
+    bool useExtrinsicGuess false
+    SolvePnPMethod flags SOLVEPNP_ITERATIVE
+    UMat rvec UMat()
+    UMat tvec UMat()
+    UMat reprojectionError UMat()/O
+cv.initCameraMatrix2D Mat 
+    vector_Mat objectPoints 
+    vector_Mat imagePoints 
+    Size imageSize 
+    double aspectRatio 1.0
+cv.initCameraMatrix2D Mat 
+    vector_Mat objectPoints 
+    vector_Mat imagePoints 
+    Size imageSize 
+    double aspectRatio 1.0
+cv.findChessboardCorners bool 
+    Mat image 
+    Size patternSize 
+    Mat corners /O
+    int flags CALIB_CB_ADAPTIVE_THRESH + CALIB_CB_NORMALIZE_IMAGE
+cv.findChessboardCorners bool 
+    UMat image 
+    Size patternSize 
+    UMat corners /O
+    int flags CALIB_CB_ADAPTIVE_THRESH + CALIB_CB_NORMALIZE_IMAGE
+cv.find4QuadCornerSubpix bool 
+    Mat img 
+    Mat corners /IO
+    Size region_size 
+cv.find4QuadCornerSubpix bool 
+    UMat img 
+    UMat corners /IO
+    Size region_size 
+cv.drawChessboardCorners void 
+    Mat image /IO
+    Size patternSize 
+    Mat corners 
+    bool patternWasFound 
+cv.drawChessboardCorners void 
+    UMat image /IO
+    Size patternSize 
+    UMat corners 
+    bool patternWasFound 
+cv.drawFrameAxes void 
+    Mat image /IO
+    Mat cameraMatrix 
+    Mat distCoeffs 
+    Mat rvec 
+    Mat tvec 
+    float length 
+    int thickness 3
+cv.drawFrameAxes void 
+    UMat image /IO
+    UMat cameraMatrix 
+    UMat distCoeffs 
+    UMat rvec 
+    UMat tvec 
+    float length 
+    int thickness 3
+struct cv.CirclesGridFinderParameters  /Simple
+    Size2f densityNeighborhoodSize /RW
+    float minDensity /RW
+    int kmeansAttempts /RW
+    int minDistanceToAddKeypoint /RW
+    int keypointScale /RW
+    float minGraphConfidence /RW
+    float vertexGain /RW
+    float vertexPenalty /RW
+    float existingVertexGain /RW
+    float edgeGain /RW
+    float edgePenalty /RW
+    float convexHullFactor /RW
+    float minRNGEdgeSwitchDist /RW
+cv.CirclesGridFinderParameters.CirclesGridFinderParameters  
+enum cv.CirclesGridFinderParameters.GridType  
+    const cv.CirclesGridFinderParameters.SYMMETRIC_GRID 0 []
+    const cv.CirclesGridFinderParameters.ASYMMETRIC_GRID 1 []
+struct cv.CirclesGridFinderParameters2 : cv::CirclesGridFinderParameters /Simple
+    float squareSize /RW
+    float maxRectifiedDistance /RW
+cv.CirclesGridFinderParameters2.CirclesGridFinderParameters2  
+cv.findCirclesGrid bool 
+    Mat image 
+    Size patternSize 
+    Mat centers /O
+    int flags 
+    Ptr_FeatureDetector blobDetector /C; /Ref
+    CirclesGridFinderParameters parameters 
+cv.findCirclesGrid bool 
+    UMat image 
+    Size patternSize 
+    UMat centers /O
+    int flags 
+    Ptr_FeatureDetector blobDetector /C; /Ref
+    CirclesGridFinderParameters parameters 
+cv.findCirclesGrid2 bool 
+    Mat image 
+    Size patternSize 
+    Mat centers /O
+    int flags 
+    Ptr_FeatureDetector blobDetector /C; /Ref
+    CirclesGridFinderParameters2 parameters 
+cv.findCirclesGrid2 bool 
+    UMat image 
+    Size patternSize 
+    UMat centers /O
+    int flags 
+    Ptr_FeatureDetector blobDetector /C; /Ref
+    CirclesGridFinderParameters2 parameters 
+cv.findCirclesGrid bool 
+    Mat image 
+    Size patternSize 
+    Mat centers /O
+    int flags CALIB_CB_SYMMETRIC_GRID
+    Ptr_FeatureDetector blobDetector SimpleBlobDetector::create()/C; /Ref
+cv.findCirclesGrid bool 
+    UMat image 
+    Size patternSize 
+    UMat centers /O
+    int flags CALIB_CB_SYMMETRIC_GRID
+    Ptr_FeatureDetector blobDetector SimpleBlobDetector::create()/C; /Ref
+cv.calibrateCamera double =calibrateCameraExtended
+    vector_Mat objectPoints 
+    vector_Mat imagePoints 
+    Size imageSize 
+    Mat cameraMatrix /IO
+    Mat distCoeffs /IO
+    vector_Mat rvecs /O
+    vector_Mat tvecs /O
+    Mat stdDeviationsIntrinsics /O
+    Mat stdDeviationsExtrinsics /O
+    Mat perViewErrors /O
+    int flags 0
+    TermCriteria criteria TermCriteria( TermCriteria::COUNT + TermCriteria::EPS, 30, DBL_EPSILON)
+cv.calibrateCamera double =calibrateCameraExtended
+    vector_Mat objectPoints 
+    vector_Mat imagePoints 
+    Size imageSize 
+    UMat cameraMatrix /IO
+    UMat distCoeffs /IO
+    vector_Mat rvecs /O
+    vector_Mat tvecs /O
+    UMat stdDeviationsIntrinsics /O
+    UMat stdDeviationsExtrinsics /O
+    UMat perViewErrors /O
+    int flags 0
+    TermCriteria criteria TermCriteria( TermCriteria::COUNT + TermCriteria::EPS, 30, DBL_EPSILON)
+cv.calibrateCamera double 
+    vector_Mat objectPoints 
+    vector_Mat imagePoints 
+    Size imageSize 
+    Mat cameraMatrix /IO
+    Mat distCoeffs /IO
+    vector_Mat rvecs /O
+    vector_Mat tvecs /O
+    int flags 0
+    TermCriteria criteria TermCriteria( TermCriteria::COUNT + TermCriteria::EPS, 30, DBL_EPSILON)
+cv.calibrateCamera double 
+    vector_Mat objectPoints 
+    vector_Mat imagePoints 
+    Size imageSize 
+    UMat cameraMatrix /IO
+    UMat distCoeffs /IO
+    vector_Mat rvecs /O
+    vector_Mat tvecs /O
+    int flags 0
+    TermCriteria criteria TermCriteria( TermCriteria::COUNT + TermCriteria::EPS, 30, DBL_EPSILON)
+cv.calibrationMatrixValues void 
+    Mat cameraMatrix 
+    Size imageSize 
+    double apertureWidth 
+    double apertureHeight 
+    double fovx /O; /Ref
+    double fovy /O; /Ref
+    double focalLength /O; /Ref
+    Point2d principalPoint /O; /Ref
+    double aspectRatio /O; /Ref
+cv.calibrationMatrixValues void 
+    UMat cameraMatrix 
+    Size imageSize 
+    double apertureWidth 
+    double apertureHeight 
+    double fovx /O; /Ref
+    double fovy /O; /Ref
+    double focalLength /O; /Ref
+    Point2d principalPoint /O; /Ref
+    double aspectRatio /O; /Ref
+cv.stereoCalibrate double =stereoCalibrateExtended
+    vector_Mat objectPoints 
+    vector_Mat imagePoints1 
+    vector_Mat imagePoints2 
+    Mat cameraMatrix1 /IO
+    Mat distCoeffs1 /IO
+    Mat cameraMatrix2 /IO
+    Mat distCoeffs2 /IO
+    Size imageSize 
+    Mat R /IO
+    Mat T /IO
+    Mat E /O
+    Mat F /O
+    Mat perViewErrors /O
+    int flags CALIB_FIX_INTRINSIC
+    TermCriteria criteria TermCriteria(TermCriteria::COUNT+TermCriteria::EPS, 30, 1e-6)
+cv.stereoCalibrate double =stereoCalibrateExtended
+    vector_Mat objectPoints 
+    vector_Mat imagePoints1 
+    vector_Mat imagePoints2 
+    UMat cameraMatrix1 /IO
+    UMat distCoeffs1 /IO
+    UMat cameraMatrix2 /IO
+    UMat distCoeffs2 /IO
+    Size imageSize 
+    UMat R /IO
+    UMat T /IO
+    UMat E /O
+    UMat F /O
+    UMat perViewErrors /O
+    int flags CALIB_FIX_INTRINSIC
+    TermCriteria criteria TermCriteria(TermCriteria::COUNT+TermCriteria::EPS, 30, 1e-6)
+cv.stereoCalibrate double 
+    vector_Mat objectPoints 
+    vector_Mat imagePoints1 
+    vector_Mat imagePoints2 
+    Mat cameraMatrix1 /IO
+    Mat distCoeffs1 /IO
+    Mat cameraMatrix2 /IO
+    Mat distCoeffs2 /IO
+    Size imageSize 
+    Mat R /O
+    Mat T /O
+    Mat E /O
+    Mat F /O
+    int flags CALIB_FIX_INTRINSIC
+    TermCriteria criteria TermCriteria(TermCriteria::COUNT+TermCriteria::EPS, 30, 1e-6)
+cv.stereoCalibrate double 
+    vector_Mat objectPoints 
+    vector_Mat imagePoints1 
+    vector_Mat imagePoints2 
+    UMat cameraMatrix1 /IO
+    UMat distCoeffs1 /IO
+    UMat cameraMatrix2 /IO
+    UMat distCoeffs2 /IO
+    Size imageSize 
+    UMat R /O
+    UMat T /O
+    UMat E /O
+    UMat F /O
+    int flags CALIB_FIX_INTRINSIC
+    TermCriteria criteria TermCriteria(TermCriteria::COUNT+TermCriteria::EPS, 30, 1e-6)
+cv.stereoRectify void 
+    Mat cameraMatrix1 
+    Mat distCoeffs1 
+    Mat cameraMatrix2 
+    Mat distCoeffs2 
+    Size imageSize 
+    Mat R 
+    Mat T 
+    Mat R1 /O
+    Mat R2 /O
+    Mat P1 /O
+    Mat P2 /O
+    Mat Q /O
+    int flags CALIB_ZERO_DISPARITY
+    double alpha -1
+    Size newImageSize Size()
+    Rect* validPixROI1 0/O
+    Rect* validPixROI2 0/O
+cv.stereoRectify void 
+    UMat cameraMatrix1 
+    UMat distCoeffs1 
+    UMat cameraMatrix2 
+    UMat distCoeffs2 
+    Size imageSize 
+    UMat R 
+    UMat T 
+    UMat R1 /O
+    UMat R2 /O
+    UMat P1 /O
+    UMat P2 /O
+    UMat Q /O
+    int flags CALIB_ZERO_DISPARITY
+    double alpha -1
+    Size newImageSize Size()
+    Rect* validPixROI1 0/O
+    Rect* validPixROI2 0/O
+cv.stereoRectifyUncalibrated bool 
+    Mat points1 
+    Mat points2 
+    Mat F 
+    Size imgSize 
+    Mat H1 /O
+    Mat H2 /O
+    double threshold 5
+cv.stereoRectifyUncalibrated bool 
+    UMat points1 
+    UMat points2 
+    UMat F 
+    Size imgSize 
+    UMat H1 /O
+    UMat H2 /O
+    double threshold 5
+cv.rectify3Collinear float 
+    Mat cameraMatrix1 
+    Mat distCoeffs1 
+    Mat cameraMatrix2 
+    Mat distCoeffs2 
+    Mat cameraMatrix3 
+    Mat distCoeffs3 
+    vector_Mat imgpt1 
+    vector_Mat imgpt3 
+    Size imageSize 
+    Mat R12 
+    Mat T12 
+    Mat R13 
+    Mat T13 
+    Mat R1 /O
+    Mat R2 /O
+    Mat R3 /O
+    Mat P1 /O
+    Mat P2 /O
+    Mat P3 /O
+    Mat Q /O
+    double alpha 
+    Size newImgSize 
+    Rect* roi1 /O
+    Rect* roi2 /O
+    int flags 
+cv.rectify3Collinear float 
+    UMat cameraMatrix1 
+    UMat distCoeffs1 
+    UMat cameraMatrix2 
+    UMat distCoeffs2 
+    UMat cameraMatrix3 
+    UMat distCoeffs3 
+    vector_Mat imgpt1 
+    vector_Mat imgpt3 
+    Size imageSize 
+    UMat R12 
+    UMat T12 
+    UMat R13 
+    UMat T13 
+    UMat R1 /O
+    UMat R2 /O
+    UMat R3 /O
+    UMat P1 /O
+    UMat P2 /O
+    UMat P3 /O
+    UMat Q /O
+    double alpha 
+    Size newImgSize 
+    Rect* roi1 /O
+    Rect* roi2 /O
+    int flags 
+cv.getOptimalNewCameraMatrix Mat 
+    Mat cameraMatrix 
+    Mat distCoeffs 
+    Size imageSize 
+    double alpha 
+    Size newImgSize Size()
+    Rect* validPixROI 0/O
+    bool centerPrincipalPoint false
+cv.getOptimalNewCameraMatrix Mat 
+    UMat cameraMatrix 
+    UMat distCoeffs 
+    Size imageSize 
+    double alpha 
+    Size newImgSize Size()
+    Rect* validPixROI 0/O
+    bool centerPrincipalPoint false
+cv.calibrateHandEye void 
+    vector_Mat R_gripper2base 
+    vector_Mat t_gripper2base 
+    vector_Mat R_target2cam 
+    vector_Mat t_target2cam 
+    Mat R_cam2gripper /O
+    Mat t_cam2gripper /O
+    HandEyeCalibrationMethod method CALIB_HAND_EYE_TSAI
+cv.calibrateHandEye void 
+    vector_Mat R_gripper2base 
+    vector_Mat t_gripper2base 
+    vector_Mat R_target2cam 
+    vector_Mat t_target2cam 
+    UMat R_cam2gripper /O
+    UMat t_cam2gripper /O
+    HandEyeCalibrationMethod method CALIB_HAND_EYE_TSAI
+cv.convertPointsToHomogeneous void 
+    Mat src 
+    Mat dst /O
+cv.convertPointsToHomogeneous void 
+    UMat src 
+    UMat dst /O
+cv.convertPointsFromHomogeneous void 
+    Mat src 
+    Mat dst /O
+cv.convertPointsFromHomogeneous void 
+    UMat src 
+    UMat dst /O
+cv.findFundamentalMat Mat 
+    Mat points1 
+    Mat points2 
+    int method FM_RANSAC
+    double ransacReprojThreshold 3.
+    double confidence 0.99
+    Mat mask Mat()/O
+cv.findFundamentalMat Mat 
+    UMat points1 
+    UMat points2 
+    int method FM_RANSAC
+    double ransacReprojThreshold 3.
+    double confidence 0.99
+    UMat mask UMat()/O
+cv.findEssentialMat Mat 
+    Mat points1 
+    Mat points2 
+    Mat cameraMatrix 
+    int method RANSAC
+    double prob 0.999
+    double threshold 1.0
+    Mat mask Mat()/O
+cv.findEssentialMat Mat 
+    UMat points1 
+    UMat points2 
+    UMat cameraMatrix 
+    int method RANSAC
+    double prob 0.999
+    double threshold 1.0
+    UMat mask UMat()/O
+cv.findEssentialMat Mat 
+    Mat points1 
+    Mat points2 
+    double focal 1.0
+    Point2d pp Point2d(0, 0)
+    int method RANSAC
+    double prob 0.999
+    double threshold 1.0
+    Mat mask Mat()/O
+cv.findEssentialMat Mat 
+    UMat points1 
+    UMat points2 
+    double focal 1.0
+    Point2d pp Point2d(0, 0)
+    int method RANSAC
+    double prob 0.999
+    double threshold 1.0
+    UMat mask UMat()/O
+cv.decomposeEssentialMat void 
+    Mat E 
+    Mat R1 /O
+    Mat R2 /O
+    Mat t /O
+cv.decomposeEssentialMat void 
+    UMat E 
+    UMat R1 /O
+    UMat R2 /O
+    UMat t /O
+cv.recoverPose int 
+    Mat E 
+    Mat points1 
+    Mat points2 
+    Mat cameraMatrix 
+    Mat R /O
+    Mat t /O
+    Mat mask Mat()/IO
+cv.recoverPose int 
+    UMat E 
+    UMat points1 
+    UMat points2 
+    UMat cameraMatrix 
+    UMat R /O
+    UMat t /O
+    UMat mask UMat()/IO
+cv.recoverPose int 
+    Mat E 
+    Mat points1 
+    Mat points2 
+    Mat R /O
+    Mat t /O
+    double focal 1.0
+    Point2d pp Point2d(0, 0)
+    Mat mask Mat()/IO
+cv.recoverPose int 
+    UMat E 
+    UMat points1 
+    UMat points2 
+    UMat R /O
+    UMat t /O
+    double focal 1.0
+    Point2d pp Point2d(0, 0)
+    UMat mask UMat()/IO
+cv.recoverPose int 
+    Mat E 
+    Mat points1 
+    Mat points2 
+    Mat cameraMatrix 
+    Mat R /O
+    Mat t /O
+    double distanceThresh 
+    Mat mask Mat()/IO
+    Mat triangulatedPoints Mat()/O
+cv.recoverPose int 
+    UMat E 
+    UMat points1 
+    UMat points2 
+    UMat cameraMatrix 
+    UMat R /O
+    UMat t /O
+    double distanceThresh 
+    UMat mask UMat()/IO
+    UMat triangulatedPoints UMat()/O
+cv.computeCorrespondEpilines void 
+    Mat points 
+    int whichImage 
+    Mat F 
+    Mat lines /O
+cv.computeCorrespondEpilines void 
+    UMat points 
+    int whichImage 
+    UMat F 
+    UMat lines /O
+cv.triangulatePoints void 
+    Mat projMatr1 
+    Mat projMatr2 
+    Mat projPoints1 
+    Mat projPoints2 
+    Mat points4D /O
+cv.triangulatePoints void 
+    UMat projMatr1 
+    UMat projMatr2 
+    UMat projPoints1 
+    UMat projPoints2 
+    UMat points4D /O
+cv.correctMatches void 
+    Mat F 
+    Mat points1 
+    Mat points2 
+    Mat newPoints1 /O
+    Mat newPoints2 /O
+cv.correctMatches void 
+    UMat F 
+    UMat points1 
+    UMat points2 
+    UMat newPoints1 /O
+    UMat newPoints2 /O
+cv.filterSpeckles void 
+    Mat img /IO
+    double newVal 
+    int maxSpeckleSize 
+    double maxDiff 
+    Mat buf Mat()/IO
+cv.filterSpeckles void 
+    UMat img /IO
+    double newVal 
+    int maxSpeckleSize 
+    double maxDiff 
+    UMat buf UMat()/IO
+cv.getValidDisparityROI Rect 
+    Rect roi1 
+    Rect roi2 
+    int minDisparity 
+    int numberOfDisparities 
+    int SADWindowSize 
+cv.validateDisparity void 
+    Mat disparity /IO
+    Mat cost 
+    int minDisparity 
+    int numberOfDisparities 
+    int disp12MaxDisp 1
+cv.validateDisparity void 
+    UMat disparity /IO
+    UMat cost 
+    int minDisparity 
+    int numberOfDisparities 
+    int disp12MaxDisp 1
+cv.reprojectImageTo3D void 
+    Mat disparity 
+    Mat _3dImage /O
+    Mat Q 
+    bool handleMissingValues false
+    int ddepth -1
+cv.reprojectImageTo3D void 
+    UMat disparity 
+    UMat _3dImage /O
+    UMat Q 
+    bool handleMissingValues false
+    int ddepth -1
+cv.sampsonDistance double 
+    Mat pt1 
+    Mat pt2 
+    Mat F 
+cv.sampsonDistance double 
+    UMat pt1 
+    UMat pt2 
+    UMat F 
+cv.estimateAffine3D int 
+    Mat src 
+    Mat dst 
+    Mat out /O
+    Mat inliers /O
+    double ransacThreshold 3
+    double confidence 0.99
+cv.estimateAffine3D int 
+    UMat src 
+    UMat dst 
+    UMat out /O
+    UMat inliers /O
+    double ransacThreshold 3
+    double confidence 0.99
+cv.estimateAffine2D Mat 
+    Mat from 
+    Mat to 
+    Mat inliers Mat()/O
+    int method RANSAC
+    double ransacReprojThreshold 3
+    size_t maxIters 2000
+    double confidence 0.99
+    size_t refineIters 10
+cv.estimateAffine2D Mat 
+    UMat from 
+    UMat to 
+    UMat inliers UMat()/O
+    int method RANSAC
+    double ransacReprojThreshold 3
+    size_t maxIters 2000
+    double confidence 0.99
+    size_t refineIters 10
+cv.estimateAffinePartial2D Mat 
+    Mat from 
+    Mat to 
+    Mat inliers Mat()/O
+    int method RANSAC
+    double ransacReprojThreshold 3
+    size_t maxIters 2000
+    double confidence 0.99
+    size_t refineIters 10
+cv.estimateAffinePartial2D Mat 
+    UMat from 
+    UMat to 
+    UMat inliers UMat()/O
+    int method RANSAC
+    double ransacReprojThreshold 3
+    size_t maxIters 2000
+    double confidence 0.99
+    size_t refineIters 10
+cv.decomposeHomographyMat int 
+    Mat H 
+    Mat K 
+    vector_Mat rotations /O
+    vector_Mat translations /O
+    vector_Mat normals /O
+cv.decomposeHomographyMat int 
+    UMat H 
+    UMat K 
+    vector_Mat rotations /O
+    vector_Mat translations /O
+    vector_Mat normals /O
+cv.filterHomographyDecompByVisibleRefpoints void 
+    vector_Mat rotations 
+    vector_Mat normals 
+    Mat beforePoints 
+    Mat afterPoints 
+    Mat possibleSolutions /O
+    Mat pointsMask Mat()
+cv.filterHomographyDecompByVisibleRefpoints void 
+    vector_Mat rotations 
+    vector_Mat normals 
+    UMat beforePoints 
+    UMat afterPoints 
+    UMat possibleSolutions /O
+    UMat pointsMask UMat()
+class cv.StereoMatcher : cv::Algorithm 
+enum cv.StereoMatcher.<unnamed>  
+    const cv.StereoMatcher.DISP_SHIFT 4 []
+    const cv.StereoMatcher.DISP_SCALE (1 << DISP_SHIFT) []
+cv.StereoMatcher.compute void /V;/PV
+    Mat left 
+    Mat right 
+    Mat disparity /O
+cv.StereoMatcher.compute void /V;/PV
+    UMat left 
+    UMat right 
+    UMat disparity /O
+cv.StereoMatcher.getMinDisparity int /C;/V;/PV
+cv.StereoMatcher.setMinDisparity void /V;/PV
+    int minDisparity 
+cv.StereoMatcher.getNumDisparities int /C;/V;/PV
+cv.StereoMatcher.setNumDisparities void /V;/PV
+    int numDisparities 
+cv.StereoMatcher.getBlockSize int /C;/V;/PV
+cv.StereoMatcher.setBlockSize void /V;/PV
+    int blockSize 
+cv.StereoMatcher.getSpeckleWindowSize int /C;/V;/PV
+cv.StereoMatcher.setSpeckleWindowSize void /V;/PV
+    int speckleWindowSize 
+cv.StereoMatcher.getSpeckleRange int /C;/V;/PV
+cv.StereoMatcher.setSpeckleRange void /V;/PV
+    int speckleRange 
+cv.StereoMatcher.getDisp12MaxDiff int /C;/V;/PV
+cv.StereoMatcher.setDisp12MaxDiff void /V;/PV
+    int disp12MaxDiff 
+class cv.StereoBM : cv::StereoMatcher 
+enum cv.StereoBM.<unnamed>  
+    const cv.StereoBM.PREFILTER_NORMALIZED_RESPONSE 0 []
+    const cv.StereoBM.PREFILTER_XSOBEL 1 []
+cv.StereoBM.getPreFilterType int /C;/V;/PV
+cv.StereoBM.setPreFilterType void /V;/PV
+    int preFilterType 
+cv.StereoBM.getPreFilterSize int /C;/V;/PV
+cv.StereoBM.setPreFilterSize void /V;/PV
+    int preFilterSize 
+cv.StereoBM.getPreFilterCap int /C;/V;/PV
+cv.StereoBM.setPreFilterCap void /V;/PV
+    int preFilterCap 
+cv.StereoBM.getTextureThreshold int /C;/V;/PV
+cv.StereoBM.setTextureThreshold void /V;/PV
+    int textureThreshold 
+cv.StereoBM.getUniquenessRatio int /C;/V;/PV
+cv.StereoBM.setUniquenessRatio void /V;/PV
+    int uniquenessRatio 
+cv.StereoBM.getSmallerBlockSize int /C;/V;/PV
+cv.StereoBM.setSmallerBlockSize void /V;/PV
+    int blockSize 
+cv.StereoBM.getROI1 Rect /C;/V;/PV
+cv.StereoBM.setROI1 void /V;/PV
+    Rect roi1 
+cv.StereoBM.getROI2 Rect /C;/V;/PV
+cv.StereoBM.setROI2 void /V;/PV
+    Rect roi2 
+cv.StereoBM.create Ptr_StereoBM /S
+    int numDisparities 0
+    int blockSize 21
+class cv.StereoSGBM : cv::StereoMatcher 
+enum cv.StereoSGBM.<unnamed>  
+    const cv.StereoSGBM.MODE_SGBM 0 []
+    const cv.StereoSGBM.MODE_HH 1 []
+    const cv.StereoSGBM.MODE_SGBM_3WAY 2 []
+    const cv.StereoSGBM.MODE_HH4 3 []
+cv.StereoSGBM.getPreFilterCap int /C;/V;/PV
+cv.StereoSGBM.setPreFilterCap void /V;/PV
+    int preFilterCap 
+cv.StereoSGBM.getUniquenessRatio int /C;/V;/PV
+cv.StereoSGBM.setUniquenessRatio void /V;/PV
+    int uniquenessRatio 
+cv.StereoSGBM.getP1 int /C;/V;/PV
+cv.StereoSGBM.setP1 void /V;/PV
+    int P1 
+cv.StereoSGBM.getP2 int /C;/V;/PV
+cv.StereoSGBM.setP2 void /V;/PV
+    int P2 
+cv.StereoSGBM.getMode int /C;/V;/PV
+cv.StereoSGBM.setMode void /V;/PV
+    int mode 
+cv.StereoSGBM.create Ptr_StereoSGBM /S
+    int minDisparity 0
+    int numDisparities 16
+    int blockSize 3
+    int P1 0
+    int P2 0
+    int disp12MaxDiff 0
+    int preFilterCap 0
+    int uniquenessRatio 0
+    int speckleWindowSize 0
+    int speckleRange 0
+    int mode StereoSGBM::MODE_SGBM
+enum cv.fisheye.<unnamed>  
+    const cv.fisheye.CALIB_USE_INTRINSIC_GUESS 1 << 0 []
+    const cv.fisheye.CALIB_RECOMPUTE_EXTRINSIC 1 << 1 []
+    const cv.fisheye.CALIB_CHECK_COND 1 << 2 []
+    const cv.fisheye.CALIB_FIX_SKEW 1 << 3 []
+    const cv.fisheye.CALIB_FIX_K1 1 << 4 []
+    const cv.fisheye.CALIB_FIX_K2 1 << 5 []
+    const cv.fisheye.CALIB_FIX_K3 1 << 6 []
+    const cv.fisheye.CALIB_FIX_K4 1 << 7 []
+    const cv.fisheye.CALIB_FIX_INTRINSIC 1 << 8 []
+    const cv.fisheye.CALIB_FIX_PRINCIPAL_POINT 1 << 9 []
+cv.fisheye.projectPoints void 
+    Mat objectPoints 
+    Mat imagePoints /O
+    Mat rvec 
+    Mat tvec 
+    Mat K 
+    Mat D 
+    double alpha 0
+    Mat jacobian Mat()/O
+cv.fisheye.projectPoints void 
+    UMat objectPoints 
+    UMat imagePoints /O
+    UMat rvec 
+    UMat tvec 
+    UMat K 
+    UMat D 
+    double alpha 0
+    UMat jacobian UMat()/O
+cv.fisheye.distortPoints void 
+    Mat undistorted 
+    Mat distorted /O
+    Mat K 
+    Mat D 
+    double alpha 0
+cv.fisheye.distortPoints void 
+    UMat undistorted 
+    UMat distorted /O
+    UMat K 
+    UMat D 
+    double alpha 0
+cv.fisheye.undistortPoints void 
+    Mat distorted 
+    Mat undistorted /O
+    Mat K 
+    Mat D 
+    Mat R Mat()
+    Mat P Mat()
+cv.fisheye.undistortPoints void 
+    UMat distorted 
+    UMat undistorted /O
+    UMat K 
+    UMat D 
+    UMat R UMat()
+    UMat P UMat()
+cv.fisheye.initUndistortRectifyMap void 
+    Mat K 
+    Mat D 
+    Mat R 
+    Mat P 
+    Size size /C; /Ref
+    int m1type 
+    Mat map1 /O
+    Mat map2 /O
+cv.fisheye.initUndistortRectifyMap void 
+    UMat K 
+    UMat D 
+    UMat R 
+    UMat P 
+    Size size /C; /Ref
+    int m1type 
+    UMat map1 /O
+    UMat map2 /O
+cv.fisheye.undistortImage void 
+    Mat distorted 
+    Mat undistorted /O
+    Mat K 
+    Mat D 
+    Mat Knew cv::Mat()
+    Size new_size Size()/C; /Ref
+cv.fisheye.undistortImage void 
+    UMat distorted 
+    UMat undistorted /O
+    UMat K 
+    UMat D 
+    UMat Knew cv::UMat()
+    Size new_size Size()/C; /Ref
+cv.fisheye.estimateNewCameraMatrixForUndistortRectify void 
+    Mat K 
+    Mat D 
+    Size image_size /C; /Ref
+    Mat R 
+    Mat P /O
+    double balance 0.0
+    Size new_size Size()/C; /Ref
+    double fov_scale 1.0
+cv.fisheye.estimateNewCameraMatrixForUndistortRectify void 
+    UMat K 
+    UMat D 
+    Size image_size /C; /Ref
+    UMat R 
+    UMat P /O
+    double balance 0.0
+    Size new_size Size()/C; /Ref
+    double fov_scale 1.0
+cv.fisheye.calibrate double 
+    vector_Mat objectPoints 
+    vector_Mat imagePoints 
+    Size image_size /C; /Ref
+    Mat K /IO
+    Mat D /IO
+    vector_Mat rvecs /O
+    vector_Mat tvecs /O
+    int flags 0
+    TermCriteria criteria TermCriteria(TermCriteria::COUNT + TermCriteria::EPS, 100, DBL_EPSILON)
+cv.fisheye.calibrate double 
+    vector_Mat objectPoints 
+    vector_Mat imagePoints 
+    Size image_size /C; /Ref
+    UMat K /IO
+    UMat D /IO
+    vector_Mat rvecs /O
+    vector_Mat tvecs /O
+    int flags 0
+    TermCriteria criteria TermCriteria(TermCriteria::COUNT + TermCriteria::EPS, 100, DBL_EPSILON)
+cv.fisheye.stereoRectify void 
+    Mat K1 
+    Mat D1 
+    Mat K2 
+    Mat D2 
+    Size imageSize /C; /Ref
+    Mat R 
+    Mat tvec 
+    Mat R1 /O
+    Mat R2 /O
+    Mat P1 /O
+    Mat P2 /O
+    Mat Q /O
+    int flags 
+    Size newImageSize Size()/C; /Ref
+    double balance 0.0
+    double fov_scale 1.0
+cv.fisheye.stereoRectify void 
+    UMat K1 
+    UMat D1 
+    UMat K2 
+    UMat D2 
+    Size imageSize /C; /Ref
+    UMat R 
+    UMat tvec 
+    UMat R1 /O
+    UMat R2 /O
+    UMat P1 /O
+    UMat P2 /O
+    UMat Q /O
+    int flags 
+    Size newImageSize Size()/C; /Ref
+    double balance 0.0
+    double fov_scale 1.0
+cv.fisheye.stereoCalibrate double 
+    vector_Mat objectPoints 
+    vector_Mat imagePoints1 
+    vector_Mat imagePoints2 
+    Mat K1 /IO
+    Mat D1 /IO
+    Mat K2 /IO
+    Mat D2 /IO
+    Size imageSize 
+    Mat R /O
+    Mat T /O
+    int flags fisheye::CALIB_FIX_INTRINSIC
+    TermCriteria criteria TermCriteria(TermCriteria::COUNT + TermCriteria::EPS, 100, DBL_EPSILON)
+cv.fisheye.stereoCalibrate double 
+    vector_Mat objectPoints 
+    vector_Mat imagePoints1 
+    vector_Mat imagePoints2 
+    UMat K1 /IO
+    UMat D1 /IO
+    UMat K2 /IO
+    UMat D2 /IO
+    Size imageSize 
+    UMat R /O
+    UMat T /O
+    int flags fisheye::CALIB_FIX_INTRINSIC
+    TermCriteria criteria TermCriteria(TermCriteria::COUNT + TermCriteria::EPS, 100, DBL_EPSILON)
+class cv.Feature2D : cv::Algorithm, cv::class, cv::Feature2D, cv::Algorithm 
+cv.Feature2D.detect void /V
+    Mat image 
+    vector_KeyPoint keypoints /O; /Ref
+    Mat mask Mat()
+cv.Feature2D.detect void /V
+    UMat image 
+    vector_KeyPoint keypoints /O; /Ref
+    UMat mask UMat()
+cv.Feature2D.detect void /V
+    vector_Mat images 
+    vector_vector_KeyPoint keypoints /O; /Ref
+    vector_Mat masks vector_Mat()
+cv.Feature2D.detect void /V
+    vector_Mat images 
+    vector_vector_KeyPoint keypoints /O; /Ref
+    vector_Mat masks vector_Mat()
+cv.Feature2D.compute void /V
+    Mat image 
+    vector_KeyPoint keypoints /O; /IO; /Ref
+    Mat descriptors /O
+cv.Feature2D.compute void /V
+    UMat image 
+    vector_KeyPoint keypoints /O; /IO; /Ref
+    UMat descriptors /O
+cv.Feature2D.compute void /V
+    vector_Mat images 
+    vector_vector_KeyPoint keypoints /O; /IO; /Ref
+    vector_Mat descriptors /O
+cv.Feature2D.compute void /V
+    vector_Mat images 
+    vector_vector_KeyPoint keypoints /O; /IO; /Ref
+    vector_Mat descriptors /O
+cv.Feature2D.detectAndCompute void /V
+    Mat image 
+    Mat mask 
+    vector_KeyPoint keypoints /O; /Ref
+    Mat descriptors /O
+    bool useProvidedKeypoints false
+cv.Feature2D.detectAndCompute void /V
+    UMat image 
+    UMat mask 
+    vector_KeyPoint keypoints /O; /Ref
+    UMat descriptors /O
+    bool useProvidedKeypoints false
+cv.Feature2D.descriptorSize int /C;/V
+cv.Feature2D.descriptorType int /C;/V
+cv.Feature2D.defaultNorm int /C;/V
+cv.Feature2D.write void /C
+    String fileName /C; /Ref
+cv.Feature2D.read void 
+    String fileName /C; /Ref
+cv.Feature2D.read void /V
+    FileNode arg1 /C; /Ref
+cv.Feature2D.empty bool /C;/V
+cv.Feature2D.getDefaultName String /C;/V
+cv.Feature2D.write void /C
+    Ptr_FileStorage fs /C; /Ref
+    String name String()/C; /Ref
+class cv.BRISK : cv::Feature2D 
+cv.BRISK.create Ptr_BRISK /S
+    int thresh 30
+    int octaves 3
+    float patternScale 1.0f
+cv.BRISK.create Ptr_BRISK /S
+    vector_float radiusList /C; /Ref
+    vector_int numberList /C; /Ref
+    float dMax 5.85f
+    float dMin 8.2f
+    vector_int indexChange std::vector<int>()/C; /Ref
+cv.BRISK.create Ptr_BRISK /S
+    int thresh 
+    int octaves 
+    vector_float radiusList /C; /Ref
+    vector_int numberList /C; /Ref
+    float dMax 5.85f
+    float dMin 8.2f
+    vector_int indexChange std::vector<int>()/C; /Ref
+cv.BRISK.getDefaultName String /C;/V
+class cv.ORB : cv::Feature2D 
+enum cv.ORB.<unnamed>  
+    const cv.ORB.kBytes 32 []
+    const cv.ORB.HARRIS_SCORE 0 []
+    const cv.ORB.FAST_SCORE 1 []
+cv.ORB.create Ptr_ORB /S
+    int nfeatures 500
+    float scaleFactor 1.2f
+    int nlevels 8
+    int edgeThreshold 31
+    int firstLevel 0
+    int WTA_K 2
+    int scoreType ORB::HARRIS_SCORE
+    int patchSize 31
+    int fastThreshold 20
+cv.ORB.setMaxFeatures void /V;/PV
+    int maxFeatures 
+cv.ORB.getMaxFeatures int /C;/V;/PV
+cv.ORB.setScaleFactor void /V;/PV
+    double scaleFactor 
+cv.ORB.getScaleFactor double /C;/V;/PV
+cv.ORB.setNLevels void /V;/PV
+    int nlevels 
+cv.ORB.getNLevels int /C;/V;/PV
+cv.ORB.setEdgeThreshold void /V;/PV
+    int edgeThreshold 
+cv.ORB.getEdgeThreshold int /C;/V;/PV
+cv.ORB.setFirstLevel void /V;/PV
+    int firstLevel 
+cv.ORB.getFirstLevel int /C;/V;/PV
+cv.ORB.setWTA_K void /V;/PV
+    int wta_k 
+cv.ORB.getWTA_K int /C;/V;/PV
+cv.ORB.setScoreType void /V;/PV
+    int scoreType 
+cv.ORB.getScoreType int /C;/V;/PV
+cv.ORB.setPatchSize void /V;/PV
+    int patchSize 
+cv.ORB.getPatchSize int /C;/V;/PV
+cv.ORB.setFastThreshold void /V;/PV
+    int fastThreshold 
+cv.ORB.getFastThreshold int /C;/V;/PV
+cv.ORB.getDefaultName String /C;/V
+class cv.MSER : cv::Feature2D 
+cv.MSER.create Ptr_MSER /S
+    int _delta 5
+    int _min_area 60
+    int _max_area 14400
+    double _max_variation 0.25
+    double _min_diversity .2
+    int _max_evolution 200
+    double _area_threshold 1.01
+    double _min_margin 0.003
+    int _edge_blur_size 5
+cv.MSER.detectRegions void /V;/PV
+    Mat image 
+    vector_vector_Point msers /O; /Ref
+    vector_Rect bboxes /O; /Ref
+cv.MSER.detectRegions void /V;/PV
+    UMat image 
+    vector_vector_Point msers /O; /Ref
+    vector_Rect bboxes /O; /Ref
+cv.MSER.setDelta void /V;/PV
+    int delta 
+cv.MSER.getDelta int /C;/V;/PV
+cv.MSER.setMinArea void /V;/PV
+    int minArea 
+cv.MSER.getMinArea int /C;/V;/PV
+cv.MSER.setMaxArea void /V;/PV
+    int maxArea 
+cv.MSER.getMaxArea int /C;/V;/PV
+cv.MSER.setPass2Only void /V;/PV
+    bool f 
+cv.MSER.getPass2Only bool /C;/V;/PV
+cv.MSER.getDefaultName String /C;/V
+class cv.FastFeatureDetector : cv::Feature2D 
+enum cv.FastFeatureDetector.<unnamed>  
+    const cv.FastFeatureDetector.TYPE_5_8 0 []
+    const cv.FastFeatureDetector.TYPE_7_12 1 []
+    const cv.FastFeatureDetector.TYPE_9_16 2 []
+    const cv.FastFeatureDetector.THRESHOLD 10000 []
+    const cv.FastFeatureDetector.NONMAX_SUPPRESSION 10001 []
+    const cv.FastFeatureDetector.FAST_N 10002 []
+cv.FastFeatureDetector.create Ptr_FastFeatureDetector /S
+    int threshold 10
+    bool nonmaxSuppression true
+    int type FastFeatureDetector::TYPE_9_16
+cv.FastFeatureDetector.setThreshold void /V;/PV
+    int threshold 
+cv.FastFeatureDetector.getThreshold int /C;/V;/PV
+cv.FastFeatureDetector.setNonmaxSuppression void /V;/PV
+    bool f 
+cv.FastFeatureDetector.getNonmaxSuppression bool /C;/V;/PV
+cv.FastFeatureDetector.setType void /V;/PV
+    int type 
+cv.FastFeatureDetector.getType int /C;/V;/PV
+cv.FastFeatureDetector.getDefaultName String /C;/V
+class cv.AgastFeatureDetector : cv::Feature2D 
+enum cv.AgastFeatureDetector.<unnamed>  
+    const cv.AgastFeatureDetector.AGAST_5_8 0 []
+    const cv.AgastFeatureDetector.AGAST_7_12d 1 []
+    const cv.AgastFeatureDetector.AGAST_7_12s 2 []
+    const cv.AgastFeatureDetector.OAST_9_16 3 []
+    const cv.AgastFeatureDetector.THRESHOLD 10000 []
+    const cv.AgastFeatureDetector.NONMAX_SUPPRESSION 10001 []
+cv.AgastFeatureDetector.create Ptr_AgastFeatureDetector /S
+    int threshold 10
+    bool nonmaxSuppression true
+    int type AgastFeatureDetector::OAST_9_16
+cv.AgastFeatureDetector.setThreshold void /V;/PV
+    int threshold 
+cv.AgastFeatureDetector.getThreshold int /C;/V;/PV
+cv.AgastFeatureDetector.setNonmaxSuppression void /V;/PV
+    bool f 
+cv.AgastFeatureDetector.getNonmaxSuppression bool /C;/V;/PV
+cv.AgastFeatureDetector.setType void /V;/PV
+    int type 
+cv.AgastFeatureDetector.getType int /C;/V;/PV
+cv.AgastFeatureDetector.getDefaultName String /C;/V
+class cv.GFTTDetector : cv::Feature2D 
+cv.GFTTDetector.create Ptr_GFTTDetector /S
+    int maxCorners 1000
+    double qualityLevel 0.01
+    double minDistance 1
+    int blockSize 3
+    bool useHarrisDetector false
+    double k 0.04
+cv.GFTTDetector.create Ptr_GFTTDetector /S
+    int maxCorners 
+    double qualityLevel 
+    double minDistance 
+    int blockSize 
+    int gradiantSize 
+    bool useHarrisDetector false
+    double k 0.04
+cv.GFTTDetector.setMaxFeatures void /V;/PV
+    int maxFeatures 
+cv.GFTTDetector.getMaxFeatures int /C;/V;/PV
+cv.GFTTDetector.setQualityLevel void /V;/PV
+    double qlevel 
+cv.GFTTDetector.getQualityLevel double /C;/V;/PV
+cv.GFTTDetector.setMinDistance void /V;/PV
+    double minDistance 
+cv.GFTTDetector.getMinDistance double /C;/V;/PV
+cv.GFTTDetector.setBlockSize void /V;/PV
+    int blockSize 
+cv.GFTTDetector.getBlockSize int /C;/V;/PV
+cv.GFTTDetector.setHarrisDetector void /V;/PV
+    bool val 
+cv.GFTTDetector.getHarrisDetector bool /C;/V;/PV
+cv.GFTTDetector.setK void /V;/PV
+    double k 
+cv.GFTTDetector.getK double /C;/V;/PV
+cv.GFTTDetector.getDefaultName String /C;/V
+class cv.SimpleBlobDetector : cv::Feature2D 
+struct cv.SimpleBlobDetector.Params  /Simple
+    float thresholdStep /RW
+    float minThreshold /RW
+    float maxThreshold /RW
+    size_t minRepeatability /RW
+    float minDistBetweenBlobs /RW
+    bool filterByColor /RW
+    uchar blobColor /RW
+    bool filterByArea /RW
+    float minArea /RW
+    float maxArea /RW
+    bool filterByCircularity /RW
+    float minCircularity /RW
+    float maxCircularity /RW
+    bool filterByInertia /RW
+    float minInertiaRatio /RW
+    float maxInertiaRatio /RW
+    bool filterByConvexity /RW
+    float minConvexity /RW
+    float maxConvexity /RW
+cv.SimpleBlobDetector.Params.Params  
+cv.SimpleBlobDetector.create Ptr_SimpleBlobDetector /S
+    SimpleBlobDetector_Params parameters SimpleBlobDetector::Params()/C; /Ref
+cv.SimpleBlobDetector.getDefaultName String /C;/V
+class cv.KAZE : cv::Feature2D 
+enum cv.KAZE.<unnamed>  
+    const cv.KAZE.DIFF_PM_G1 0 []
+    const cv.KAZE.DIFF_PM_G2 1 []
+    const cv.KAZE.DIFF_WEICKERT 2 []
+    const cv.KAZE.DIFF_CHARBONNIER 3 []
+cv.KAZE.create Ptr_KAZE /S
+    bool extended false
+    bool upright false
+    float threshold 0.001f
+    int nOctaves 4
+    int nOctaveLayers 4
+    int diffusivity KAZE::DIFF_PM_G2
+cv.KAZE.setExtended void /V;/PV
+    bool extended 
+cv.KAZE.getExtended bool /C;/V;/PV
+cv.KAZE.setUpright void /V;/PV
+    bool upright 
+cv.KAZE.getUpright bool /C;/V;/PV
+cv.KAZE.setThreshold void /V;/PV
+    double threshold 
+cv.KAZE.getThreshold double /C;/V;/PV
+cv.KAZE.setNOctaves void /V;/PV
+    int octaves 
+cv.KAZE.getNOctaves int /C;/V;/PV
+cv.KAZE.setNOctaveLayers void /V;/PV
+    int octaveLayers 
+cv.KAZE.getNOctaveLayers int /C;/V;/PV
+cv.KAZE.setDiffusivity void /V;/PV
+    int diff 
+cv.KAZE.getDiffusivity int /C;/V;/PV
+cv.KAZE.getDefaultName String /C;/V
+class cv.AKAZE : cv::Feature2D 
+enum cv.AKAZE.<unnamed>  
+    const cv.AKAZE.DESCRIPTOR_KAZE_UPRIGHT 2 []
+    const cv.AKAZE.DESCRIPTOR_KAZE 3 []
+    const cv.AKAZE.DESCRIPTOR_MLDB_UPRIGHT 4 []
+    const cv.AKAZE.DESCRIPTOR_MLDB 5 []
+cv.AKAZE.create Ptr_AKAZE /S
+    int descriptor_type AKAZE::DESCRIPTOR_MLDB
+    int descriptor_size 0
+    int descriptor_channels 3
+    float threshold 0.001f
+    int nOctaves 4
+    int nOctaveLayers 4
+    int diffusivity KAZE::DIFF_PM_G2
+cv.AKAZE.setDescriptorType void /V;/PV
+    int dtype 
+cv.AKAZE.getDescriptorType int /C;/V;/PV
+cv.AKAZE.setDescriptorSize void /V;/PV
+    int dsize 
+cv.AKAZE.getDescriptorSize int /C;/V;/PV
+cv.AKAZE.setDescriptorChannels void /V;/PV
+    int dch 
+cv.AKAZE.getDescriptorChannels int /C;/V;/PV
+cv.AKAZE.setThreshold void /V;/PV
+    double threshold 
+cv.AKAZE.getThreshold double /C;/V;/PV
+cv.AKAZE.setNOctaves void /V;/PV
+    int octaves 
+cv.AKAZE.getNOctaves int /C;/V;/PV
+cv.AKAZE.setNOctaveLayers void /V;/PV
+    int octaveLayers 
+cv.AKAZE.getNOctaveLayers int /C;/V;/PV
+cv.AKAZE.setDiffusivity void /V;/PV
+    int diff 
+cv.AKAZE.getDiffusivity int /C;/V;/PV
+cv.AKAZE.getDefaultName String /C;/V
+class cv.DescriptorMatcher : cv::Algorithm 
+enum cv.DescriptorMatcher.<unnamed>  
+    const cv.DescriptorMatcher.FLANNBASED 1 []
+    const cv.DescriptorMatcher.BRUTEFORCE 2 []
+    const cv.DescriptorMatcher.BRUTEFORCE_L1 3 []
+    const cv.DescriptorMatcher.BRUTEFORCE_HAMMING 4 []
+    const cv.DescriptorMatcher.BRUTEFORCE_HAMMINGLUT 5 []
+    const cv.DescriptorMatcher.BRUTEFORCE_SL2 6 []
+cv.DescriptorMatcher.add void /V
+    vector_Mat descriptors 
+cv.DescriptorMatcher.add void /V
+    vector_Mat descriptors 
+cv.DescriptorMatcher.getTrainDescriptors vector_Mat /C
+cv.DescriptorMatcher.clear void /V
+cv.DescriptorMatcher.empty bool /C;/V
+cv.DescriptorMatcher.isMaskSupported bool /C;/V;/PV
+cv.DescriptorMatcher.train void /V
+cv.DescriptorMatcher.match void /C
+    Mat queryDescriptors 
+    Mat trainDescriptors 
+    vector_DMatch matches /O; /Ref
+    Mat mask Mat()
+cv.DescriptorMatcher.match void /C
+    UMat queryDescriptors 
+    UMat trainDescriptors 
+    vector_DMatch matches /O; /Ref
+    UMat mask UMat()
+cv.DescriptorMatcher.knnMatch void /C
+    Mat queryDescriptors 
+    Mat trainDescriptors 
+    vector_vector_DMatch matches /O; /Ref
+    int k 
+    Mat mask Mat()
+    bool compactResult false
+cv.DescriptorMatcher.knnMatch void /C
+    UMat queryDescriptors 
+    UMat trainDescriptors 
+    vector_vector_DMatch matches /O; /Ref
+    int k 
+    UMat mask UMat()
+    bool compactResult false
+cv.DescriptorMatcher.radiusMatch void /C
+    Mat queryDescriptors 
+    Mat trainDescriptors 
+    vector_vector_DMatch matches /O; /Ref
+    float maxDistance 
+    Mat mask Mat()
+    bool compactResult false
+cv.DescriptorMatcher.radiusMatch void /C
+    UMat queryDescriptors 
+    UMat trainDescriptors 
+    vector_vector_DMatch matches /O; /Ref
+    float maxDistance 
+    UMat mask UMat()
+    bool compactResult false
+cv.DescriptorMatcher.match void 
+    Mat queryDescriptors 
+    vector_DMatch matches /O; /Ref
+    vector_Mat masks vector_Mat()
+cv.DescriptorMatcher.match void 
+    UMat queryDescriptors 
+    vector_DMatch matches /O; /Ref
+    vector_Mat masks vector_Mat()
+cv.DescriptorMatcher.knnMatch void 
+    Mat queryDescriptors 
+    vector_vector_DMatch matches /O; /Ref
+    int k 
+    vector_Mat masks vector_Mat()
+    bool compactResult false
+cv.DescriptorMatcher.knnMatch void 
+    UMat queryDescriptors 
+    vector_vector_DMatch matches /O; /Ref
+    int k 
+    vector_Mat masks vector_Mat()
+    bool compactResult false
+cv.DescriptorMatcher.radiusMatch void 
+    Mat queryDescriptors 
+    vector_vector_DMatch matches /O; /Ref
+    float maxDistance 
+    vector_Mat masks vector_Mat()
+    bool compactResult false
+cv.DescriptorMatcher.radiusMatch void 
+    UMat queryDescriptors 
+    vector_vector_DMatch matches /O; /Ref
+    float maxDistance 
+    vector_Mat masks vector_Mat()
+    bool compactResult false
+cv.DescriptorMatcher.write void /C
+    String fileName /C; /Ref
+cv.DescriptorMatcher.read void 
+    String fileName /C; /Ref
+cv.DescriptorMatcher.read void /V
+    FileNode arg1 /C; /Ref
+cv.DescriptorMatcher.clone Ptr_DescriptorMatcher /C;/V;/PV
+    bool emptyTrainData false
+cv.DescriptorMatcher.create Ptr_DescriptorMatcher /S
+    String descriptorMatcherType /C; /Ref
+cv.DescriptorMatcher.create Ptr_DescriptorMatcher /S
+    int matcherType 
+cv.DescriptorMatcher.write void /C
+    Ptr_FileStorage fs /C; /Ref
+    String name String()/C; /Ref
+class cv.BFMatcher : cv::DescriptorMatcher 
+cv.BFMatcher.BFMatcher  
+    int normType NORM_L2
+    bool crossCheck false
+cv.BFMatcher.create Ptr_BFMatcher /S
+    int normType NORM_L2
+    bool crossCheck false
+class cv.FlannBasedMatcher : cv::DescriptorMatcher 
+cv.FlannBasedMatcher.FlannBasedMatcher  
+    Ptr_flann_IndexParams indexParams makePtr<flann::KDTreeIndexParams>()/C; /Ref
+    Ptr_flann_SearchParams searchParams makePtr<flann::SearchParams>()/C; /Ref
+cv.FlannBasedMatcher.create Ptr_FlannBasedMatcher /S
+enum cv.DrawMatchesFlags.<unnamed>  
+    const cv.DrawMatchesFlags.DEFAULT 0 []
+    const cv.DrawMatchesFlags.DRAW_OVER_OUTIMG 1 []
+    const cv.DrawMatchesFlags.NOT_DRAW_SINGLE_POINTS 2 []
+    const cv.DrawMatchesFlags.DRAW_RICH_KEYPOINTS 4 []
+cv.drawKeypoints void 
+    Mat image 
+    vector_KeyPoint keypoints /C; /Ref
+    Mat outImage /IO
+    Scalar color Scalar::all(-1)/C; /Ref
+    int flags DrawMatchesFlags::DEFAULT
+cv.drawKeypoints void 
+    UMat image 
+    vector_KeyPoint keypoints /C; /Ref
+    UMat outImage /IO
+    Scalar color Scalar::all(-1)/C; /Ref
+    int flags DrawMatchesFlags::DEFAULT
+cv.drawMatches void 
+    Mat img1 
+    vector_KeyPoint keypoints1 /C; /Ref
+    Mat img2 
+    vector_KeyPoint keypoints2 /C; /Ref
+    vector_DMatch matches1to2 /C; /Ref
+    Mat outImg /IO
+    Scalar matchColor Scalar::all(-1)/C; /Ref
+    Scalar singlePointColor Scalar::all(-1)/C; /Ref
+    vector_char matchesMask std::vector<char>()/C; /Ref
+    int flags DrawMatchesFlags::DEFAULT
+cv.drawMatches void 
+    UMat img1 
+    vector_KeyPoint keypoints1 /C; /Ref
+    UMat img2 
+    vector_KeyPoint keypoints2 /C; /Ref
+    vector_DMatch matches1to2 /C; /Ref
+    UMat outImg /IO
+    Scalar matchColor Scalar::all(-1)/C; /Ref
+    Scalar singlePointColor Scalar::all(-1)/C; /Ref
+    vector_char matchesMask std::vector<char>()/C; /Ref
+    int flags DrawMatchesFlags::DEFAULT
+cv.drawMatches void =drawMatchesKnn
+    Mat img1 
+    vector_KeyPoint keypoints1 /C; /Ref
+    Mat img2 
+    vector_KeyPoint keypoints2 /C; /Ref
+    vector_vector_DMatch matches1to2 /C; /Ref
+    Mat outImg /IO
+    Scalar matchColor Scalar::all(-1)/C; /Ref
+    Scalar singlePointColor Scalar::all(-1)/C; /Ref
+    vector_vector_char matchesMask std::vector<std::vector<char> >()/C; /Ref
+    int flags DrawMatchesFlags::DEFAULT
+cv.drawMatches void =drawMatchesKnn
+    UMat img1 
+    vector_KeyPoint keypoints1 /C; /Ref
+    UMat img2 
+    vector_KeyPoint keypoints2 /C; /Ref
+    vector_vector_DMatch matches1to2 /C; /Ref
+    UMat outImg /IO
+    Scalar matchColor Scalar::all(-1)/C; /Ref
+    Scalar singlePointColor Scalar::all(-1)/C; /Ref
+    vector_vector_char matchesMask std::vector<std::vector<char> >()/C; /Ref
+    int flags DrawMatchesFlags::DEFAULT
+class cv.BOWTrainer  
+cv.BOWTrainer.add void 
+    Mat descriptors /C; /Ref
+cv.BOWTrainer.add void 
+    Mat descriptors /C; /Ref
+cv.BOWTrainer.getDescriptors vector_Mat /C
+cv.BOWTrainer.descriptorsCount int /C
+cv.BOWTrainer.clear void /V
+cv.BOWTrainer.cluster Mat /C;/V;/PV
+cv.BOWTrainer.cluster Mat /C;/V;/PV
+    Mat descriptors /C; /Ref
+cv.BOWTrainer.cluster Mat /C;/V;/PV
+    Mat descriptors /C; /Ref
+class cv.BOWKMeansTrainer : cv::BOWTrainer 
+cv.BOWKMeansTrainer.BOWKMeansTrainer  
+    int clusterCount 
+    TermCriteria termcrit TermCriteria()/C; /Ref
+    int attempts 3
+    int flags KMEANS_PP_CENTERS
+cv.BOWKMeansTrainer.cluster Mat /C;/V
+cv.BOWKMeansTrainer.cluster Mat /C;/V
+    Mat descriptors /C; /Ref
+cv.BOWKMeansTrainer.cluster Mat /C;/V
+    Mat descriptors /C; /Ref
+class cv.BOWImgDescriptorExtractor  
+cv.BOWImgDescriptorExtractor.BOWImgDescriptorExtractor  
+    Ptr_DescriptorExtractor dextractor /C; /Ref
+    Ptr_DescriptorMatcher dmatcher /C; /Ref
+cv.BOWImgDescriptorExtractor.setVocabulary void 
+    Mat vocabulary /C; /Ref
+cv.BOWImgDescriptorExtractor.setVocabulary void 
+    Mat vocabulary /C; /Ref
+cv.BOWImgDescriptorExtractor.getVocabulary Mat /C
+cv.BOWImgDescriptorExtractor.compute2 void =compute
+    Mat image /C; /Ref
+    vector_KeyPoint keypoints /Ref
+    Mat imgDescriptor /O; /Ref
+cv.BOWImgDescriptorExtractor.compute2 void =compute
+    Mat image /C; /Ref
+    vector_KeyPoint keypoints /Ref
+    Mat imgDescriptor /O; /Ref
+cv.BOWImgDescriptorExtractor.descriptorSize int /C
+cv.BOWImgDescriptorExtractor.descriptorType int /C
+enum cv.<unnamed>  
+    const cv.OPTFLOW_USE_INITIAL_FLOW 4 []
+    const cv.OPTFLOW_LK_GET_MIN_EIGENVALS 8 []
+    const cv.OPTFLOW_FARNEBACK_GAUSSIAN 256 []
+cv.CamShift RotatedRect 
+    Mat probImage 
+    Rect window /IO; /Ref
+    TermCriteria criteria 
+cv.CamShift RotatedRect 
+    UMat probImage 
+    Rect window /IO; /Ref
+    TermCriteria criteria 
+cv.meanShift int 
+    Mat probImage 
+    Rect window /IO; /Ref
+    TermCriteria criteria 
+cv.meanShift int 
+    UMat probImage 
+    Rect window /IO; /Ref
+    TermCriteria criteria 
+cv.buildOpticalFlowPyramid int 
+    Mat img 
+    vector_Mat pyramid /O
+    Size winSize 
+    int maxLevel 
+    bool withDerivatives true
+    int pyrBorder BORDER_REFLECT_101
+    int derivBorder BORDER_CONSTANT
+    bool tryReuseInputImage true
+cv.buildOpticalFlowPyramid int 
+    UMat img 
+    vector_Mat pyramid /O
+    Size winSize 
+    int maxLevel 
+    bool withDerivatives true
+    int pyrBorder BORDER_REFLECT_101
+    int derivBorder BORDER_CONSTANT
+    bool tryReuseInputImage true
+cv.calcOpticalFlowPyrLK void 
+    Mat prevImg 
+    Mat nextImg 
+    Mat prevPts 
+    Mat nextPts /IO
+    Mat status /O
+    Mat err /O
+    Size winSize Size(21,21)
+    int maxLevel 3
+    TermCriteria criteria TermCriteria(TermCriteria::COUNT+TermCriteria::EPS, 30, 0.01)
+    int flags 0
+    double minEigThreshold 1e-4
+cv.calcOpticalFlowPyrLK void 
+    UMat prevImg 
+    UMat nextImg 
+    UMat prevPts 
+    UMat nextPts /IO
+    UMat status /O
+    UMat err /O
+    Size winSize Size(21,21)
+    int maxLevel 3
+    TermCriteria criteria TermCriteria(TermCriteria::COUNT+TermCriteria::EPS, 30, 0.01)
+    int flags 0
+    double minEigThreshold 1e-4
+cv.calcOpticalFlowFarneback void 
+    Mat prev 
+    Mat next 
+    Mat flow /IO
+    double pyr_scale 
+    int levels 
+    int winsize 
+    int iterations 
+    int poly_n 
+    double poly_sigma 
+    int flags 
+cv.calcOpticalFlowFarneback void 
+    UMat prev 
+    UMat next 
+    UMat flow /IO
+    double pyr_scale 
+    int levels 
+    int winsize 
+    int iterations 
+    int poly_n 
+    double poly_sigma 
+    int flags 
+cv.estimateRigidTransform Mat 
+    Mat src 
+    Mat dst 
+    bool fullAffine 
+cv.estimateRigidTransform Mat 
+    UMat src 
+    UMat dst 
+    bool fullAffine 
+cv.estimateRigidTransform Mat 
+    Mat src 
+    Mat dst 
+    bool fullAffine 
+    int ransacMaxIters 
+    double ransacGoodRatio 
+    int ransacSize0 
+cv.estimateRigidTransform Mat 
+    UMat src 
+    UMat dst 
+    bool fullAffine 
+    int ransacMaxIters 
+    double ransacGoodRatio 
+    int ransacSize0 
+enum cv.<unnamed>  
+    const cv.MOTION_TRANSLATION 0 []
+    const cv.MOTION_EUCLIDEAN 1 []
+    const cv.MOTION_AFFINE 2 []
+    const cv.MOTION_HOMOGRAPHY 3 []
+cv.computeECC double 
+    Mat templateImage 
+    Mat inputImage 
+    Mat inputMask Mat()
+cv.computeECC double 
+    UMat templateImage 
+    UMat inputImage 
+    UMat inputMask UMat()
+cv.findTransformECC double 
+    Mat templateImage 
+    Mat inputImage 
+    Mat warpMatrix /IO
+    int motionType 
+    TermCriteria criteria 
+    Mat inputMask 
+    int gaussFiltSize 
+cv.findTransformECC double 
+    UMat templateImage 
+    UMat inputImage 
+    UMat warpMatrix /IO
+    int motionType 
+    TermCriteria criteria 
+    UMat inputMask 
+    int gaussFiltSize 
+class cv.KalmanFilter  
+    Mat statePre /RW
+    Mat statePost /RW
+    Mat transitionMatrix /RW
+    Mat controlMatrix /RW
+    Mat measurementMatrix /RW
+    Mat processNoiseCov /RW
+    Mat measurementNoiseCov /RW
+    Mat errorCovPre /RW
+    Mat gain /RW
+    Mat errorCovPost /RW
+cv.KalmanFilter.KalmanFilter  
+cv.KalmanFilter.KalmanFilter  
+    int dynamParams 
+    int measureParams 
+    int controlParams 0
+    int type CV_32F
+cv.KalmanFilter.predict Mat 
+    Mat control Mat()/C; /Ref
+cv.KalmanFilter.predict Mat 
+    Mat control Mat()/C; /Ref
+cv.KalmanFilter.correct Mat 
+    Mat measurement /C; /Ref
+cv.KalmanFilter.correct Mat 
+    Mat measurement /C; /Ref
+class cv.DenseOpticalFlow : cv::Algorithm 
+cv.DenseOpticalFlow.calc void /V;/PV
+    Mat I0 
+    Mat I1 
+    Mat flow /IO
+cv.DenseOpticalFlow.calc void /V;/PV
+    UMat I0 
+    UMat I1 
+    UMat flow /IO
+cv.DenseOpticalFlow.collectGarbage void /V;/PV
+class cv.SparseOpticalFlow : cv::Algorithm 
+cv.SparseOpticalFlow.calc void /V;/PV
+    Mat prevImg 
+    Mat nextImg 
+    Mat prevPts 
+    Mat nextPts /IO
+    Mat status /O
+    Mat err cv::Mat()/O
+cv.SparseOpticalFlow.calc void /V;/PV
+    UMat prevImg 
+    UMat nextImg 
+    UMat prevPts 
+    UMat nextPts /IO
+    UMat status /O
+    UMat err cv::UMat()/O
+class cv.DualTVL1OpticalFlow : cv::DenseOpticalFlow 
+cv.DualTVL1OpticalFlow.getTau double /C;/V;/PV
+cv.DualTVL1OpticalFlow.setTau void /V;/PV
+    double val 
+cv.DualTVL1OpticalFlow.getLambda double /C;/V;/PV
+cv.DualTVL1OpticalFlow.setLambda void /V;/PV
+    double val 
+cv.DualTVL1OpticalFlow.getTheta double /C;/V;/PV
+cv.DualTVL1OpticalFlow.setTheta void /V;/PV
+    double val 
+cv.DualTVL1OpticalFlow.getGamma double /C;/V;/PV
+cv.DualTVL1OpticalFlow.setGamma void /V;/PV
+    double val 
+cv.DualTVL1OpticalFlow.getScalesNumber int /C;/V;/PV
+cv.DualTVL1OpticalFlow.setScalesNumber void /V;/PV
+    int val 
+cv.DualTVL1OpticalFlow.getWarpingsNumber int /C;/V;/PV
+cv.DualTVL1OpticalFlow.setWarpingsNumber void /V;/PV
+    int val 
+cv.DualTVL1OpticalFlow.getEpsilon double /C;/V;/PV
+cv.DualTVL1OpticalFlow.setEpsilon void /V;/PV
+    double val 
+cv.DualTVL1OpticalFlow.getInnerIterations int /C;/V;/PV
+cv.DualTVL1OpticalFlow.setInnerIterations void /V;/PV
+    int val 
+cv.DualTVL1OpticalFlow.getOuterIterations int /C;/V;/PV
+cv.DualTVL1OpticalFlow.setOuterIterations void /V;/PV
+    int val 
+cv.DualTVL1OpticalFlow.getUseInitialFlow bool /C;/V;/PV
+cv.DualTVL1OpticalFlow.setUseInitialFlow void /V;/PV
+    bool val 
+cv.DualTVL1OpticalFlow.getScaleStep double /C;/V;/PV
+cv.DualTVL1OpticalFlow.setScaleStep void /V;/PV
+    double val 
+cv.DualTVL1OpticalFlow.getMedianFiltering int /C;/V;/PV
+cv.DualTVL1OpticalFlow.setMedianFiltering void /V;/PV
+    int val 
+cv.DualTVL1OpticalFlow.create Ptr_DualTVL1OpticalFlow /S
+    double tau 0.25
+    double lambda 0.15
+    double theta 0.3
+    int nscales 5
+    int warps 5
+    double epsilon 0.01
+    int innnerIterations 30
+    int outerIterations 10
+    double scaleStep 0.8
+    double gamma 0.0
+    int medianFiltering 5
+    bool useInitialFlow false
+cv.createOptFlow_DualTVL1 Ptr_DualTVL1OpticalFlow 
+class cv.FarnebackOpticalFlow : cv::DenseOpticalFlow 
+cv.FarnebackOpticalFlow.getNumLevels int /C;/V;/PV
+cv.FarnebackOpticalFlow.setNumLevels void /V;/PV
+    int numLevels 
+cv.FarnebackOpticalFlow.getPyrScale double /C;/V;/PV
+cv.FarnebackOpticalFlow.setPyrScale void /V;/PV
+    double pyrScale 
+cv.FarnebackOpticalFlow.getFastPyramids bool /C;/V;/PV
+cv.FarnebackOpticalFlow.setFastPyramids void /V;/PV
+    bool fastPyramids 
+cv.FarnebackOpticalFlow.getWinSize int /C;/V;/PV
+cv.FarnebackOpticalFlow.setWinSize void /V;/PV
+    int winSize 
+cv.FarnebackOpticalFlow.getNumIters int /C;/V;/PV
+cv.FarnebackOpticalFlow.setNumIters void /V;/PV
+    int numIters 
+cv.FarnebackOpticalFlow.getPolyN int /C;/V;/PV
+cv.FarnebackOpticalFlow.setPolyN void /V;/PV
+    int polyN 
+cv.FarnebackOpticalFlow.getPolySigma double /C;/V;/PV
+cv.FarnebackOpticalFlow.setPolySigma void /V;/PV
+    double polySigma 
+cv.FarnebackOpticalFlow.getFlags int /C;/V;/PV
+cv.FarnebackOpticalFlow.setFlags void /V;/PV
+    int flags 
+cv.FarnebackOpticalFlow.create Ptr_FarnebackOpticalFlow /S
+    int numLevels 5
+    double pyrScale 0.5
+    bool fastPyramids false
+    int winSize 13
+    int numIters 10
+    int polyN 5
+    double polySigma 1.1
+    int flags 0
+class cv.SparsePyrLKOpticalFlow : cv::SparseOpticalFlow 
+cv.SparsePyrLKOpticalFlow.getWinSize Size /C;/V;/PV
+cv.SparsePyrLKOpticalFlow.setWinSize void /V;/PV
+    Size winSize 
+cv.SparsePyrLKOpticalFlow.getMaxLevel int /C;/V;/PV
+cv.SparsePyrLKOpticalFlow.setMaxLevel void /V;/PV
+    int maxLevel 
+cv.SparsePyrLKOpticalFlow.getTermCriteria TermCriteria /C;/V;/PV
+cv.SparsePyrLKOpticalFlow.setTermCriteria void /V;/PV
+    TermCriteria crit /Ref
+cv.SparsePyrLKOpticalFlow.getFlags int /C;/V;/PV
+cv.SparsePyrLKOpticalFlow.setFlags void /V;/PV
+    int flags 
+cv.SparsePyrLKOpticalFlow.getMinEigThreshold double /C;/V;/PV
+cv.SparsePyrLKOpticalFlow.setMinEigThreshold void /V;/PV
+    double minEigThreshold 
+cv.SparsePyrLKOpticalFlow.create Ptr_SparsePyrLKOpticalFlow /S
+    Size winSize Size(21, 21)
+    int maxLevel 3
+    TermCriteria crit TermCriteria(TermCriteria::COUNT+TermCriteria::EPS, 30, 0.01)
+    int flags 0
+    double minEigThreshold 1e-4
+class cv.BackgroundSubtractor : cv::Algorithm 
+cv.BackgroundSubtractor.apply void /V;/PV
+    Mat image 
+    Mat fgmask /O
+    double learningRate -1
+cv.BackgroundSubtractor.apply void /V;/PV
+    UMat image 
+    UMat fgmask /O
+    double learningRate -1
+cv.BackgroundSubtractor.getBackgroundImage void /C;/V;/PV
+    Mat backgroundImage /O
+cv.BackgroundSubtractor.getBackgroundImage void /C;/V;/PV
+    UMat backgroundImage /O
+class cv.BackgroundSubtractorMOG2 : cv::BackgroundSubtractor 
+cv.BackgroundSubtractorMOG2.getHistory int /C;/V;/PV
+cv.BackgroundSubtractorMOG2.setHistory void /V;/PV
+    int history 
+cv.BackgroundSubtractorMOG2.getNMixtures int /C;/V;/PV
+cv.BackgroundSubtractorMOG2.setNMixtures void /V;/PV
+    int nmixtures 
+cv.BackgroundSubtractorMOG2.getBackgroundRatio double /C;/V;/PV
+cv.BackgroundSubtractorMOG2.setBackgroundRatio void /V;/PV
+    double ratio 
+cv.BackgroundSubtractorMOG2.getVarThreshold double /C;/V;/PV
+cv.BackgroundSubtractorMOG2.setVarThreshold void /V;/PV
+    double varThreshold 
+cv.BackgroundSubtractorMOG2.getVarThresholdGen double /C;/V;/PV
+cv.BackgroundSubtractorMOG2.setVarThresholdGen void /V;/PV
+    double varThresholdGen 
+cv.BackgroundSubtractorMOG2.getVarInit double /C;/V;/PV
+cv.BackgroundSubtractorMOG2.setVarInit void /V;/PV
+    double varInit 
+cv.BackgroundSubtractorMOG2.getVarMin double /C;/V;/PV
+cv.BackgroundSubtractorMOG2.setVarMin void /V;/PV
+    double varMin 
+cv.BackgroundSubtractorMOG2.getVarMax double /C;/V;/PV
+cv.BackgroundSubtractorMOG2.setVarMax void /V;/PV
+    double varMax 
+cv.BackgroundSubtractorMOG2.getComplexityReductionThreshold double /C;/V;/PV
+cv.BackgroundSubtractorMOG2.setComplexityReductionThreshold void /V;/PV
+    double ct 
+cv.BackgroundSubtractorMOG2.getDetectShadows bool /C;/V;/PV
+cv.BackgroundSubtractorMOG2.setDetectShadows void /V;/PV
+    bool detectShadows 
+cv.BackgroundSubtractorMOG2.getShadowValue int /C;/V;/PV
+cv.BackgroundSubtractorMOG2.setShadowValue void /V;/PV
+    int value 
+cv.BackgroundSubtractorMOG2.getShadowThreshold double /C;/V;/PV
+cv.BackgroundSubtractorMOG2.setShadowThreshold void /V;/PV
+    double threshold 
+cv.BackgroundSubtractorMOG2.apply void /V;/PV
+    Mat image 
+    Mat fgmask /O
+    double learningRate -1
+cv.BackgroundSubtractorMOG2.apply void /V;/PV
+    UMat image 
+    UMat fgmask /O
+    double learningRate -1
+cv.createBackgroundSubtractorMOG2 Ptr_BackgroundSubtractorMOG2 
+    int history 500
+    double varThreshold 16
+    bool detectShadows true
+class cv.BackgroundSubtractorKNN : cv::BackgroundSubtractor 
+cv.BackgroundSubtractorKNN.getHistory int /C;/V;/PV
+cv.BackgroundSubtractorKNN.setHistory void /V;/PV
+    int history 
+cv.BackgroundSubtractorKNN.getNSamples int /C;/V;/PV
+cv.BackgroundSubtractorKNN.setNSamples void /V;/PV
+    int _nN 
+cv.BackgroundSubtractorKNN.getDist2Threshold double /C;/V;/PV
+cv.BackgroundSubtractorKNN.setDist2Threshold void /V;/PV
+    double _dist2Threshold 
+cv.BackgroundSubtractorKNN.getkNNSamples int /C;/V;/PV
+cv.BackgroundSubtractorKNN.setkNNSamples void /V;/PV
+    int _nkNN 
+cv.BackgroundSubtractorKNN.getDetectShadows bool /C;/V;/PV
+cv.BackgroundSubtractorKNN.setDetectShadows void /V;/PV
+    bool detectShadows 
+cv.BackgroundSubtractorKNN.getShadowValue int /C;/V;/PV
+cv.BackgroundSubtractorKNN.setShadowValue void /V;/PV
+    int value 
+cv.BackgroundSubtractorKNN.getShadowThreshold double /C;/V;/PV
+cv.BackgroundSubtractorKNN.setShadowThreshold void /V;/PV
+    double threshold 
+cv.createBackgroundSubtractorKNN Ptr_BackgroundSubtractorKNN 
+    int history 500
+    double dist2Threshold 400.0
+    bool detectShadows true
+cv.groupRectangles void 
+    vector_Rect rectList /IO; /Ref
+    vector_int weights /O; /Ref
+    int groupThreshold 
+    double eps 0.2
+enum cv.<unnamed>  
+    const cv.CASCADE_DO_CANNY_PRUNING 1 []
+    const cv.CASCADE_SCALE_IMAGE 2 []
+    const cv.CASCADE_FIND_BIGGEST_OBJECT 4 []
+    const cv.CASCADE_DO_ROUGH_SEARCH 8 []
+class cv.BaseCascadeClassifier : cv::Algorithm 
+class cv.CascadeClassifier  
+cv.CascadeClassifier.CascadeClassifier  
+cv.CascadeClassifier.CascadeClassifier  
+    String filename /C; /Ref
+cv.CascadeClassifier.empty bool /C
+cv.CascadeClassifier.load bool 
+    String filename /C; /Ref
+cv.CascadeClassifier.read bool 
+    FileNode node /C; /Ref
+cv.CascadeClassifier.detectMultiScale void 
+    Mat image 
+    vector_Rect objects /O; /Ref
+    double scaleFactor 1.1
+    int minNeighbors 3
+    int flags 0
+    Size minSize Size()
+    Size maxSize Size()
+cv.CascadeClassifier.detectMultiScale void 
+    UMat image 
+    vector_Rect objects /O; /Ref
+    double scaleFactor 1.1
+    int minNeighbors 3
+    int flags 0
+    Size minSize Size()
+    Size maxSize Size()
+cv.CascadeClassifier.detectMultiScale void =detectMultiScale2
+    Mat image 
+    vector_Rect objects /O; /Ref
+    vector_int numDetections /O; /Ref
+    double scaleFactor 1.1
+    int minNeighbors 3
+    int flags 0
+    Size minSize Size()
+    Size maxSize Size()
+cv.CascadeClassifier.detectMultiScale void =detectMultiScale2
+    UMat image 
+    vector_Rect objects /O; /Ref
+    vector_int numDetections /O; /Ref
+    double scaleFactor 1.1
+    int minNeighbors 3
+    int flags 0
+    Size minSize Size()
+    Size maxSize Size()
+cv.CascadeClassifier.detectMultiScale void =detectMultiScale3
+    Mat image 
+    vector_Rect objects /O; /Ref
+    vector_int rejectLevels /O; /Ref
+    vector_double levelWeights /O; /Ref
+    double scaleFactor 1.1
+    int minNeighbors 3
+    int flags 0
+    Size minSize Size()
+    Size maxSize Size()
+    bool outputRejectLevels false
+cv.CascadeClassifier.detectMultiScale void =detectMultiScale3
+    UMat image 
+    vector_Rect objects /O; /Ref
+    vector_int rejectLevels /O; /Ref
+    vector_double levelWeights /O; /Ref
+    double scaleFactor 1.1
+    int minNeighbors 3
+    int flags 0
+    Size minSize Size()
+    Size maxSize Size()
+    bool outputRejectLevels false
+cv.CascadeClassifier.isOldFormatCascade bool /C
+cv.CascadeClassifier.getOriginalWindowSize Size /C
+cv.CascadeClassifier.getFeatureType int /C
+cv.CascadeClassifier.convert bool /S
+    String oldcascade /C; /Ref
+    String newcascade /C; /Ref
+struct cv.HOGDescriptor  
+    Size winSize 
+    Size blockSize 
+    Size blockStride 
+    Size cellSize 
+    int nbins 
+    int derivAperture 
+    double winSigma 
+    int histogramNormType 
+    double L2HysThreshold 
+    bool gammaCorrection 
+    vector_float svmDetector 
+    int nlevels 
+    bool signedGradient 
+enum cv.HOGDescriptor.<unnamed>  
+    const cv.HOGDescriptor.L2Hys 0 []
+enum cv.HOGDescriptor.<unnamed>  
+    const cv.HOGDescriptor.DEFAULT_NLEVELS 64 []
+cv.HOGDescriptor.HOGDescriptor  
+cv.HOGDescriptor.HOGDescriptor  
+    Size _winSize 
+    Size _blockSize 
+    Size _blockStride 
+    Size _cellSize 
+    int _nbins 
+    int _derivAperture 1
+    double _winSigma -1
+    int _histogramNormType HOGDescriptor::L2Hys
+    double _L2HysThreshold 0.2
+    bool _gammaCorrection false
+    int _nlevels HOGDescriptor::DEFAULT_NLEVELS
+    bool _signedGradient false
+cv.HOGDescriptor.HOGDescriptor  
+    String filename /C; /Ref
+cv.HOGDescriptor.getDescriptorSize size_t /C
+cv.HOGDescriptor.checkDetectorSize bool /C
+cv.HOGDescriptor.getWinSigma double /C
+cv.HOGDescriptor.setSVMDetector void /V
+    Mat _svmdetector 
+cv.HOGDescriptor.setSVMDetector void /V
+    UMat _svmdetector 
+cv.HOGDescriptor.load bool /V
+    String filename /C; /Ref
+    String objname String()/C; /Ref
+cv.HOGDescriptor.save void /C;/V
+    String filename /C; /Ref
+    String objname String()/C; /Ref
+cv.HOGDescriptor.compute void /C;/V
+    Mat img 
+    vector_float descriptors /O; /Ref
+    Size winStride Size()
+    Size padding Size()
+    vector_Point locations std::vector<Point>()/C; /Ref
+cv.HOGDescriptor.compute void /C;/V
+    UMat img 
+    vector_float descriptors /O; /Ref
+    Size winStride Size()
+    Size padding Size()
+    vector_Point locations std::vector<Point>()/C; /Ref
+cv.HOGDescriptor.detect void /C;/V
+    Mat img /C; /Ref
+    vector_Point foundLocations /O; /Ref
+    vector_double weights /O; /Ref
+    double hitThreshold 0
+    Size winStride Size()
+    Size padding Size()
+    vector_Point searchLocations std::vector<Point>()/C; /Ref
+cv.HOGDescriptor.detect void /C;/V
+    Mat img /C; /Ref
+    vector_Point foundLocations /O; /Ref
+    vector_double weights /O; /Ref
+    double hitThreshold 0
+    Size winStride Size()
+    Size padding Size()
+    vector_Point searchLocations std::vector<Point>()/C; /Ref
+cv.HOGDescriptor.detectMultiScale void /C;/V
+    Mat img 
+    vector_Rect foundLocations /O; /Ref
+    vector_double foundWeights /O; /Ref
+    double hitThreshold 0
+    Size winStride Size()
+    Size padding Size()
+    double scale 1.05
+    double finalThreshold 2.0
+    bool useMeanshiftGrouping false
+cv.HOGDescriptor.detectMultiScale void /C;/V
+    UMat img 
+    vector_Rect foundLocations /O; /Ref
+    vector_double foundWeights /O; /Ref
+    double hitThreshold 0
+    Size winStride Size()
+    Size padding Size()
+    double scale 1.05
+    double finalThreshold 2.0
+    bool useMeanshiftGrouping false
+cv.HOGDescriptor.computeGradient void /C;/V
+    Mat img /C; /Ref
+    Mat grad /O; /Ref
+    Mat angleOfs /O; /Ref
+    Size paddingTL Size()
+    Size paddingBR Size()
+cv.HOGDescriptor.computeGradient void /C;/V
+    Mat img /C; /Ref
+    Mat grad /O; /Ref
+    Mat angleOfs /O; /Ref
+    Size paddingTL Size()
+    Size paddingBR Size()
+cv.HOGDescriptor.getDefaultPeopleDetector vector_float /S
+cv.HOGDescriptor.getDaimlerPeopleDetector vector_float /S
+class cv.QRCodeDetector  
+cv.QRCodeDetector.QRCodeDetector  
+cv.QRCodeDetector.setEpsX void 
+    double epsX 
+cv.QRCodeDetector.setEpsY void 
+    double epsY 
+cv.QRCodeDetector.detect bool /C
+    Mat img 
+    Mat points /O
+cv.QRCodeDetector.detect bool /C
+    UMat img 
+    UMat points /O
+cv.QRCodeDetector.decode String 
+    Mat img 
+    Mat points 
+    Mat straight_qrcode Mat()/O
+cv.QRCodeDetector.decode String 
+    UMat img 
+    UMat points 
+    UMat straight_qrcode UMat()/O
+cv.QRCodeDetector.detectAndDecode String 
+    Mat img 
+    Mat points Mat()/O
+    Mat straight_qrcode Mat()/O
+cv.QRCodeDetector.detectAndDecode String 
+    UMat img 
+    UMat points UMat()/O
+    UMat straight_qrcode UMat()/O
+enum cv.ImreadModes  
+    const cv.IMREAD_UNCHANGED -1 []
+    const cv.IMREAD_GRAYSCALE 0 []
+    const cv.IMREAD_COLOR 1 []
+    const cv.IMREAD_ANYDEPTH 2 []
+    const cv.IMREAD_ANYCOLOR 4 []
+    const cv.IMREAD_LOAD_GDAL 8 []
+    const cv.IMREAD_REDUCED_GRAYSCALE_2 16 []
+    const cv.IMREAD_REDUCED_COLOR_2 17 []
+    const cv.IMREAD_REDUCED_GRAYSCALE_4 32 []
+    const cv.IMREAD_REDUCED_COLOR_4 33 []
+    const cv.IMREAD_REDUCED_GRAYSCALE_8 64 []
+    const cv.IMREAD_REDUCED_COLOR_8 65 []
+    const cv.IMREAD_IGNORE_ORIENTATION 128 []
+enum cv.ImwriteFlags  
+    const cv.IMWRITE_JPEG_QUALITY 1 []
+    const cv.IMWRITE_JPEG_PROGRESSIVE 2 []
+    const cv.IMWRITE_JPEG_OPTIMIZE 3 []
+    const cv.IMWRITE_JPEG_RST_INTERVAL 4 []
+    const cv.IMWRITE_JPEG_LUMA_QUALITY 5 []
+    const cv.IMWRITE_JPEG_CHROMA_QUALITY 6 []
+    const cv.IMWRITE_PNG_COMPRESSION 16 []
+    const cv.IMWRITE_PNG_STRATEGY 17 []
+    const cv.IMWRITE_PNG_BILEVEL 18 []
+    const cv.IMWRITE_PXM_BINARY 32 []
+    const cv.IMWRITE_EXR_TYPE (3 << 4) + 0 []
+    const cv.IMWRITE_WEBP_QUALITY 64 []
+    const cv.IMWRITE_PAM_TUPLETYPE 128 []
+    const cv.IMWRITE_TIFF_RESUNIT 256 []
+    const cv.IMWRITE_TIFF_XDPI 257 []
+    const cv.IMWRITE_TIFF_YDPI 258 []
+    const cv.IMWRITE_TIFF_COMPRESSION 259 []
+enum cv.ImwriteEXRTypeFlags  
+    const cv.IMWRITE_EXR_TYPE_HALF 1 []
+    const cv.IMWRITE_EXR_TYPE_FLOAT 2 []
+enum cv.ImwritePNGFlags  
+    const cv.IMWRITE_PNG_STRATEGY_DEFAULT 0 []
+    const cv.IMWRITE_PNG_STRATEGY_FILTERED 1 []
+    const cv.IMWRITE_PNG_STRATEGY_HUFFMAN_ONLY 2 []
+    const cv.IMWRITE_PNG_STRATEGY_RLE 3 []
+    const cv.IMWRITE_PNG_STRATEGY_FIXED 4 []
+enum cv.ImwritePAMFlags  
+    const cv.IMWRITE_PAM_FORMAT_NULL 0 []
+    const cv.IMWRITE_PAM_FORMAT_BLACKANDWHITE 1 []
+    const cv.IMWRITE_PAM_FORMAT_GRAYSCALE 2 []
+    const cv.IMWRITE_PAM_FORMAT_GRAYSCALE_ALPHA 3 []
+    const cv.IMWRITE_PAM_FORMAT_RGB 4 []
+    const cv.IMWRITE_PAM_FORMAT_RGB_ALPHA 5 []
+cv.imread Mat 
+    String filename /C; /Ref
+    int flags IMREAD_COLOR
+cv.imreadmulti bool 
+    String filename /C; /Ref
+    vector_Mat mats /O; /Ref
+    int flags IMREAD_ANYCOLOR
+cv.imreadmulti bool 
+    String filename /C; /Ref
+    vector_Mat mats /O; /Ref
+    int flags IMREAD_ANYCOLOR
+cv.imwrite bool 
+    String filename /C; /Ref
+    Mat img 
+    vector_int params std::vector<int>()/C; /Ref
+cv.imwrite bool 
+    String filename /C; /Ref
+    UMat img 
+    vector_int params std::vector<int>()/C; /Ref
+cv.imdecode Mat 
+    Mat buf 
+    int flags 
+cv.imdecode Mat 
+    UMat buf 
+    int flags 
+cv.imencode bool 
+    String ext /C; /Ref
+    Mat img 
+    vector_uchar buf /O; /Ref
+    vector_int params std::vector<int>()/C; /Ref
+cv.imencode bool 
+    String ext /C; /Ref
+    UMat img 
+    vector_uchar buf /O; /Ref
+    vector_int params std::vector<int>()/C; /Ref
+enum cv.VideoCaptureAPIs  
+    const cv.CAP_ANY 0 []
+    const cv.CAP_VFW 200 []
+    const cv.CAP_V4L 200 []
+    const cv.CAP_V4L2 CAP_V4L []
+    const cv.CAP_FIREWIRE 300 []
+    const cv.CAP_FIREWARE CAP_FIREWIRE []
+    const cv.CAP_IEEE1394 CAP_FIREWIRE []
+    const cv.CAP_DC1394 CAP_FIREWIRE []
+    const cv.CAP_CMU1394 CAP_FIREWIRE []
+    const cv.CAP_QT 500 []
+    const cv.CAP_UNICAP 600 []
+    const cv.CAP_DSHOW 700 []
+    const cv.CAP_PVAPI 800 []
+    const cv.CAP_OPENNI 900 []
+    const cv.CAP_OPENNI_ASUS 910 []
+    const cv.CAP_ANDROID 1000 []
+    const cv.CAP_XIAPI 1100 []
+    const cv.CAP_AVFOUNDATION 1200 []
+    const cv.CAP_GIGANETIX 1300 []
+    const cv.CAP_MSMF 1400 []
+    const cv.CAP_WINRT 1410 []
+    const cv.CAP_INTELPERC 1500 []
+    const cv.CAP_OPENNI2 1600 []
+    const cv.CAP_OPENNI2_ASUS 1610 []
+    const cv.CAP_GPHOTO2 1700 []
+    const cv.CAP_GSTREAMER 1800 []
+    const cv.CAP_FFMPEG 1900 []
+    const cv.CAP_IMAGES 2000 []
+    const cv.CAP_ARAVIS 2100 []
+    const cv.CAP_OPENCV_MJPEG 2200 []
+    const cv.CAP_INTEL_MFX 2300 []
+    const cv.CAP_XINE 2400 []
+enum cv.VideoCaptureProperties  
+    const cv.CAP_PROP_POS_MSEC 0 []
+    const cv.CAP_PROP_POS_FRAMES 1 []
+    const cv.CAP_PROP_POS_AVI_RATIO 2 []
+    const cv.CAP_PROP_FRAME_WIDTH 3 []
+    const cv.CAP_PROP_FRAME_HEIGHT 4 []
+    const cv.CAP_PROP_FPS 5 []
+    const cv.CAP_PROP_FOURCC 6 []
+    const cv.CAP_PROP_FRAME_COUNT 7 []
+    const cv.CAP_PROP_FORMAT 8 []
+    const cv.CAP_PROP_MODE 9 []
+    const cv.CAP_PROP_BRIGHTNESS 10 []
+    const cv.CAP_PROP_CONTRAST 11 []
+    const cv.CAP_PROP_SATURATION 12 []
+    const cv.CAP_PROP_HUE 13 []
+    const cv.CAP_PROP_GAIN 14 []
+    const cv.CAP_PROP_EXPOSURE 15 []
+    const cv.CAP_PROP_CONVERT_RGB 16 []
+    const cv.CAP_PROP_WHITE_BALANCE_BLUE_U 17 []
+    const cv.CAP_PROP_RECTIFICATION 18 []
+    const cv.CAP_PROP_MONOCHROME 19 []
+    const cv.CAP_PROP_SHARPNESS 20 []
+    const cv.CAP_PROP_AUTO_EXPOSURE 21 []
+    const cv.CAP_PROP_GAMMA 22 []
+    const cv.CAP_PROP_TEMPERATURE 23 []
+    const cv.CAP_PROP_TRIGGER 24 []
+    const cv.CAP_PROP_TRIGGER_DELAY 25 []
+    const cv.CAP_PROP_WHITE_BALANCE_RED_V 26 []
+    const cv.CAP_PROP_ZOOM 27 []
+    const cv.CAP_PROP_FOCUS 28 []
+    const cv.CAP_PROP_GUID 29 []
+    const cv.CAP_PROP_ISO_SPEED 30 []
+    const cv.CAP_PROP_BACKLIGHT 32 []
+    const cv.CAP_PROP_PAN 33 []
+    const cv.CAP_PROP_TILT 34 []
+    const cv.CAP_PROP_ROLL 35 []
+    const cv.CAP_PROP_IRIS 36 []
+    const cv.CAP_PROP_SETTINGS 37 []
+    const cv.CAP_PROP_BUFFERSIZE 38 []
+    const cv.CAP_PROP_AUTOFOCUS 39 []
+    const cv.CAP_PROP_SAR_NUM 40 []
+    const cv.CAP_PROP_SAR_DEN 41 []
+    const cv.CAP_PROP_BACKEND 42 []
+    const cv.CAP_PROP_CHANNEL 43 []
+    const cv.CAP_PROP_AUTO_WB 44 []
+    const cv.CAP_PROP_WB_TEMPERATURE 45 []
+    const cv.CAP_PROP_CODEC_PIXEL_FORMAT 46 []
+enum cv.VideoCaptureModes  
+    const cv.CAP_MODE_BGR 0 []
+    const cv.CAP_MODE_RGB 1 []
+    const cv.CAP_MODE_GRAY 2 []
+    const cv.CAP_MODE_YUYV 3 []
+enum cv.VideoWriterProperties  
+    const cv.VIDEOWRITER_PROP_QUALITY 1 []
+    const cv.VIDEOWRITER_PROP_FRAMEBYTES 2 []
+    const cv.VIDEOWRITER_PROP_NSTRIPES 3 []
+enum cv.<unnamed>  
+    const cv.CAP_PROP_DC1394_OFF -4 []
+    const cv.CAP_PROP_DC1394_MODE_MANUAL -3 []
+    const cv.CAP_PROP_DC1394_MODE_AUTO -2 []
+    const cv.CAP_PROP_DC1394_MODE_ONE_PUSH_AUTO -1 []
+    const cv.CAP_PROP_DC1394_MAX 31 []
+enum cv.<unnamed>  
+    const cv.CAP_OPENNI_DEPTH_GENERATOR 1 << 31 []
+    const cv.CAP_OPENNI_IMAGE_GENERATOR 1 << 30 []
+    const cv.CAP_OPENNI_IR_GENERATOR 1 << 29 []
+    const cv.CAP_OPENNI_GENERATORS_MASK CAP_OPENNI_DEPTH_GENERATOR + CAP_OPENNI_IMAGE_GENERATOR + CAP_OPENNI_IR_GENERATOR []
+enum cv.<unnamed>  
+    const cv.CAP_PROP_OPENNI_OUTPUT_MODE 100 []
+    const cv.CAP_PROP_OPENNI_FRAME_MAX_DEPTH 101 []
+    const cv.CAP_PROP_OPENNI_BASELINE 102 []
+    const cv.CAP_PROP_OPENNI_FOCAL_LENGTH 103 []
+    const cv.CAP_PROP_OPENNI_REGISTRATION 104 []
+    const cv.CAP_PROP_OPENNI_REGISTRATION_ON CAP_PROP_OPENNI_REGISTRATION []
+    const cv.CAP_PROP_OPENNI_APPROX_FRAME_SYNC 105 []
+    const cv.CAP_PROP_OPENNI_MAX_BUFFER_SIZE 106 []
+    const cv.CAP_PROP_OPENNI_CIRCLE_BUFFER 107 []
+    const cv.CAP_PROP_OPENNI_MAX_TIME_DURATION 108 []
+    const cv.CAP_PROP_OPENNI_GENERATOR_PRESENT 109 []
+    const cv.CAP_PROP_OPENNI2_SYNC 110 []
+    const cv.CAP_PROP_OPENNI2_MIRROR 111 []
+enum cv.<unnamed>  
+    const cv.CAP_OPENNI_IMAGE_GENERATOR_PRESENT CAP_OPENNI_IMAGE_GENERATOR + CAP_PROP_OPENNI_GENERATOR_PRESENT []
+    const cv.CAP_OPENNI_IMAGE_GENERATOR_OUTPUT_MODE CAP_OPENNI_IMAGE_GENERATOR + CAP_PROP_OPENNI_OUTPUT_MODE []
+    const cv.CAP_OPENNI_DEPTH_GENERATOR_PRESENT CAP_OPENNI_DEPTH_GENERATOR + CAP_PROP_OPENNI_GENERATOR_PRESENT []
+    const cv.CAP_OPENNI_DEPTH_GENERATOR_BASELINE CAP_OPENNI_DEPTH_GENERATOR + CAP_PROP_OPENNI_BASELINE []
+    const cv.CAP_OPENNI_DEPTH_GENERATOR_FOCAL_LENGTH CAP_OPENNI_DEPTH_GENERATOR + CAP_PROP_OPENNI_FOCAL_LENGTH []
+    const cv.CAP_OPENNI_DEPTH_GENERATOR_REGISTRATION CAP_OPENNI_DEPTH_GENERATOR + CAP_PROP_OPENNI_REGISTRATION []
+    const cv.CAP_OPENNI_DEPTH_GENERATOR_REGISTRATION_ON CAP_OPENNI_DEPTH_GENERATOR_REGISTRATION []
+    const cv.CAP_OPENNI_IR_GENERATOR_PRESENT CAP_OPENNI_IR_GENERATOR + CAP_PROP_OPENNI_GENERATOR_PRESENT []
+enum cv.<unnamed>  
+    const cv.CAP_OPENNI_DEPTH_MAP 0 []
+    const cv.CAP_OPENNI_POINT_CLOUD_MAP 1 []
+    const cv.CAP_OPENNI_DISPARITY_MAP 2 []
+    const cv.CAP_OPENNI_DISPARITY_MAP_32F 3 []
+    const cv.CAP_OPENNI_VALID_DEPTH_MASK 4 []
+    const cv.CAP_OPENNI_BGR_IMAGE 5 []
+    const cv.CAP_OPENNI_GRAY_IMAGE 6 []
+    const cv.CAP_OPENNI_IR_IMAGE 7 []
+enum cv.<unnamed>  
+    const cv.CAP_OPENNI_VGA_30HZ 0 []
+    const cv.CAP_OPENNI_SXGA_15HZ 1 []
+    const cv.CAP_OPENNI_SXGA_30HZ 2 []
+    const cv.CAP_OPENNI_QVGA_30HZ 3 []
+    const cv.CAP_OPENNI_QVGA_60HZ 4 []
+enum cv.<unnamed>  
+    const cv.CAP_PROP_GSTREAMER_QUEUE_LENGTH 200 []
+enum cv.<unnamed>  
+    const cv.CAP_PROP_PVAPI_MULTICASTIP 300 []
+    const cv.CAP_PROP_PVAPI_FRAMESTARTTRIGGERMODE 301 []
+    const cv.CAP_PROP_PVAPI_DECIMATIONHORIZONTAL 302 []
+    const cv.CAP_PROP_PVAPI_DECIMATIONVERTICAL 303 []
+    const cv.CAP_PROP_PVAPI_BINNINGX 304 []
+    const cv.CAP_PROP_PVAPI_BINNINGY 305 []
+    const cv.CAP_PROP_PVAPI_PIXELFORMAT 306 []
+enum cv.<unnamed>  
+    const cv.CAP_PVAPI_FSTRIGMODE_FREERUN 0 []
+    const cv.CAP_PVAPI_FSTRIGMODE_SYNCIN1 1 []
+    const cv.CAP_PVAPI_FSTRIGMODE_SYNCIN2 2 []
+    const cv.CAP_PVAPI_FSTRIGMODE_FIXEDRATE 3 []
+    const cv.CAP_PVAPI_FSTRIGMODE_SOFTWARE 4 []
+enum cv.<unnamed>  
+    const cv.CAP_PVAPI_DECIMATION_OFF 1 []
+    const cv.CAP_PVAPI_DECIMATION_2OUTOF4 2 []
+    const cv.CAP_PVAPI_DECIMATION_2OUTOF8 4 []
+    const cv.CAP_PVAPI_DECIMATION_2OUTOF16 8 []
+enum cv.<unnamed>  
+    const cv.CAP_PVAPI_PIXELFORMAT_MONO8 1 []
+    const cv.CAP_PVAPI_PIXELFORMAT_MONO16 2 []
+    const cv.CAP_PVAPI_PIXELFORMAT_BAYER8 3 []
+    const cv.CAP_PVAPI_PIXELFORMAT_BAYER16 4 []
+    const cv.CAP_PVAPI_PIXELFORMAT_RGB24 5 []
+    const cv.CAP_PVAPI_PIXELFORMAT_BGR24 6 []
+    const cv.CAP_PVAPI_PIXELFORMAT_RGBA32 7 []
+    const cv.CAP_PVAPI_PIXELFORMAT_BGRA32 8 []
+enum cv.<unnamed>  
+    const cv.CAP_PROP_XI_DOWNSAMPLING 400 []
+    const cv.CAP_PROP_XI_DATA_FORMAT 401 []
+    const cv.CAP_PROP_XI_OFFSET_X 402 []
+    const cv.CAP_PROP_XI_OFFSET_Y 403 []
+    const cv.CAP_PROP_XI_TRG_SOURCE 404 []
+    const cv.CAP_PROP_XI_TRG_SOFTWARE 405 []
+    const cv.CAP_PROP_XI_GPI_SELECTOR 406 []
+    const cv.CAP_PROP_XI_GPI_MODE 407 []
+    const cv.CAP_PROP_XI_GPI_LEVEL 408 []
+    const cv.CAP_PROP_XI_GPO_SELECTOR 409 []
+    const cv.CAP_PROP_XI_GPO_MODE 410 []
+    const cv.CAP_PROP_XI_LED_SELECTOR 411 []
+    const cv.CAP_PROP_XI_LED_MODE 412 []
+    const cv.CAP_PROP_XI_MANUAL_WB 413 []
+    const cv.CAP_PROP_XI_AUTO_WB 414 []
+    const cv.CAP_PROP_XI_AEAG 415 []
+    const cv.CAP_PROP_XI_EXP_PRIORITY 416 []
+    const cv.CAP_PROP_XI_AE_MAX_LIMIT 417 []
+    const cv.CAP_PROP_XI_AG_MAX_LIMIT 418 []
+    const cv.CAP_PROP_XI_AEAG_LEVEL 419 []
+    const cv.CAP_PROP_XI_TIMEOUT 420 []
+    const cv.CAP_PROP_XI_EXPOSURE 421 []
+    const cv.CAP_PROP_XI_EXPOSURE_BURST_COUNT 422 []
+    const cv.CAP_PROP_XI_GAIN_SELECTOR 423 []
+    const cv.CAP_PROP_XI_GAIN 424 []
+    const cv.CAP_PROP_XI_DOWNSAMPLING_TYPE 426 []
+    const cv.CAP_PROP_XI_BINNING_SELECTOR 427 []
+    const cv.CAP_PROP_XI_BINNING_VERTICAL 428 []
+    const cv.CAP_PROP_XI_BINNING_HORIZONTAL 429 []
+    const cv.CAP_PROP_XI_BINNING_PATTERN 430 []
+    const cv.CAP_PROP_XI_DECIMATION_SELECTOR 431 []
+    const cv.CAP_PROP_XI_DECIMATION_VERTICAL 432 []
+    const cv.CAP_PROP_XI_DECIMATION_HORIZONTAL 433 []
+    const cv.CAP_PROP_XI_DECIMATION_PATTERN 434 []
+    const cv.CAP_PROP_XI_TEST_PATTERN_GENERATOR_SELECTOR 587 []
+    const cv.CAP_PROP_XI_TEST_PATTERN 588 []
+    const cv.CAP_PROP_XI_IMAGE_DATA_FORMAT 435 []
+    const cv.CAP_PROP_XI_SHUTTER_TYPE 436 []
+    const cv.CAP_PROP_XI_SENSOR_TAPS 437 []
+    const cv.CAP_PROP_XI_AEAG_ROI_OFFSET_X 439 []
+    const cv.CAP_PROP_XI_AEAG_ROI_OFFSET_Y 440 []
+    const cv.CAP_PROP_XI_AEAG_ROI_WIDTH 441 []
+    const cv.CAP_PROP_XI_AEAG_ROI_HEIGHT 442 []
+    const cv.CAP_PROP_XI_BPC 445 []
+    const cv.CAP_PROP_XI_WB_KR 448 []
+    const cv.CAP_PROP_XI_WB_KG 449 []
+    const cv.CAP_PROP_XI_WB_KB 450 []
+    const cv.CAP_PROP_XI_WIDTH 451 []
+    const cv.CAP_PROP_XI_HEIGHT 452 []
+    const cv.CAP_PROP_XI_REGION_SELECTOR 589 []
+    const cv.CAP_PROP_XI_REGION_MODE 595 []
+    const cv.CAP_PROP_XI_LIMIT_BANDWIDTH 459 []
+    const cv.CAP_PROP_XI_SENSOR_DATA_BIT_DEPTH 460 []
+    const cv.CAP_PROP_XI_OUTPUT_DATA_BIT_DEPTH 461 []
+    const cv.CAP_PROP_XI_IMAGE_DATA_BIT_DEPTH 462 []
+    const cv.CAP_PROP_XI_OUTPUT_DATA_PACKING 463 []
+    const cv.CAP_PROP_XI_OUTPUT_DATA_PACKING_TYPE 464 []
+    const cv.CAP_PROP_XI_IS_COOLED 465 []
+    const cv.CAP_PROP_XI_COOLING 466 []
+    const cv.CAP_PROP_XI_TARGET_TEMP 467 []
+    const cv.CAP_PROP_XI_CHIP_TEMP 468 []
+    const cv.CAP_PROP_XI_HOUS_TEMP 469 []
+    const cv.CAP_PROP_XI_HOUS_BACK_SIDE_TEMP 590 []
+    const cv.CAP_PROP_XI_SENSOR_BOARD_TEMP 596 []
+    const cv.CAP_PROP_XI_CMS 470 []
+    const cv.CAP_PROP_XI_APPLY_CMS 471 []
+    const cv.CAP_PROP_XI_IMAGE_IS_COLOR 474 []
+    const cv.CAP_PROP_XI_COLOR_FILTER_ARRAY 475 []
+    const cv.CAP_PROP_XI_GAMMAY 476 []
+    const cv.CAP_PROP_XI_GAMMAC 477 []
+    const cv.CAP_PROP_XI_SHARPNESS 478 []
+    const cv.CAP_PROP_XI_CC_MATRIX_00 479 []
+    const cv.CAP_PROP_XI_CC_MATRIX_01 480 []
+    const cv.CAP_PROP_XI_CC_MATRIX_02 481 []
+    const cv.CAP_PROP_XI_CC_MATRIX_03 482 []
+    const cv.CAP_PROP_XI_CC_MATRIX_10 483 []
+    const cv.CAP_PROP_XI_CC_MATRIX_11 484 []
+    const cv.CAP_PROP_XI_CC_MATRIX_12 485 []
+    const cv.CAP_PROP_XI_CC_MATRIX_13 486 []
+    const cv.CAP_PROP_XI_CC_MATRIX_20 487 []
+    const cv.CAP_PROP_XI_CC_MATRIX_21 488 []
+    const cv.CAP_PROP_XI_CC_MATRIX_22 489 []
+    const cv.CAP_PROP_XI_CC_MATRIX_23 490 []
+    const cv.CAP_PROP_XI_CC_MATRIX_30 491 []
+    const cv.CAP_PROP_XI_CC_MATRIX_31 492 []
+    const cv.CAP_PROP_XI_CC_MATRIX_32 493 []
+    const cv.CAP_PROP_XI_CC_MATRIX_33 494 []
+    const cv.CAP_PROP_XI_DEFAULT_CC_MATRIX 495 []
+    const cv.CAP_PROP_XI_TRG_SELECTOR 498 []
+    const cv.CAP_PROP_XI_ACQ_FRAME_BURST_COUNT 499 []
+    const cv.CAP_PROP_XI_DEBOUNCE_EN 507 []
+    const cv.CAP_PROP_XI_DEBOUNCE_T0 508 []
+    const cv.CAP_PROP_XI_DEBOUNCE_T1 509 []
+    const cv.CAP_PROP_XI_DEBOUNCE_POL 510 []
+    const cv.CAP_PROP_XI_LENS_MODE 511 []
+    const cv.CAP_PROP_XI_LENS_APERTURE_VALUE 512 []
+    const cv.CAP_PROP_XI_LENS_FOCUS_MOVEMENT_VALUE 513 []
+    const cv.CAP_PROP_XI_LENS_FOCUS_MOVE 514 []
+    const cv.CAP_PROP_XI_LENS_FOCUS_DISTANCE 515 []
+    const cv.CAP_PROP_XI_LENS_FOCAL_LENGTH 516 []
+    const cv.CAP_PROP_XI_LENS_FEATURE_SELECTOR 517 []
+    const cv.CAP_PROP_XI_LENS_FEATURE 518 []
+    const cv.CAP_PROP_XI_DEVICE_MODEL_ID 521 []
+    const cv.CAP_PROP_XI_DEVICE_SN 522 []
+    const cv.CAP_PROP_XI_IMAGE_DATA_FORMAT_RGB32_ALPHA 529 []
+    const cv.CAP_PROP_XI_IMAGE_PAYLOAD_SIZE 530 []
+    const cv.CAP_PROP_XI_TRANSPORT_PIXEL_FORMAT 531 []
+    const cv.CAP_PROP_XI_SENSOR_CLOCK_FREQ_HZ 532 []
+    const cv.CAP_PROP_XI_SENSOR_CLOCK_FREQ_INDEX 533 []
+    const cv.CAP_PROP_XI_SENSOR_OUTPUT_CHANNEL_COUNT 534 []
+    const cv.CAP_PROP_XI_FRAMERATE 535 []
+    const cv.CAP_PROP_XI_COUNTER_SELECTOR 536 []
+    const cv.CAP_PROP_XI_COUNTER_VALUE 537 []
+    const cv.CAP_PROP_XI_ACQ_TIMING_MODE 538 []
+    const cv.CAP_PROP_XI_AVAILABLE_BANDWIDTH 539 []
+    const cv.CAP_PROP_XI_BUFFER_POLICY 540 []
+    const cv.CAP_PROP_XI_LUT_EN 541 []
+    const cv.CAP_PROP_XI_LUT_INDEX 542 []
+    const cv.CAP_PROP_XI_LUT_VALUE 543 []
+    const cv.CAP_PROP_XI_TRG_DELAY 544 []
+    const cv.CAP_PROP_XI_TS_RST_MODE 545 []
+    const cv.CAP_PROP_XI_TS_RST_SOURCE 546 []
+    const cv.CAP_PROP_XI_IS_DEVICE_EXIST 547 []
+    const cv.CAP_PROP_XI_ACQ_BUFFER_SIZE 548 []
+    const cv.CAP_PROP_XI_ACQ_BUFFER_SIZE_UNIT 549 []
+    const cv.CAP_PROP_XI_ACQ_TRANSPORT_BUFFER_SIZE 550 []
+    const cv.CAP_PROP_XI_BUFFERS_QUEUE_SIZE 551 []
+    const cv.CAP_PROP_XI_ACQ_TRANSPORT_BUFFER_COMMIT 552 []
+    const cv.CAP_PROP_XI_RECENT_FRAME 553 []
+    const cv.CAP_PROP_XI_DEVICE_RESET 554 []
+    const cv.CAP_PROP_XI_COLUMN_FPN_CORRECTION 555 []
+    const cv.CAP_PROP_XI_ROW_FPN_CORRECTION 591 []
+    const cv.CAP_PROP_XI_SENSOR_MODE 558 []
+    const cv.CAP_PROP_XI_HDR 559 []
+    const cv.CAP_PROP_XI_HDR_KNEEPOINT_COUNT 560 []
+    const cv.CAP_PROP_XI_HDR_T1 561 []
+    const cv.CAP_PROP_XI_HDR_T2 562 []
+    const cv.CAP_PROP_XI_KNEEPOINT1 563 []
+    const cv.CAP_PROP_XI_KNEEPOINT2 564 []
+    const cv.CAP_PROP_XI_IMAGE_BLACK_LEVEL 565 []
+    const cv.CAP_PROP_XI_HW_REVISION 571 []
+    const cv.CAP_PROP_XI_DEBUG_LEVEL 572 []
+    const cv.CAP_PROP_XI_AUTO_BANDWIDTH_CALCULATION 573 []
+    const cv.CAP_PROP_XI_FFS_FILE_ID 594 []
+    const cv.CAP_PROP_XI_FFS_FILE_SIZE 580 []
+    const cv.CAP_PROP_XI_FREE_FFS_SIZE 581 []
+    const cv.CAP_PROP_XI_USED_FFS_SIZE 582 []
+    const cv.CAP_PROP_XI_FFS_ACCESS_KEY 583 []
+    const cv.CAP_PROP_XI_SENSOR_FEATURE_SELECTOR 585 []
+    const cv.CAP_PROP_XI_SENSOR_FEATURE_VALUE 586 []
+enum cv.<unnamed>  
+    const cv.CAP_PROP_IOS_DEVICE_FOCUS 9001 []
+    const cv.CAP_PROP_IOS_DEVICE_EXPOSURE 9002 []
+    const cv.CAP_PROP_IOS_DEVICE_FLASH 9003 []
+    const cv.CAP_PROP_IOS_DEVICE_WHITEBALANCE 9004 []
+    const cv.CAP_PROP_IOS_DEVICE_TORCH 9005 []
+enum cv.<unnamed>  
+    const cv.CAP_PROP_GIGA_FRAME_OFFSET_X 10001 []
+    const cv.CAP_PROP_GIGA_FRAME_OFFSET_Y 10002 []
+    const cv.CAP_PROP_GIGA_FRAME_WIDTH_MAX 10003 []
+    const cv.CAP_PROP_GIGA_FRAME_HEIGH_MAX 10004 []
+    const cv.CAP_PROP_GIGA_FRAME_SENS_WIDTH 10005 []
+    const cv.CAP_PROP_GIGA_FRAME_SENS_HEIGH 10006 []
+enum cv.<unnamed>  
+    const cv.CAP_PROP_INTELPERC_PROFILE_COUNT 11001 []
+    const cv.CAP_PROP_INTELPERC_PROFILE_IDX 11002 []
+    const cv.CAP_PROP_INTELPERC_DEPTH_LOW_CONFIDENCE_VALUE 11003 []
+    const cv.CAP_PROP_INTELPERC_DEPTH_SATURATION_VALUE 11004 []
+    const cv.CAP_PROP_INTELPERC_DEPTH_CONFIDENCE_THRESHOLD 11005 []
+    const cv.CAP_PROP_INTELPERC_DEPTH_FOCAL_LENGTH_HORZ 11006 []
+    const cv.CAP_PROP_INTELPERC_DEPTH_FOCAL_LENGTH_VERT 11007 []
+enum cv.<unnamed>  
+    const cv.CAP_INTELPERC_DEPTH_GENERATOR 1 << 29 []
+    const cv.CAP_INTELPERC_IMAGE_GENERATOR 1 << 28 []
+    const cv.CAP_INTELPERC_GENERATORS_MASK CAP_INTELPERC_DEPTH_GENERATOR + CAP_INTELPERC_IMAGE_GENERATOR []
+enum cv.<unnamed>  
+    const cv.CAP_INTELPERC_DEPTH_MAP 0 []
+    const cv.CAP_INTELPERC_UVDEPTH_MAP 1 []
+    const cv.CAP_INTELPERC_IR_MAP 2 []
+    const cv.CAP_INTELPERC_IMAGE 3 []
+enum cv.<unnamed>  
+    const cv.CAP_PROP_GPHOTO2_PREVIEW 17001 []
+    const cv.CAP_PROP_GPHOTO2_WIDGET_ENUMERATE 17002 []
+    const cv.CAP_PROP_GPHOTO2_RELOAD_CONFIG 17003 []
+    const cv.CAP_PROP_GPHOTO2_RELOAD_ON_CHANGE 17004 []
+    const cv.CAP_PROP_GPHOTO2_COLLECT_MSGS 17005 []
+    const cv.CAP_PROP_GPHOTO2_FLUSH_MSGS 17006 []
+    const cv.CAP_PROP_SPEED 17007 []
+    const cv.CAP_PROP_APERTURE 17008 []
+    const cv.CAP_PROP_EXPOSUREPROGRAM 17009 []
+    const cv.CAP_PROP_VIEWFINDER 17010 []
+enum cv.<unnamed>  
+    const cv.CAP_PROP_IMAGES_BASE 18000 []
+    const cv.CAP_PROP_IMAGES_LAST 19000 []
+class cv.VideoCapture  
+cv.VideoCapture.VideoCapture  
+cv.VideoCapture.VideoCapture  
+    String filename /C; /Ref
+cv.VideoCapture.VideoCapture  
+    String filename /C; /Ref
+    int apiPreference 
+cv.VideoCapture.VideoCapture  
+    int index 
+cv.VideoCapture.VideoCapture  
+    int index 
+    int apiPreference 
+cv.VideoCapture.open bool /V
+    String filename /C; /Ref
+cv.VideoCapture.open bool /V
+    int index 
+cv.VideoCapture.open bool 
+    int cameraNum 
+    int apiPreference 
+cv.VideoCapture.isOpened bool /C;/V
+cv.VideoCapture.release void /V
+cv.VideoCapture.grab bool /V
+cv.VideoCapture.retrieve bool /V
+    Mat image /O
+    int flag 0
+cv.VideoCapture.retrieve bool /V
+    UMat image /O
+    int flag 0
+cv.VideoCapture.read bool /V
+    Mat image /O
+cv.VideoCapture.read bool /V
+    UMat image /O
+cv.VideoCapture.set bool /V
+    int propId 
+    double value 
+cv.VideoCapture.get double /C;/V
+    int propId 
+cv.VideoCapture.open bool /V
+    String filename /C; /Ref
+    int apiPreference 
+cv.VideoCapture.getBackendName String /C
+class cv.VideoWriter  
+cv.VideoWriter.VideoWriter  
+cv.VideoWriter.VideoWriter  
+    String filename /C; /Ref
+    int fourcc 
+    double fps 
+    Size frameSize 
+    bool isColor true
+cv.VideoWriter.VideoWriter  
+    String filename /C; /Ref
+    int apiPreference 
+    int fourcc 
+    double fps 
+    Size frameSize 
+    bool isColor true
+cv.VideoWriter.open bool /V
+    String filename /C; /Ref
+    int fourcc 
+    double fps 
+    Size frameSize 
+    bool isColor true
+cv.VideoWriter.open bool 
+    String filename /C; /Ref
+    int apiPreference 
+    int fourcc 
+    double fps 
+    Size frameSize 
+    bool isColor true
+cv.VideoWriter.isOpened bool /C;/V
+cv.VideoWriter.release void /V
+cv.VideoWriter.write void /V
+    Mat image /C; /Ref
+cv.VideoWriter.write void /V
+    Mat image /C; /Ref
+cv.VideoWriter.set bool /V
+    int propId 
+    double value 
+cv.VideoWriter.get double /C;/V
+    int propId 
+cv.VideoWriter.fourcc int /S
+    char c1 
+    char c2 
+    char c3 
+    char c4 
+cv.VideoWriter.getBackendName String /C
+enum cv.WindowFlags  
+    const cv.WINDOW_NORMAL 0x00000000 []
+    const cv.WINDOW_AUTOSIZE 0x00000001 []
+    const cv.WINDOW_OPENGL 0x00001000 []
+    const cv.WINDOW_FULLSCREEN 1 []
+    const cv.WINDOW_FREERATIO 0x00000100 []
+    const cv.WINDOW_KEEPRATIO 0x00000000 []
+    const cv.WINDOW_GUI_EXPANDED 0x00000000 []
+    const cv.WINDOW_GUI_NORMAL 0x00000010 []
+enum cv.WindowPropertyFlags  
+    const cv.WND_PROP_FULLSCREEN 0 []
+    const cv.WND_PROP_AUTOSIZE 1 []
+    const cv.WND_PROP_ASPECT_RATIO 2 []
+    const cv.WND_PROP_OPENGL 3 []
+    const cv.WND_PROP_VISIBLE 4 []
+    const cv.WND_PROP_TOPMOST 5 []
+enum cv.MouseEventTypes  
+    const cv.EVENT_MOUSEMOVE 0 []
+    const cv.EVENT_LBUTTONDOWN 1 []
+    const cv.EVENT_RBUTTONDOWN 2 []
+    const cv.EVENT_MBUTTONDOWN 3 []
+    const cv.EVENT_LBUTTONUP 4 []
+    const cv.EVENT_RBUTTONUP 5 []
+    const cv.EVENT_MBUTTONUP 6 []
+    const cv.EVENT_LBUTTONDBLCLK 7 []
+    const cv.EVENT_RBUTTONDBLCLK 8 []
+    const cv.EVENT_MBUTTONDBLCLK 9 []
+    const cv.EVENT_MOUSEWHEEL 10 []
+    const cv.EVENT_MOUSEHWHEEL 11 []
+enum cv.MouseEventFlags  
+    const cv.EVENT_FLAG_LBUTTON 1 []
+    const cv.EVENT_FLAG_RBUTTON 2 []
+    const cv.EVENT_FLAG_MBUTTON 4 []
+    const cv.EVENT_FLAG_CTRLKEY 8 []
+    const cv.EVENT_FLAG_SHIFTKEY 16 []
+    const cv.EVENT_FLAG_ALTKEY 32 []
+enum cv.QtFontWeights  
+    const cv.QT_FONT_LIGHT 25 []
+    const cv.QT_FONT_NORMAL 50 []
+    const cv.QT_FONT_DEMIBOLD 63 []
+    const cv.QT_FONT_BOLD 75 []
+    const cv.QT_FONT_BLACK 87 []
+enum cv.QtFontStyles  
+    const cv.QT_STYLE_NORMAL 0 []
+    const cv.QT_STYLE_ITALIC 1 []
+    const cv.QT_STYLE_OBLIQUE 2 []
+enum cv.QtButtonTypes  
+    const cv.QT_PUSH_BUTTON 0 []
+    const cv.QT_CHECKBOX 1 []
+    const cv.QT_RADIOBOX 2 []
+    const cv.QT_NEW_BUTTONBAR 1024 []
+cv.namedWindow void 
+    String winname /C; /Ref
+    int flags WINDOW_AUTOSIZE
+cv.destroyWindow void 
+    String winname /C; /Ref
+cv.destroyAllWindows void 
+cv.startWindowThread int 
+cv.waitKeyEx int 
+    int delay 0
+cv.waitKey int 
+    int delay 0
+cv.imshow void 
+    String winname /C; /Ref
+    Mat mat 
+cv.imshow void 
+    String winname /C; /Ref
+    UMat mat 
+cv.resizeWindow void 
+    String winname /C; /Ref
+    int width 
+    int height 
+cv.resizeWindow void 
+    String winname /C; /Ref
+    Size size /C; /Ref
+cv.moveWindow void 
+    String winname /C; /Ref
+    int x 
+    int y 
+cv.setWindowProperty void 
+    String winname /C; /Ref
+    int prop_id 
+    double prop_value 
+cv.setWindowTitle void 
+    String winname /C; /Ref
+    String title /C; /Ref
+cv.getWindowProperty double 
+    String winname /C; /Ref
+    int prop_id 
+cv.getWindowImageRect Rect 
+    String winname /C; /Ref
+cv.selectROI Rect 
+    String windowName /C; /Ref
+    Mat img 
+    bool showCrosshair true
+    bool fromCenter false
+cv.selectROI Rect 
+    String windowName /C; /Ref
+    UMat img 
+    bool showCrosshair true
+    bool fromCenter false
+cv.selectROI Rect 
+    Mat img 
+    bool showCrosshair true
+    bool fromCenter false
+cv.selectROI Rect 
+    UMat img 
+    bool showCrosshair true
+    bool fromCenter false
+cv.selectROIs void 
+    String windowName /C; /Ref
+    Mat img 
+    vector_Rect boundingBoxes /O; /Ref
+    bool showCrosshair true
+    bool fromCenter false
+cv.selectROIs void 
+    String windowName /C; /Ref
+    UMat img 
+    vector_Rect boundingBoxes /O; /Ref
+    bool showCrosshair true
+    bool fromCenter false
+cv.getTrackbarPos int 
+    String trackbarname /C; /Ref
+    String winname /C; /Ref
+cv.setTrackbarPos void 
+    String trackbarname /C; /Ref
+    String winname /C; /Ref
+    int pos 
+cv.setTrackbarMax void 
+    String trackbarname /C; /Ref
+    String winname /C; /Ref
+    int maxval 
+cv.setTrackbarMin void 
+    String trackbarname /C; /Ref
+    String winname /C; /Ref
+    int minval 
+cv.addText void 
+    Mat img /C; /Ref
+    String text /C; /Ref
+    Point org 
+    String nameFont /C; /Ref
+    int pointSize -1
+    Scalar color Scalar::all(0)
+    int weight QT_FONT_NORMAL
+    int style QT_STYLE_NORMAL
+    int spacing 0
+cv.addText void 
+    Mat img /C; /Ref
+    String text /C; /Ref
+    Point org 
+    String nameFont /C; /Ref
+    int pointSize -1
+    Scalar color Scalar::all(0)
+    int weight QT_FONT_NORMAL
+    int style QT_STYLE_NORMAL
+    int spacing 0
+cv.displayOverlay void 
+    String winname /C; /Ref
+    String text /C; /Ref
+    int delayms 0
+cv.displayStatusBar void 
+    String winname /C; /Ref
+    String text /C; /Ref
+    int delayms 0
+1620
+namespaces: cv cv.fisheye cv.flann cv.ml cv.ocl

@@ -1,0 +1,19 @@
+org/hrcy/ipctest/RemoteService.java
+ org.hrcy.ipctest.RemoteService
+ org.hrcy.ipctest.RemoteService$1
+org/hrcy/ipctest/IAIDLInterface.java
+ org.hrcy.ipctest.IAIDLInterface
+ org.hrcy.ipctest.IAIDLInterface$Default
+ org.hrcy.ipctest.IAIDLInterface$Stub
+ org.hrcy.ipctest.IAIDLInterface$Stub$Proxy
+org/hrcy/ipctest/APIData.java
+ org.hrcy.ipctest.APIData
+ org.hrcy.ipctest.APIData$1
+org/hrcy/ipctest/Student.java
+ org.hrcy.ipctest.Student
+ org.hrcy.ipctest.Student$1
+org/hrcy/ipctest/BuildConfig.java
+ org.hrcy.ipctest.BuildConfig
+org/hrcy/ipctest/MainActivity.java
+ org.hrcy.ipctest.MainActivity
+ org.hrcy.ipctest.MainActivity$1
