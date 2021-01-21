@@ -14,7 +14,12 @@ Details are shown in `tools/Python_static_analysis`.
 ## **IsoPhase Source Code**
 `code` folder contains the source code of IsoPhase.
 ## **Pipeline Application List**
-This folder contains the list of popular applications we collected from GitHub.
+In section 5 discussion, we mention that it is general that data processing applications follow the pipeline style data transfer.
+
+This folder contains the list of most popular applications in the corresponding framework's topic in the GitHub. We evaluated them and found they all follow the pipeline style data transfer. 
+
+Details are shown in `list.md`.
+
 ## **Kernel Module**
 We use a configurable kernel module to block unintended syscalls.
 
