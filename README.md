@@ -32,4 +32,4 @@ This folder contains the source code of a configurable kernel module.
 Details are in `tools/kernel_module`.
 
 ## **CVEs**
-This folder contains the POC image used by us to trigger the vulnerabilities of the underlying frameworks.
+`CVE cases` contains the POC image used by us to trigger the vulnerabilities of the underlying frameworks.
