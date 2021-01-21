@@ -32,4 +32,8 @@ This folder contains the source code of a configurable kernel module.
 Details are in `tools/kernel_module`.
 
 ## **CVEs**
+We evluated the CVEs of popular data processing frameworks including `OpenCV, Numpy, Pillow, TensorFlow, PyTorch and Caffe` and found that 59/92 CVEs are in Phase 1, 33/92 CVEs are in phase 2 and no CVE is in Phase 3.
+
+Details are shown in `list.md`.
+
 `CVE cases` contains the POC image used by us to trigger the vulnerabilities of the underlying frameworks.
