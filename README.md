@@ -13,7 +13,7 @@ We use the ast module of Python to analyze the target application's source code.
 Details are shown in `tools/Python_static_analysis`.
 ## **IsoPhase Source Code**
 `code` folder contains the source code of IsoPhase.
-## **Pipeline Application List**
+## **Application List**
 In section 5 discussion, we mentioned that it is general that data processing applications follow the pipeline style data transfer.
 
 This folder contains the list of most popular applications in the corresponding framework's topic in the GitHub. We evaluated them and found they all follow the pipeline style data transfer. 
