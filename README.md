@@ -30,3 +30,6 @@ In section 2.1.2, we mentioned that IsoPhase uses a kernel module to block unint
 This folder contains the source code of a configurable kernel module.
 
 Details are in `tools/kernel_module`.
+
+## **CVEs**
+This folder contains the POC image used by us to trigger the vulnerabilities of the underlying frameworks.
