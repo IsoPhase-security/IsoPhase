@@ -3,12 +3,6 @@ We searched popular applications under topic OpenCV, PyTorch, Caffe and TensorFl
 
 We manually inspect the source code of these projects and find those deep learning framework based applications do not break the assumptions on the pipline data flow pattern. 
 
-|Syntax|Information Type|
-|----|----------------|
-|S<sub>1</sub>|result values of algorithm|
-|S<sub>2</sub>|outputs annotated with the results and sensitive information|
-|S<sub>3</sub>|sensitive metadata that the program loads|
-|S<sub>4</sub>|ML models|
 
 ## List of Analyzed CVEs
 
@@ -71,8 +65,14 @@ We analyzed the CVEs on these 6 data processing related libraries and we find th
 |            |                  |                |                | CVE-2020-15190 |
 |            |                  |                |                | CVE-2019-16778 |
 |            |                  |                |                | CVE-2018-21233 |
-| \# Phase 3 |         N/A         |   N/A             |  N/A              |  N/A              |
+| Phase 3 |         N/A         |   N/A             |  N/A              |  N/A              |
 
+|Syntax|Information Type|
+|----|----------------|
+|S<sub>1</sub>|result values of algorithm|
+|S<sub>2</sub>|outputs annotated with the results and sensitive information|
+|S<sub>3</sub>|sensitive metadata that the program loads|
+|S<sub>4</sub>|ML models|
 
 ## List of Applications
 |FrameWork|Name|Link|
