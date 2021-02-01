@@ -77,8 +77,8 @@ N/A means there is no CVE case for the framework.
 |S<sub>4</sub>|ML models|
 
 ## List of Applications
-|FrameWork|Name|Link|
-|---------|----|-------|
+|FrameWork|Name|Link|Information in Phase1|Information in Phase2|Information in Phase3|
+|---------|----|-------|----|--|--|
 |OpenCV|Face_Recognition|https://github.com/ageitgey/face_recognition|
 |OpenCV|faceai|https://github.com/vipstone/faceai|
 |OpenCV|BossSensor|https://github.com/Hironsan/BossSensor|
