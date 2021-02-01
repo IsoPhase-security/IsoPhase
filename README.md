@@ -1,7 +1,7 @@
 # **IsoPhase**
 This is the IsoPhase project page. Source code and contents that we was not able to cover in the paper due to the page limit are placed here.
 ## List of TensorFlow APIs
-In section 10, we mentioned that we could not put the whole list of categorized TensorFlow APIs due to the paper limit.
+In section 10, we mentioned that we could not put the whole list of categorized TensorFlow APIs due to the page limit.
 
 `TF API` contains the full list of TensorFlow API categorization.
 
