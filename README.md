@@ -39,11 +39,3 @@ Details are shown in `list.md`.
 
 ## **Quick Start**
 [simple demo](https://github.com/IsoPhase-security/IsoPhase/tree/main/demo)
-### Execution of main process with debug information 
-![main process](imgs/main.gif "main process")
-### Execution of phase 1 with debug information 
-![phase1](imgs/phase1.gif "phase1")
-### Execution of phase 2 with debug information 
-![phase2](imgs/phase2.gif "phase2")
-### Execution of phase 3 with debug information 
-![phase3](imgs/phase3.gif "phase3")
