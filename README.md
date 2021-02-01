@@ -37,5 +37,4 @@ Details are shown in `list.md`.
 
 `CVE cases` contains the POC image used by us to trigger the vulnerabilities of the underlying frameworks.
 
-## **Quick Start**
-[simple demo](https://github.com/IsoPhase-security/IsoPhase/tree/main/demo)
+
