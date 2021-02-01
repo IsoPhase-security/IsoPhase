@@ -39,6 +39,7 @@ Details are shown in `list.md`.
 
 ## **Quick Start**
 [simple demo](https://github.com/IsoPhase-security/IsoPhase/tree/main/demo)
+Demo program with debug infomation will print the requested command in the terminal. It will automatically assign new index to a object is constructed to be stored in the shared memory and the index will be freed when the corresponding object is destructed.
 ### Execution of main process with debug information 
 ![main process](imgs/main.gif "main process")
 ### Execution of phase 1 with debug information 
