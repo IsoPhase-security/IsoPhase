@@ -6,9 +6,8 @@ In section 10, we mentioned that we could not put the whole list of categorized 
 `TF API` contains the full list of TensorFlow API categorization.
 
 Details are shown in `TF API/phase.txt`.
-## **Quick Start**
-[simple demo](https://github.com/IsoPhase-security/IsoPhase/tree/main/demo)
-It is OpenCV IsoPhase demo. Run with test.sh.
+
+
 ## **Static API Analysis Tool**
 We use the ast module of Python to analyze the target application's source code. 
 
@@ -37,3 +36,14 @@ We evluated the CVEs of popular data processing frameworks including `OpenCV, Nu
 Details are shown in `list.md`.
 
 `CVE cases` contains the POC image used by us to trigger the vulnerabilities of the underlying frameworks.
+
+## **Quick Start**
+[simple demo](https://github.com/IsoPhase-security/IsoPhase/tree/main/demo)
+### Execution of main process with debug information 
+![main process](imgs/main.gif "main process")
+### Execution of phase 1 with debug information 
+![phase1](imgs/phase1.gif "phase1")
+### Execution of phase 2 with debug information 
+![phase2](imgs/phase2.gif "phase2")
+### Execution of phase 3 with debug information 
+![phase3](imgs/phase3.gif "phase3")
