@@ -11,7 +11,7 @@ shm_size = 1280*720*3*100
 try:
     shm = sa.create("phase1", shm_size)
 except:
-    print("it exist, so we just attach")
+    print("shared memory exists, so we just attach")
     shm = sa.attach("phase1")
 
 index_table = shm[0:100]#the beginning of index table

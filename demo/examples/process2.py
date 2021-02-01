@@ -30,7 +30,7 @@ def free_model_index(index):
 while True:
     #  Wait for next request from client
     print("wait for request")
-    print(iso_model_list)
+    #print(iso_model_list)
     message = socket.recv()
     func_name = message.decode("utf-8")
     print("process2 get request for "+func_name)
@@ -60,9 +60,9 @@ while True:
         args = socket.recv().decode("utf-8")
         args_list = args.split(",")
         np_src = iso_main.shm2np(int(args_list[0]))
-        # print(args_list)
+        print(args_list)
         # print("inside process2 cvtColor")
-        # print(type(np_src))
+        print(type(np_src))
         np_dst = cv2.cvtColor(np_src,int(args_list[1]))
         # iso_np = iso_numpy.iso_numpy(iso_main.get_free_index(),np_dst)
         index = iso_main.get_free_index()
@@ -92,6 +92,17 @@ while True:
         iso_model_list[index] = keras_model
         #print(type(iso_main.iso_model_list[index]))
         socket.send_string(str(index))
+    
+    elif(func_name == 'rectangle'):
+        socket.send_string("args")
+        args = socket.recv().decode("utf-8")
+        arg_list = args.split("-")
+        print(arg_list)
+        np_src = iso_main.shm2np(int(arg_list[0]))
+        cv2.rectangle(np_src,eval(arg_list[1]),eval(arg_list[2]),eval(arg_list[3]),eval(arg_list[4]))
+        #iso_np = iso_numpy.iso_numpy(int(arg_list[0]),np_src)
+        iso_main.np2shm(int(arg_list[0]),np_src)
+        socket.send_string("rectangle executed")
     
     elif(func_name == "keras.model.inputshape"):
         socket.send_string("args")

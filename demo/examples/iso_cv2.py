@@ -81,12 +81,12 @@ def imread(filename:str,code):#phase 1
 
 def rectangle(iso_obj,start_point, end_point, color, thickness):#phase 2
     index = iso_obj.index
-    socket3.send_string("rectangle")
-    message = socket3.recv()
+    socket2.send_string("rectangle")
+    message = socket2.recv()
     arg_string = str(index)+"-"+str(start_point)+"-"+str(end_point)+"-"+str(color)+"-"+str(thickness)
     print("rectangle: "+arg_string)
-    socket3.send_string(arg_string)
-    message = socket3.recv()
+    socket2.send_string(arg_string)
+    message = socket2.recv()
     print(message)
 
 

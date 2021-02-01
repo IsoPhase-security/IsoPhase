@@ -49,4 +49,4 @@ while True:
         np_src = iso_main.shm2np(int(args_list[1]))
         print(args_list)
         cv2.imwrite(args_list[0],np_src)
-        socket.send_string("waitkey executed")      
+        socket.send_string("imwrite executed")      
