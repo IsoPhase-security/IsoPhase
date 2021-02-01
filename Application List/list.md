@@ -1,7 +1,7 @@
 # Analyzed Applications
 We searched popular applications under topic OpenCV, PyTorch, Caffe and TensorFlow. The popularity is measured by the number of stars. 
 
-We manually inspect the source code of these projects and find those deep learning framework based applications do not break the assumptions on the pipline data flow pattern. 
+We manually inspect the source code of these projects and find those popular deep learning framework based applications do not break the assumptions on the pipline data flow pattern. 
 
 
 ## List of Analyzed CVEs
