@@ -8,6 +8,8 @@ We manually inspect the source code of these projects and find those deep learni
 
 We analyzed the CVEs on these 6 data processing related libraries and we find that vulnerablities only happens in Phase 1 and Phase 2. And except TensorFlow, other most of the frameworks' vulnerabilities are in phase 1. So when IsoPhase is applied to the target application, the most important phase3 can be protected from those CVEs.
 
+N/A means currently no public available CVE for the framework.
+
 
 |            | OpenCV           | Numpy          | pillow         | TensorFlow     |PyTorch|Caffe|
 | ---------- | ---------------- | -------------- | -------------- | -------------- |-------|-----|
