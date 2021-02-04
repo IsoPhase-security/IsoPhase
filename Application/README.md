@@ -3,72 +3,6 @@ We searched popular applications under topic OpenCV, PyTorch, Caffe and TensorFl
 
 We manually inspect the source code of these projects and find those popular deep learning framework based applications do not break the assumptions on the pipline data flow pattern. 
 
-
-## List of Analyzed CVEs
-
-We analyzed the CVEs on these 6 data processing related libraries and we find that vulnerablities only happens in Phase 1 and Phase 2. And except TensorFlow, other most of the frameworks' vulnerabilities are in phase 1. So when IsoPhase is applied to the target application, the most important phase3 can be protected from those CVEs.
-
-N/A means there is no CVE case for the framework.
-
-
-|            | OpenCV           | Numpy          | pillow         | TensorFlow     |PyTorch|Caffe|
-| ---------- | ---------------- | -------------- | -------------- | -------------- |-------|-----|
-|    Phase1  | CVE-2019-5064    | CVE-2019-6446  | CVE-2020-5313  | CVE-2020-26271 |N/A|N/A|
-|            | CVE-2019-5063    |                | CVE-2020-5312  | CVE-2019-9635  |
-|            | CVE-2019-14493   |                | CVE-2020-5311  | CVE-2018-21233 |
-|            | CVE-2018-7714    |                | CVE-2020-5310  | CVE-2018-7575  |
-|            | CVE-2018-7713    |                | CVE-2020-35655 | CVE-2018-7576  |
-|            | CVE-2018-7712    |                | CVE-2020-35654 |                |
-|            | CVE-2018-5269    |                | CVE-2020-35653 |                |
-|            | CVE-2018-5268    |                | CVE-2020-11538 |                |
-|            | CVE-2017-18009   |                | CVE-2020-11538 |                |
-|            | CVE-2017-17760   |                | CVE-2020-10379 |                |
-|            | CVE-2017-14136   |                | CVE-2020-10378 |                |
-|            | CVE-2017-12864   |                | CVE-2020-10177 |                |
-|            | CVE-2017-12863   |                | CVE-2019-19911 |                |
-|            | CVE-2017-12862   |                | CVE-2019-16865 |                |
-|            | CVE-2017-12606   |                | CVE-2016-9190  |                |
-|            | CVE-2017-12605   |                | CVE-2016-9189  |                |
-|            | CVE-2017-12604   |                | CVE-2016-3076  |                |
-|            | CVE-2017-12603   |                | CVE-2016-2533  |                |
-|            | CVE-2017-12602   |                | CVE-2016-0775  |                |
-|            | CVE-2017-12601   |                | CVE-2016-0740  |                |
-|            | CVE-2017-12600   |                | CVE-2014-9601  |                |
-|            | CVE-2017-12599   |                | CVE-2014-3598  |                |
-|            | CVE-2017-12598   |                | CVE-2014-3589  |                |
-|            | CVE-2017-12597   |                | CVE-2014-3007  |                |
-|            | CVE-2017-1000450 |                | CVE-2014-1933  |                |
-|            | CVE-2016-1516    |                | CVE-2014-1932  |                |
-|            | CVE-2016-1517    |                |                |                | 
-| Phase 2    | CVE-2019-19624   | CVE-2017-12852 | CVE-2016-4009  | CVE-2020-5215  |
-|            | CVE-2019-15939   |                |                | CVE-2020-26270 |
-|            | CVE-2019-14492   |                |                | CVE-2020-26269 |
-|            | CVE-2019-14491   |                |                | CVE-2020-26268 |
-|            |                  |                |                | CVE-2020-26267 |
-|            |                  |                |                | CVE-2020-26266 |
-|            |                  |                |                | CVE-2020-15266 |
-|            |                  |                |                | CVE-2020-15265 |
-|            |                  |                |                | CVE-2020-15206 |
-|            |                  |                |                | CVE-2020-15205 |
-|            |                  |                |                | CVE-2020-15204 |
-|            |                  |                |                | CVE-2020-15203 |
-|            |                  |                |                | CVE-2020-15202 |
-|            |                  |                |                | CVE-2020-15201 |
-|            |                  |                |                | CVE-2020-15200 |
-|            |                  |                |                | CVE-2020-15199 |
-|            |                  |                |                | CVE-2020-15198 |
-|            |                  |                |                | CVE-2020-15197 |
-|            |                  |                |                | CVE-2020-15196 |
-|            |                  |                |                | CVE-2020-15195 |
-|            |                  |                |                | CVE-2020-15194 |
-|            |                  |                |                | CVE-2020-15193 |
-|            |                  |                |                | CVE-2020-15192 |
-|            |                  |                |                | CVE-2020-15191 |
-|            |                  |                |                | CVE-2020-15190 |
-|            |                  |                |                | CVE-2019-16778 |
-|            |                  |                |                | CVE-2018-21233 |
-| Phase 3 |         N/A         |   N/A             |  N/A              |  N/A              |
-
 |Syntax|Information Type|
 |----|----------------|
 |S<sub>1</sub>|result values of algorithm|
@@ -135,3 +69,68 @@ N/A means there is no CVE case for the framework.
 |Caffe|person_search|None|S<sub>1</sub>S<sub>4</sub>|S<sub>2</sub>S<sub>3</sub>|https://github.com/ShuangLI59/person_search|
 |Caffe|multi-object-tracker|None|S<sub>1</sub>S<sub>4</sub>|S<sub>2</sub>|https://github.com/adipandas/multi-object-tracker|
 |Caffe|caffe-yolov3|None|S<sub>1</sub>S<sub>4</sub>|S<sub>2</sub>|https://github.com/ChenYingpeng/caffe-yolov3|
+
+# List of Analyzed CVEs
+
+We analyzed the CVEs on these 6 data processing related libraries and we find that vulnerablities only happens in Phase 1 and Phase 2. And except TensorFlow, other most of the frameworks' vulnerabilities are in phase 1. So when IsoPhase is applied to the target application, the most important phase3 can be protected from those CVEs.
+
+N/A means there is no CVE case for the framework.
+
+
+|            | OpenCV           | Numpy          | pillow         | TensorFlow     |PyTorch|Caffe|
+| ---------- | ---------------- | -------------- | -------------- | -------------- |-------|-----|
+|    Phase1  | CVE-2019-5064    | CVE-2019-6446  | CVE-2020-5313  | CVE-2020-26271 |N/A|N/A|
+|            | CVE-2019-5063    |                | CVE-2020-5312  | CVE-2019-9635  |
+|            | CVE-2019-14493   |                | CVE-2020-5311  | CVE-2018-21233 |
+|            | CVE-2018-7714    |                | CVE-2020-5310  | CVE-2018-7575  |
+|            | CVE-2018-7713    |                | CVE-2020-35655 | CVE-2018-7576  |
+|            | CVE-2018-7712    |                | CVE-2020-35654 |                |
+|            | CVE-2018-5269    |                | CVE-2020-35653 |                |
+|            | CVE-2018-5268    |                | CVE-2020-11538 |                |
+|            | CVE-2017-18009   |                | CVE-2020-11538 |                |
+|            | CVE-2017-17760   |                | CVE-2020-10379 |                |
+|            | CVE-2017-14136   |                | CVE-2020-10378 |                |
+|            | CVE-2017-12864   |                | CVE-2020-10177 |                |
+|            | CVE-2017-12863   |                | CVE-2019-19911 |                |
+|            | CVE-2017-12862   |                | CVE-2019-16865 |                |
+|            | CVE-2017-12606   |                | CVE-2016-9190  |                |
+|            | CVE-2017-12605   |                | CVE-2016-9189  |                |
+|            | CVE-2017-12604   |                | CVE-2016-3076  |                |
+|            | CVE-2017-12603   |                | CVE-2016-2533  |                |
+|            | CVE-2017-12602   |                | CVE-2016-0775  |                |
+|            | CVE-2017-12601   |                | CVE-2016-0740  |                |
+|            | CVE-2017-12600   |                | CVE-2014-9601  |                |
+|            | CVE-2017-12599   |                | CVE-2014-3598  |                |
+|            | CVE-2017-12598   |                | CVE-2014-3589  |                |
+|            | CVE-2017-12597   |                | CVE-2014-3007  |                |
+|            | CVE-2017-1000450 |                | CVE-2014-1933  |                |
+|            | CVE-2016-1516    |                | CVE-2014-1932  |                |
+|            | CVE-2016-1517    |                |                |                | 
+| Phase 2    | CVE-2019-19624   | CVE-2017-12852 | CVE-2016-4009  | CVE-2020-5215  |
+|            | CVE-2019-15939   |                |                | CVE-2020-26270 |
+|            | CVE-2019-14492   |                |                | CVE-2020-26269 |
+|            | CVE-2019-14491   |                |                | CVE-2020-26268 |
+|            |                  |                |                | CVE-2020-26267 |
+|            |                  |                |                | CVE-2020-26266 |
+|            |                  |                |                | CVE-2020-15266 |
+|            |                  |                |                | CVE-2020-15265 |
+|            |                  |                |                | CVE-2020-15206 |
+|            |                  |                |                | CVE-2020-15205 |
+|            |                  |                |                | CVE-2020-15204 |
+|            |                  |                |                | CVE-2020-15203 |
+|            |                  |                |                | CVE-2020-15202 |
+|            |                  |                |                | CVE-2020-15201 |
+|            |                  |                |                | CVE-2020-15200 |
+|            |                  |                |                | CVE-2020-15199 |
+|            |                  |                |                | CVE-2020-15198 |
+|            |                  |                |                | CVE-2020-15197 |
+|            |                  |                |                | CVE-2020-15196 |
+|            |                  |                |                | CVE-2020-15195 |
+|            |                  |                |                | CVE-2020-15194 |
+|            |                  |                |                | CVE-2020-15193 |
+|            |                  |                |                | CVE-2020-15192 |
+|            |                  |                |                | CVE-2020-15191 |
+|            |                  |                |                | CVE-2020-15190 |
+|            |                  |                |                | CVE-2019-16778 |
+|            |                  |                |                | CVE-2018-21233 |
+| Phase 3 |         N/A         |   N/A             |  N/A              |  N/A              |
