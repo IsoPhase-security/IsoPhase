@@ -106,7 +106,7 @@ N/A means there is no CVE case for the framework.
 |            | CVE-2017-1000450 |                | CVE-2014-1933  |                |
 |            | CVE-2016-1516    |                | CVE-2014-1932  |                |
 |            | CVE-2016-1517    |                |                |                | 
-| Phase 2    | CVE-2019-19624   | CVE-2017-12852 | CVE-2016-4009  | CVE-2020-5215  |
+| Phase 2    | CVE-2019-19624   | CVE-2017-12852 | CVE-2016-4009  | CVE-2020-5215  |N/A|N/A|
 |            | CVE-2019-15939   |                |                | CVE-2020-26270 |
 |            | CVE-2019-14492   |                |                | CVE-2020-26269 |
 |            | CVE-2019-14491   |                |                | CVE-2020-26268 |
@@ -133,4 +133,4 @@ N/A means there is no CVE case for the framework.
 |            |                  |                |                | CVE-2020-15190 |
 |            |                  |                |                | CVE-2019-16778 |
 |            |                  |                |                | CVE-2018-21233 |
-| Phase 3 |         N/A         |   N/A             |  N/A              |  N/A     |N/A|N/A|
+| Phase 3 |         N/A         |   N/A          |  N/A           |  N/A     |N/A|N/A|
