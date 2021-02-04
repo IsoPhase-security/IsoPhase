@@ -133,4 +133,4 @@ N/A means there is no CVE case for the framework.
 |            |                  |                |                | CVE-2020-15190 |
 |            |                  |                |                | CVE-2019-16778 |
 |            |                  |                |                | CVE-2018-21233 |
-| Phase 3 |         N/A         |   N/A             |  N/A              |  N/A              |
+| Phase 3 |         N/A         |   N/A             |  N/A              |  N/A     |N/A|N/A|
