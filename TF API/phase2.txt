@@ -26,6 +26,7 @@ tf.Variable
 tf.Variable.SaveSliceInfo
 tf.VariableAggregation
 tf.VariableSynchronization
+
 tf.abs
 tf.acos
 tf.acosh
