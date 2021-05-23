@@ -2,7 +2,7 @@ import importlib
 from cv2 import *
 import inspect
 
-# wildcard import above does not import "private" variables like __version__
+# wildcard import above does not simport "private" variables like __version__
 # this makes them available
 globals().update(importlib.import_module("cv2.cv2").__dict__)
 m = importlib.import_module("cv2.cv2").__dict__
